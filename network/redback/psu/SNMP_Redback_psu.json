@@ -1,0 +1,136 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:40Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Redback psu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Redback psi equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check psu status.",
+            "item_prototypes": [
+              {
+                "delay": "1h",
+                "description": "Check psu status.",
+                "key": "rbnPowerDescr[{#SNMPINDEX}]",
+                "name": "PSU {#PSU}: Description",
+                "snmp_oid": ".1.3.6.1.4.1.2352.2.4.1.2.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "redback"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "df162c50e93249c9ba2e39eca3848b76"
+              },
+              {
+                "description": "Check psu.",
+                "key": "rbnPowerStatus[{#SNMPINDEX}]",
+                "name": "PSU {#PSU}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.2352.2.4.1.2.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "redback"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "35ee24ad174d46adb3aa7b9a468da355",
+                "valuemap": {
+                  "name": "Psu_Status"
+                }
+              }
+            ],
+            "key": "rbnPowerStatusEntry-[{#SNMPVALUE}]",
+            "name": "Redback PSU",
+            "snmp_oid": "discovery[{#PSU},1.3.6.1.4.1.2352.2.4.1.2.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "6d6bf6ead57a41c9a40c2aa449d64165"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Redback psu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "psu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "redback"
+          }
+        ],
+        "template": "SNMP Redback psu",
+        "uuid": "e494c04a82144406aa1f3cf9cd3a484a",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "failed",
+                "value": "2"
+              },
+              {
+                "newvalue": "absent",
+                "value": "3"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "4"
+              }
+            ],
+            "name": "Psu_Status",
+            "uuid": "a1a25f64b33a4e2fb18288fad0dfec88"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

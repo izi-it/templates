@@ -1,0 +1,117 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:43Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Mcafee webgateway versions by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Mcafee webgateway versions equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "key": "pAMProactiveVersion",
+            "name": "Proactive version",
+            "snmp_oid": ".1.3.6.1.4.1.1230.2.7.1.20.5.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pAMProactiveVersion"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mcafee webgateway"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "ea2d8408daae43c2bc1f2fd9eb877e1e"
+          },
+          {
+            "delay": "2m",
+            "key": "pMFEDATVersion",
+            "name": "Version of the McAfee DATs",
+            "snmp_oid": ".1.3.6.1.4.1.1230.2.7.1.20.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pMFEDATVersion"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mcafee webgateway"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4890c8e9c15c42ceadd827098c2252f8"
+          },
+          {
+            "key": "pTSDBVersion",
+            "name": "TSDB Version",
+            "snmp_oid": ".1.3.6.1.4.1.1230.2.7.1.20.6.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pTSDBVersion"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mcafee webgateway"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2646990e1b214660bcb0a47d231cd01a"
+          }
+        ],
+        "name": "SNMP Mcafee webgateway versions",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "mcafee webgateway"
+          }
+        ],
+        "template": "SNMP Mcafee webgateway versions",
+        "uuid": "e980b89640ca4f58bbcf81a4079457cb"
+      }
+    ],
+    "version": "6.0"
+  }
+}

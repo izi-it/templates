@@ -1,0 +1,73 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:52Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Silverpeak status made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n\nCheck operational state of the Silverpeak appliance.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "The current operational state of the appliance  ==> [OID:.1.3.6.1.4.1.23867.3.1.1.1.3.0]",
+            "key": "spsOperStatus",
+            "name": "Operational state of the appliance",
+            "snmp_oid": ".1.3.6.1.4.1.23867.3.1.1.1.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "operational state"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Silverpeak"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "f0e6ab5c564d41d7a3160aeebb190235",
+            "value_type": "CHAR"
+          }
+        ],
+        "name": "SNMP Silverpeak status",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "status"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Silverpeak"
+          }
+        ],
+        "template": "SNMP Silverpeak status",
+        "uuid": "7f02b3d7ec434f23843e8c5bcedcd10f"
+      }
+    ],
+    "version": "6.0"
+  }
+}

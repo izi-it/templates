@@ -1,0 +1,129 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:37Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Ruggedcom fan by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Ruggedcom equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "key": "rcDeviceStsFanBank1",
+            "name": "Fan 1: Status",
+            "snmp_oid": ".1.3.6.1.4.1.15004.4.2.2.10.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "fan"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ruggedcom"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "ca47970b946f47b382a719f9f60772df",
+            "valuemap": {
+              "name": "Ruggedon_Fan_Status"
+            }
+          },
+          {
+            "key": "rcDeviceStsFanBank2",
+            "name": "Fan 2: Status",
+            "snmp_oid": ".1.3.6.1.4.1.15004.4.2.2.11.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "fan"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ruggedcom"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "7c267575de1b4c6dbde9690ec396453c",
+            "valuemap": {
+              "name": "Ruggedon_Fan_Status"
+            }
+          }
+        ],
+        "name": "SNMP Ruggedcom fan",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "fan"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Ruggedcom"
+          }
+        ],
+        "template": "SNMP Ruggedcom fan",
+        "uuid": "2df608446c644cc980005fdb42757655",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "notPresent",
+                "value": "1"
+              },
+              {
+                "newvalue": "failed",
+                "value": "2"
+              },
+              {
+                "newvalue": "standby",
+                "value": "3"
+              },
+              {
+                "newvalue": "off",
+                "value": "4"
+              },
+              {
+                "newvalue": "on",
+                "value": "5"
+              }
+            ],
+            "name": "Ruggedon_Fan_Status",
+            "uuid": "064c723536d14b0fb40809bf8aee3e49"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

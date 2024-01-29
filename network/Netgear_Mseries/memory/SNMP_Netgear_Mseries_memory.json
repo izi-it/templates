@@ -1,0 +1,101 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:46Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Netgear Mseries memory made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "The total memory allocated for the tasks  ==> [OID:.1.3.6.1.4.1.4526.10.1.1.4.2.0]",
+            "key": "agentSwitchCpuProcessMemAvailable",
+            "name": "Total Memory",
+            "snmp_oid": ".1.3.6.1.4.1.4526.10.1.1.4.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "total memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Netgear Mseries"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "30ee3c4541a746adb8c355530055f60c",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "The total memory freed for utilization  ==> [OID:.1.3.6.1.4.1.4526.10.1.1.4.1.0]",
+            "key": "agentSwitchCpuProcessMemFree",
+            "name": "Free Memory",
+            "snmp_oid": ".1.3.6.1.4.1.4526.10.1.1.4.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "free memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Netgear Mseries"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "9ebf50f7da464e06bd7e03eeb9f8dc89",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Netgear Mseries memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Netgear Mseries"
+          }
+        ],
+        "template": "SNMP Netgear Mseries memory",
+        "uuid": "75eed08a03eb41b1b1392c5144058724"
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:38Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Peplink pepwave  by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Peplink pepwave  equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Peplink pepwave",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "peplink pepwave"
+          }
+        ],
+        "template": "SNMP Peplink pepwave",
+        "templates": [
+          {
+            "name": "SNMP Peplink pepwave cpu"
+          },
+          {
+            "name": "SNMP Peplink pepwave memory"
+          },
+          {
+            "name": "SNMP Peplink pepwave wanusage"
+          }
+        ],
+        "uuid": "a031e1ea4bb64fa296bd0b614906c6d4",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "fail",
+                "value": "0"
+              },
+              {
+                "newvalue": "success",
+                "value": "1"
+              }
+            ],
+            "name": "Pepwave_Health",
+            "uuid": "139457641714454db338aaf296bdcac6"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

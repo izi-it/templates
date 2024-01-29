@@ -1,0 +1,307 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:39Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket realmusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Average QoS RFactor observed during the period\n==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.24]",
+                "key": "apSigRealmStatsAverageQoSRFactor[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Average QoS RFactor observed during the period",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.24.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "average qos rfactor"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "7256922b321f4a6da1fb9d8c5c44b9a2",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of current active inbound sessions  => [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.3]",
+                "key": "apSigRealmStatsCurrentActiveSessionsInbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Number of current active inbound sessions",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "current active sessions inbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "8e76df84b1424ca0924aa6156e0dc85f"
+              },
+              {
+                "description": "Number of current active outbound sessions\n ==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.5]",
+                "key": "apSigRealmStatsCurrentActiveSessionsOutbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Number of current active outbound sessions",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "current active sessions outbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "afe8e12131de4e22a9832655e9c730fe"
+              },
+              {
+                "description": "Current Inbound Session rate in CPS  => [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.4]",
+                "key": "apSigRealmStatsCurrentSessionRateInbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Current Inbound Session rate in CPS",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "current session rate inbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "e5dcc45fd3454e88920631df1995ec3f"
+              },
+              {
+                "description": "Current outbound session rate in CPS\n => [ OID:1.3.6.1.4.1.9148.3.2.1.2.4.1.6]",
+                "key": "apSigRealmStatsCurrentSessionRateOutbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Current outbound session rate in CPS",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "current session rate outbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "3509c53dea4e4175a34ea1ed2224afac"
+              },
+              {
+                "description": "Peg counts of number of times the Major Rfactor\nthreshold was exceeded during the lifetime. ==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.27]",
+                "key": "apSigRealmStatsTotalMajorRFactorExceeded[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Total rfactor",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.27.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total major rfactor exceeded"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "f5c74d1d2f73464f98edbac348a700f1"
+              },
+              {
+                "description": "Total Number of inbound sessions\n==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.7]",
+                "key": "apSigRealmStatsTotalSessionsInbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Total Number of inbound sessions",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total sessions inbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "4d8f20315d0a40268d919d29941dbd62"
+              },
+              {
+                "description": "Total Number of outbound sessions\n==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.11]",
+                "key": "apSigRealmStatsTotalSessionsOutbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Total Number of outbound sessions",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total sessions outbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "a18c3b425a1d4e919c7159765439f4fa"
+              }
+            ],
+            "key": "realm_name-[{#SNMPVALUE}]",
+            "name": "Acmepacket realmusage",
+            "snmp_oid": "discovery[{#REALM_NAME},1.3.6.1.4.1.9148.3.2.1.2.4.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "a3d917f2cd5f4b9bb055226723b50962"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Acmepacket  realmusage",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP Acmepacket  realmusage",
+        "uuid": "2fc654bd36944560ab61504af484bac3",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "unknown",
+                "value": "0"
+              },
+              {
+                "newvalue": "initial",
+                "value": "1"
+              },
+              {
+                "newvalue": "active",
+                "value": "2"
+              },
+              {
+                "newvalue": "standby",
+                "value": "3"
+              },
+              {
+                "newvalue": "outOfService",
+                "value": "4"
+              },
+              {
+                "newvalue": "unassigned",
+                "value": "5"
+              },
+              {
+                "newvalue": "activePending",
+                "value": "6"
+              },
+              {
+                "newvalue": "standbyPending",
+                "value": "7"
+              },
+              {
+                "newvalue": "outOfServicePending",
+                "value": "8"
+              },
+              {
+                "newvalue": "recovery",
+                "value": "9"
+              }
+            ],
+            "name": "Acme_Mapping_Redundancy",
+            "uuid": "00e758e8624c423e8476400f6dd66b19"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:32Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Ruggedcom memory  by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Ruggedcom equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "key": "rcDeviceInfoTotalRam",
+            "name": "Total Memory",
+            "snmp_oid": ".1.3.6.1.4.1.15004.4.2.3.5.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "total memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ruggedcom"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "9feded77604b4d898fb84754ac3000bf",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "rcDeviceStsAvailableRam",
+            "name": "Available Memory",
+            "snmp_oid": ".1.3.6.1.4.1.15004.4.2.2.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "available memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ruggedcom"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "0373a347e4fd4a1ab273161b57a9a770",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Ruggedcom memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Ruggedcom"
+          }
+        ],
+        "template": "SNMP Ruggedcom memory",
+        "uuid": "ceef67b59d184aeebcc202fa0b99f454"
+      }
+    ],
+    "version": "6.0"
+  }
+}

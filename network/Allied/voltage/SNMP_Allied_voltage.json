@@ -1,0 +1,183 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:27Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Allied voltage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Allied equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The current reading of this voltage rail in millivolts.\n => [ OID:.1.3.6.1.4.1.207.8.4.4.3.12.2.1.5]",
+                "key": "atEnvMonv2VoltageCurrent[{#SNMPINDEX}]",
+                "name": "Voltage {#VOLTAGE}: Current value",
+                "snmp_oid": ".1.3.6.1.4.1.207.8.4.4.3.12.2.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "current value"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Allied"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "mV",
+                "uuid": "300427392b994030b1aab7e5cc18a746",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "The minimum acceptable reading of this voltage rail in millivolts.\n=> [ OID:.1.3.6.1.4.1.207.8.4.4.3.12.2.1.7]",
+                "key": "atEnvMonv2VoltageLowerThreshold[{#SNMPINDEX}]",
+                "name": "Voltage {#VOLTAGE}: Minimum acceptable",
+                "snmp_oid": ".1.3.6.1.4.1.207.8.4.4.3.12.2.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "minimum value"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Allied"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "mV",
+                "uuid": "781ea33fc0f04ceaa6ca26538bd810c6",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "An indication of whether this voltage rail is currently in an alarm condition. \nA value of 'outOfRange' indicates that its current reading is outside its threshold range, \n'inRange' indicates that the current reading is acceptable.\n[OID:.1.3.6.1.4.1.207.8.4.4.3.12.2.1.8]",
+                "key": "atEnvMonv2VoltageStatus[{#SNMPINDEX}]",
+                "name": "Voltage {#VOLTAGE}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.207.8.4.4.3.12.2.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Allied"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "d6f8ae1de4fc4cfdbeeb765c1fbb3d7e",
+                "valuemap": {
+                  "name": "Allied_Voltage_Status"
+                }
+              },
+              {
+                "description": "The maximum acceptable reading of this voltage rail in millivolts.\n=> [ OID:.1.3.6.1.4.1.207.8.4.4.3.12.2.1.6]",
+                "key": "atEnvMonv2VoltageUpperThreshold[{#SNMPINDEX}]",
+                "name": "Voltage {#VOLTAGE}: Maximum acceptable",
+                "snmp_oid": ".1.3.6.1.4.1.207.8.4.4.3.12.2.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "maximum value"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Allied"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "mV",
+                "uuid": "fb8d8b788fe843019fd1144912d69ed7",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "atEnvMonv2VoltageDescription-[{#SNMPVALUE}]",
+            "name": "Allied voltage",
+            "snmp_oid": "discovery[{#VOLTAGE},1.3.6.1.4.1.207.8.4.4.3.12.2.1.4]",
+            "type": "SNMP_AGENT",
+            "uuid": "7c0b2b58459745df9f0ea56d9ac92ff7"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Allied voltage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "voltage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Allied"
+          }
+        ],
+        "template": "SNMP Allied voltage",
+        "uuid": "526a71042b264e71a12802c082255563",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "outOfRange",
+                "value": "1"
+              },
+              {
+                "newvalue": "inRange",
+                "value": "2"
+              }
+            ],
+            "name": "Allied_Voltage_Status",
+            "uuid": "dee3563941fd4b72993b1c5caaa2a2f7"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

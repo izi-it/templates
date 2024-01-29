@@ -1,0 +1,183 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:44Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "The Oper status of the Power Supply.\n1.3.6.1.4.1.629.1.50.11.1.8.2.1.5",
+            "key": "PSOperStatus",
+            "name": "Power Supply : Status",
+            "snmp_oid": ".1.3.6.1.4.1.629.1.50.11.1.8.2.1.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ps"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mrv"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8139235cca3e46ffbc49e86a6a6be33a",
+            "valuemap": {
+              "name": "MRV_PS_Status"
+            }
+          },
+          {
+            "description": "The working mode of the Power Supply.\n1.3.6.1.4.1.629.1.50.11.1.8.2.1.4",
+            "key": "PSRedundantMode",
+            "name": "Working mode PS",
+            "snmp_oid": ".1.3.6.1.4.1.629.1.50.11.1.8.2.1.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ps"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mrv"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "ad3b9fef47b04c7692b46d02cd7e73b8",
+            "valuemap": {
+              "name": "MRV_PS_Redundant"
+            }
+          },
+          {
+            "delay": "3m",
+            "description": "The Temperature Mode of Device.\n1.3.6.1.4.1.629.1.50.11.1.6",
+            "key": "TemperatureModeState",
+            "name": "Temperature Device : State",
+            "snmp_oid": ".1.3.6.1.4.1.629.1.50.11.1.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Temperature"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a28fa447954943b68a9767dd71a227ef",
+            "valuemap": {
+              "name": "MRV_Temperature"
+            }
+          }
+        ],
+        "name": "SNMP MRV Optiswitch Generic",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "mrv"
+          }
+        ],
+        "template": "SNMP MRV Optiswitch Generic",
+        "uuid": "26dfff431702492b9fee36a51b0b079e",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "none",
+                "value": "1"
+              },
+              {
+                "newvalue": "mainPS",
+                "value": "2"
+              },
+              {
+                "newvalue": "secondaryPS",
+                "value": "3"
+              }
+            ],
+            "name": "MRV_PS_Redundant",
+            "uuid": "ea75b847b47343d09b94561afa1298dc"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "none",
+                "value": "1"
+              },
+              {
+                "newvalue": "active",
+                "value": "2"
+              },
+              {
+                "newvalue": "notActive",
+                "value": "3"
+              }
+            ],
+            "name": "MRV_PS_Status",
+            "uuid": "a6fbb40bf1d14cd990555edcd106e73e"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "none",
+                "value": "1"
+              },
+              {
+                "newvalue": "normal",
+                "value": "2"
+              },
+              {
+                "newvalue": "high",
+                "value": "3"
+              }
+            ],
+            "name": "MRV_Temperature",
+            "uuid": "d9603fce40ac463a96e9a27babfe00a0"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

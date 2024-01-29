@@ -1,0 +1,68 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:48Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Acmepacket",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP Acmepacket",
+        "templates": [
+          {
+            "name": "SNMP Acmepacket codec"
+          },
+          {
+            "name": "SNMP Acmepacket  fan"
+          },
+          {
+            "name": "SNMP acmepacket policyservers"
+          },
+          {
+            "name": "SNMP Acmepacket psu"
+          },
+          {
+            "name": "SNMP Acmepacket  realmusage"
+          },
+          {
+            "name": "SNMP Acmepacket  sipusage"
+          },
+          {
+            "name": "SNMP Acmepacket  systemusage"
+          },
+          {
+            "name": "SNMP Acmepacket  temperature"
+          },
+          {
+            "name": "SNMP Acmepacket voltage"
+          }
+        ],
+        "uuid": "caedcd12774749da8aa6ddfa39701d93"
+      }
+    ],
+    "version": "6.0"
+  }
+}

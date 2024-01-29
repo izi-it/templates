@@ -1,0 +1,59 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:41Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Audiocodes by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Audiocodes equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Audiocodes",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Audiocodes"
+          }
+        ],
+        "template": "SNMP Audiocodes",
+        "templates": [
+          {
+            "name": "SNMP Audiocodes cpu"
+          },
+          {
+            "name": "SNMP Audiocodes fantray"
+          },
+          {
+            "name": "SNMP Audiocodes memory"
+          },
+          {
+            "name": "SNMP Audiocodes module"
+          },
+          {
+            "name": "SNMP Audiocodes psu"
+          },
+          {
+            "name": "SNMP Audiocodes trunkstatus"
+          }
+        ],
+        "uuid": "e780d2397c574b03983991cbb4e5cec2"
+      }
+    ],
+    "version": "6.0"
+  }
+}

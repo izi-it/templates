@@ -1,0 +1,128 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:44Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Synology fan  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Returns error if CPU fan fails => [OID:.1.3.6.1.4.1.6574.1.4.2]\n- Normal(1)\n-  Failed(2)",
+                "key": "synoSystemcpuFanStatus[{#SNMPINDEX}]",
+                "name": "CPU Fan {#FAN}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.6574.1.4.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu fan status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "c8201c9d5ada4354af4b5a66a39f0867",
+                "valuemap": {
+                  "name": "Synology_Fan_Status"
+                }
+              },
+              {
+                "description": "Returns error if system fan fails => [OID: .1.3.6.1.4.1.6574.1.4.1]\n-  Normal(1)\n-  Failed(2)",
+                "key": "synoSystemsystemFanStatus[{#SNMPINDEX}]",
+                "name": "System Fan {#FAN}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.6574.1.4.1.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "system fan status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "ab4cfe4baa5e4d7b80176689856e63b3",
+                "valuemap": {
+                  "name": "Synology_Fan_Status"
+                }
+              }
+            ],
+            "key": "synologyfan-[{#SNMPVALUE}]",
+            "name": "Synology fan",
+            "snmp_oid": "discovery[{#FAN},1.3.6.1.4.1.6574.1.4]",
+            "type": "SNMP_AGENT",
+            "uuid": "85dc27fdadd741f399defdcef8b6a4ef"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Synology fan",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "fan"
+          },
+          {
+            "tag": "layer",
+            "value": "storage"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Synology"
+          }
+        ],
+        "template": "SNMP Synology fan",
+        "uuid": "c320768adc3642cd8a418df5deef9b8f",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "Normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "Failed",
+                "value": "2"
+              }
+            ],
+            "name": "Synology_Fan_Status",
+            "uuid": "72900b78ad2647db9b794fde08a6a372"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

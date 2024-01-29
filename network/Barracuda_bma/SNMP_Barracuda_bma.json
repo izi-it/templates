@@ -1,0 +1,50 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:25Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Barracuda bma made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Barracuda bma",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Barracuda bma"
+          }
+        ],
+        "template": "SNMP Barracuda bma",
+        "templates": [
+          {
+            "name": "SNMP Barracuda bma cpu"
+          },
+          {
+            "name": "SNMP Barracuda bma mails"
+          },
+          {
+            "name": "SNMP Barracuda bma storage"
+          }
+        ],
+        "uuid": "20e062eee433413086d1f1a82af3c4da"
+      }
+    ],
+    "version": "6.0"
+  }
+}

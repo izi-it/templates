@@ -1,0 +1,282 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:37Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket systemusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "The percentage of total CPU utilization measured in 1 second  ==> [OID:.1.3.6.1.4.1.9148.3.2.1.1.1]",
+            "key": "apSysCPUUtil",
+            "name": "CPU utilization",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.1.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "77c2c614e0004f8799b2bea2dfa19513",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "The total instant number of Global Concurrent Sessions\nat the moment.==> [OID:.1.3.6.1.4.1.9148.3.2.1.1.5]",
+            "key": "apSysGlobalConSess",
+            "name": "Current sessions",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.1.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "current sessions"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "1552cf5be1a94a22b1268b8986ba58a1"
+          },
+          {
+            "description": "The number of global call per second. This is an instant value.\n==> [OID:.1.3.6.1.4.1.9148.3.2.1.1.6]",
+            "key": "apSysGlobalCPS",
+            "name": "Current calls",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.1.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "current calls"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "eda6a5e530fe41b8aa16d46a0f24cde6"
+          },
+          {
+            "description": "System health percentage. 100, which understands as 100%, is healthiest. ==> [OID:.1.3.6.1.4.1.9148.3.2.1.1.3]",
+            "key": "apSysHealthScore",
+            "name": "System health percentage",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.1.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system health"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "c102e08d9cf44d2e829571a7f234e9b0",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "The percentage of licensed sessions currently in progress.\n==> [OID:.1.3.6.1.4.1.9148.3.2.1.1.10]",
+            "key": "apSysLicenseCapacity",
+            "name": "License usage",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.1.10",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "license used"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "c4a827f684b3406dbfa25dca7994ec07",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "The percentage of Memory utilization ==> [OID:.1.3.6.1.4.1.9148.3.7.2.2.2]",
+            "key": "apSysMemoryUtil",
+            "name": "Memory utilization",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.1.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "13770ee291d542c195a1eae778785d3b",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "In redundancy set, one SD is active, one is standby.\nIf there is no redundancy set, the value is 'other(3)'.  ==> [OID:.1.3.6.1.4.1.9148.3.2.1.1.4]",
+            "key": "apSysRedundancy",
+            "name": "Replication state",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.1.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "replication state"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "d452d25e78dc48a0bcdd510c0d7e510e",
+            "valuemap": {
+              "name": "Acme_Mapping_Redundancy"
+            }
+          }
+        ],
+        "name": "SNMP Acmepacket  systemusage",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP Acmepacket  systemusage",
+        "uuid": "f6c92b80c0344b918b6433c532aad1d1",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "unknown",
+                "value": "0"
+              },
+              {
+                "newvalue": "initial",
+                "value": "1"
+              },
+              {
+                "newvalue": "active",
+                "value": "2"
+              },
+              {
+                "newvalue": "standby",
+                "value": "3"
+              },
+              {
+                "newvalue": "outOfService",
+                "value": "4"
+              },
+              {
+                "newvalue": "unassigned",
+                "value": "5"
+              },
+              {
+                "newvalue": "activePending",
+                "value": "6"
+              },
+              {
+                "newvalue": "standbyPending",
+                "value": "7"
+              },
+              {
+                "newvalue": "outOfServicePending",
+                "value": "8"
+              },
+              {
+                "newvalue": "recovery",
+                "value": "9"
+              }
+            ],
+            "name": "Acme_Mapping_Redundancy",
+            "uuid": "6a1e23b9f2e64254aa7f4fab3ed039a2"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

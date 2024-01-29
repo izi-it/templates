@@ -1,0 +1,44 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:40Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Teltonika by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Teltonika equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Teltonika",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Teltonika"
+          }
+        ],
+        "template": "SNMP Teltonika",
+        "templates": [
+          {
+            "name": "SNMP Teltonika system"
+          }
+        ],
+        "uuid": "96d60ece003c4cfd981011051abe0120"
+      }
+    ],
+    "version": "6.0"
+  }
+}

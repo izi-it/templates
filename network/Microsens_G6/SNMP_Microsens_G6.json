@@ -1,0 +1,140 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:50Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Microsens made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Microsens G6",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Microsens G6"
+          }
+        ],
+        "template": "SNMP Microsens G6",
+        "templates": [
+          {
+            "name": "HOST-RESOURCES-MIB CPU SNMP"
+          },
+          {
+            "name": "HOST-RESOURCES-MIB memory SNMP"
+          },
+          {
+            "name": "Network Generic Device SNMP"
+          },
+          {
+            "name": "SNMP Microsens G6 hardware"
+          },
+          {
+            "name": "SNMP Microsens G6 sfp"
+          }
+        ],
+        "uuid": "050a38f79bb343829f5161173a76f094",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "unused",
+                "value": "0"
+              },
+              {
+                "newvalue": "unused",
+                "value": "1"
+              },
+              {
+                "newvalue": "degraded",
+                "value": "2"
+              },
+              {
+                "newvalue": "fail",
+                "value": "3"
+              },
+              {
+                "newvalue": "missing",
+                "value": "4"
+              }
+            ],
+            "name": "Microsens_Fan_Status",
+            "uuid": "bb7eb1c562da45c3a32d1550044b22cb"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "ok",
+                "value": "0"
+              },
+              {
+                "newvalue": "overload",
+                "value": "1"
+              },
+              {
+                "newvalue": "inputLow",
+                "value": "2"
+              },
+              {
+                "newvalue": "fuseFail",
+                "value": "3"
+              },
+              {
+                "newvalue": "notApplicable",
+                "value": "4"
+              },
+              {
+                "newvalue": "unmanaged",
+                "value": "5"
+              },
+              {
+                "newvalue": "notInstalled",
+                "value": "6"
+              }
+            ],
+            "name": "Microsens_Psu_Status",
+            "uuid": "3221e4dc612a46d5ab546be713a66bba"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "empty",
+                "value": "0"
+              },
+              {
+                "newvalue": "inserted",
+                "value": "1"
+              },
+              {
+                "newvalue": "writeProtected",
+                "value": "2"
+              },
+              {
+                "newvalue": "writing",
+                "value": "3"
+              }
+            ],
+            "name": "Microsens_SD_Status",
+            "uuid": "a1608f71636a48c98553bb531c8123a3"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

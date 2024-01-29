@@ -1,0 +1,136 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:31Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Zyxel vpnsamonitor by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Zyxel vpnsamonitor equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Number of in-bound bytes of VPN connection==> [OID:.1.3.6.1.4.1.890.1.6.22.2.6.1.7]",
+                "key": "vpnSaMonitorInBytes[{#SNMPINDEX}]",
+                "name": "VPN {#VPNSAMONITOR_NAME}: Traffic in",
+                "snmp_oid": ".1.3.6.1.4.1.890.1.6.22.2.6.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic in"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "zyxel"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "cd763dd58ddf4c9b95f52e5811e0bcf1",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of out-bound bytes of VPN connection==> [OID:.1.3.6.1.4.1.890.1.6.22.2.6.1.9]",
+                "key": "vpnSaMonitorOutBytes[{#SNMPINDEX}]",
+                "name": "VPN {#VPNSAMONITOR_NAME}: Traffic out",
+                "snmp_oid": ".1.3.6.1.4.1.890.1.6.22.2.6.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic out"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "zyxel"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "a1566df222c64630b24ee7c47a1b594f",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "vpnSaMonitorConnectionName-[{#SNMPVALUE}]",
+            "name": "Zyxel vpnsamonitor",
+            "snmp_oid": "discovery[{#VPNSAMONITOR_NAME},1.3.6.1.4.1.890.1.6.22.2.6.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "e331cd5f5315483f8e2a33e0901aaa84"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Zyxel vpnsamonitor",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Zyxel"
+          }
+        ],
+        "template": "SNMP Zyxel vpnsamonitor",
+        "uuid": "f2f913c3a7fd4ebba2e60ab882e3d5ff",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "inactive",
+                "value": "0"
+              },
+              {
+                "newvalue": "active",
+                "value": "1"
+              }
+            ],
+            "name": "Zyxel_VPN_Active_Status",
+            "uuid": "0d4598b9b25c488f8bdfabf31abfa341"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "disconnected",
+                "value": "0"
+              },
+              {
+                "newvalue": "connected",
+                "value": "1"
+              }
+            ],
+            "name": "Zyxel_VPN_Connect_Status",
+            "uuid": "5d9812f93eb845d38b99b988ca72fa75"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

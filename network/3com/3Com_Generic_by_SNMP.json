@@ -1,0 +1,58 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:26Z",
+    "groups": [
+      {
+        "name": "Templates/IZI-IT",
+        "uuid": "a3002296d8da409584ee71838ac571f4"
+      },
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "3Com Generic by SNMP by IZI-IT",
+        "groups": [
+          {
+            "name": "Templates/IZI-IT"
+          },
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "3Com Generic by SNMP",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "type",
+            "value": "generic"
+          },
+          {
+            "tag": "vendor",
+            "value": "3com"
+          }
+        ],
+        "template": "3Com Generic by SNMP",
+        "templates": [
+          {
+            "name": "3Com Generic CPU by SNMP"
+          },
+          {
+            "name": "Interfaces SNMP"
+          }
+        ],
+        "uuid": "b242f39120d6469ab99da39254caa632"
+      }
+    ],
+    "version": "6.0"
+  }
+}

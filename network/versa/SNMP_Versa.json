@@ -1,0 +1,56 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:58Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Versa by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Versa equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Versa",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "versa"
+          }
+        ],
+        "template": "SNMP Versa",
+        "templates": [
+          {
+            "name": "SNMP Versa appqospolicy"
+          },
+          {
+            "name": "SNMP Versa devices"
+          },
+          {
+            "name": "SNMP Versa ipsec"
+          },
+          {
+            "name": "SNMP Versa qospolicy"
+          },
+          {
+            "name": "SNMP Versa sdwan"
+          }
+        ],
+        "uuid": "6b003d10f08c4a1caabeae60ba4fe357"
+      }
+    ],
+    "version": "6.0"
+  }
+}

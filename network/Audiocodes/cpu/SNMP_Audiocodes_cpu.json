@@ -1,0 +1,99 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:32Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Audiocodes cpu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Audiocodes equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Data Memory Utilization ==> [OID:.1.3.6.1.4.1.5003.9.10.10.2.5.8.0]",
+            "key": "acSysStateDataCpuUtilization",
+            "name": "Data CPU Utilization",
+            "snmp_oid": ".1.3.6.1.4.1.5003.9.10.10.2.5.8.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "data cpu utilization"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Audiocodes"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "62e6258ccf12409d9516f8b8595d8773",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "VoIp CPU Utilization ==> [OID:.1.3.6.1.4.1.5003.9.10.10.2.5.10.0]",
+            "key": "acSysStateVoIpCpuUtilization",
+            "name": "VoIp CPU Utilization",
+            "snmp_oid": ".1.3.6.1.4.1.5003.9.10.10.2.5.10.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Audiocodes"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "7e236ab3716b407295b6e75d42093139",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Audiocodes cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Audiocodes"
+          }
+        ],
+        "template": "SNMP Audiocodes cpu",
+        "uuid": "289a9efed61e4ebd92218db981ce83ca"
+      }
+    ],
+    "version": "6.0"
+  }
+}

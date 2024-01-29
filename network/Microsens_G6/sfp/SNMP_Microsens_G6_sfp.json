@@ -1,0 +1,215 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:51Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Microsens G6 sfp by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Microsens G6 equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "key": "informationLocation[{#SNMPINDEX}]",
+                "name": "SFP Port {#SFP_PORT}: Location",
+                "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.34.100.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "location"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Microsens G6"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "65f6b4c12c8144618a60f8d9f4b093b1",
+                "value_type": "FLOAT"
+              },
+              {
+                "key": "informationRxPower[{#SNMPINDEX}]",
+                "name": "SFP Port {#SFP_PORT}: Input Power",
+                "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.34.100.1.19.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "input power"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Microsens G6"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "b61aaa50e0df4f09a786f4e55f7e354b",
+                "value_type": "FLOAT"
+              },
+              {
+                "key": "informationStatus[{#SNMPINDEX}]",
+                "name": "SFP Port {#SFP_PORT}: State",
+                "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.34.100.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Microsens G6"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0fb9bd58294140c69ab2602c35a88687",
+                "valuemap": {
+                  "name": "MicrosensG6_SFO_Status"
+                }
+              },
+              {
+                "key": "informationTemperature[{#SNMPINDEX}]",
+                "name": "SFP Port {#SFP_PORT}: Temperature",
+                "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.34.100.1.20.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Microsens G6"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "f1f207765db24a1b86879e129f4825bd",
+                "value_type": "FLOAT"
+              },
+              {
+                "key": "informationTxPower[{#SNMPINDEX}]",
+                "name": "SFP Port {#SFP_PORT}: Out Power",
+                "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.34.100.1.18.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "out power"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Microsens G6"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "e5dd3d2ebeb74f08848663cbe2e2e773",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "informationPort-[{#SNMPVALUE}]",
+            "name": "Microsens G6 sfp",
+            "snmp_oid": "discovery[{#SFP_PORT},1.3.6.1.4.1.3181.10.6.1.34.100.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "56df2b13394a489a862f2f626228a937"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Microsens G6 sfp",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "sfp"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Microsens G6"
+          }
+        ],
+        "template": "SNMP Microsens G6 sfp",
+        "uuid": "f3ab18b1997140c081ebb17072300996",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "ok",
+                "value": "0"
+              },
+              {
+                "newvalue": "laserDisabled",
+                "value": "1"
+              },
+              {
+                "newvalue": "lossOfSignal",
+                "value": "2"
+              },
+              {
+                "newvalue": "txFailure",
+                "value": "3"
+              },
+              {
+                "newvalue": "readError",
+                "value": "4"
+              }
+            ],
+            "name": "MicrosensG6_SFO_Status",
+            "uuid": "26299ede50fb40b9b04055e2fec5b9df"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

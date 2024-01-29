@@ -1,0 +1,47 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:45Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Sophos ES by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Sophos ES equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Sophos ES",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Sophos ES"
+          }
+        ],
+        "template": "SNMP Sophos ES",
+        "templates": [
+          {
+            "name": "SNMP Sophos ES hardware"
+          },
+          {
+            "name": "SNMP Sophos ES system"
+          }
+        ],
+        "uuid": "e642cb0fba6d46009b090821b92399e4"
+      }
+    ],
+    "version": "6.0"
+  }
+}

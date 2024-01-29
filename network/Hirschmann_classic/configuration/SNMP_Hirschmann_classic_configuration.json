@@ -1,0 +1,108 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:44Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Hirschmann classic configuration by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck configuration status.",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Status of the local configuration. ok(1): Local and running configuration match. notInSync(2): Local and running configuration don't match, configuration has not yet been saved.\n   ==> [OID:.1.3.6.1.4.1.248.14.2.4.12]",
+            "key": "hmConfigurationStatus",
+            "name": "Configuration status",
+            "snmp_oid": ".1.3.6.1.4.1.248.14.2.4.12",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "configuration status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Hirschmann classic"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "278d287313f84028a30580105758db99",
+            "valuemap": {
+              "name": "Hirschmann_Config_Status"
+            }
+          }
+        ],
+        "name": "SNMP Hirschmann classic configuration",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "configuration"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Hirschmann classic"
+          }
+        ],
+        "template": "SNMP Hirschmann classic configuration",
+        "uuid": "5c390c309acc4d38ae2cc4683ce5ce07",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "ok",
+                "value": "1"
+              },
+              {
+                "newvalue": "outOfSync",
+                "value": "2"
+              },
+              {
+                "newvalue": "busy",
+                "value": "3"
+              }
+            ],
+            "name": "Hirschmannmap_NVM_State",
+            "uuid": "ad725904cc844c3b8ff9952ef3ffb648"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "ok",
+                "value": "1"
+              },
+              {
+                "newvalue": "notInSync",
+                "value": "2"
+              }
+            ],
+            "name": "Hirschmann_Config_Status",
+            "uuid": "e2edf167567542c6aa35926d06baa84f"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

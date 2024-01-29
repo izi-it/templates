@@ -1,0 +1,105 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:42Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Polycom board  by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Polycom rmx board equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check board.",
+            "item_prototypes": [
+              {
+                "description": "BOARD Status",
+                "key": "hardwareIntegratedBoardStatus[{#SNMPINDEX}]",
+                "name": "BOARD {#BOARD}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.13885.110.1.3.4.1.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "polycom rmx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "213eb06878424b9cb1296fa36646759b",
+                "valuemap": {
+                  "name": "Polycom_Hardware_Status"
+                }
+              }
+            ],
+            "key": "polycomhardwareboard-[{#SNMPVALUE}]",
+            "name": "Polycom rmx board",
+            "snmp_oid": "discovery[{#BOARD},1.3.6.1.4.1.13885.110.1.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "0823542bb02240da9ecbf28901a18ff2"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Polycom rmx board",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "board"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "polycom rmx"
+          }
+        ],
+        "template": "SNMP Polycom rmx board",
+        "uuid": "8553a6d3aaef4b619bf6eef032d34c62",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "disabled",
+                "value": "1"
+              },
+              {
+                "newvalue": "ok",
+                "value": "2"
+              },
+              {
+                "newvalue": "failed",
+                "value": "3"
+              }
+            ],
+            "name": "Polycom_Hardware_Status",
+            "uuid": "144ec641463746869ba634f642e05d76"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:47Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Synology disk  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck disk",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The count of each disk I/ O bad sector => [OID:.1.3.6.1.4.1.6574.2.1.1.9]",
+                "history": "0",
+                "key": "diskBadSector[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Bad Sector",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "bad sector"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "031fcecda1ee4e44bfea2195014969a7"
+              },
+              {
+                "description": "Current disk health status => [OID:.1.3.6.1.4.1.6574.2.1.1.13]",
+                "history": "0",
+                "key": "diskHealthStatus[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Health status",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.13.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "health status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "375b7b44693040b1ae168e0bdac3c63a",
+                "valuemap": {
+                  "name": "Synology_Disk_Health"
+                }
+              },
+              {
+                "description": "The estimate remain life of each disk => [OID:.1.3.6.1.4.1.6574.2.1.1.11]",
+                "history": "0",
+                "key": "diskRemainLife[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Remain Life",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "remain life"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "53ce32167a3c491c9a44b51851af7c31"
+              },
+              {
+                "description": "Disk temperature => [OID:.1.3.6.1.4.1.6574.2.1.1.6]",
+                "history": "0",
+                "key": "diskTemperature[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Temperature",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "disk temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "\u00b0C",
+                "uuid": "8c7453ab55cb4253b50e7f1ea4ad9aa1",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Current disk status => [OID:.1.3.6.1.4.1.6574.2.1.1.5]\n\nNormal(1)*",
+                "history": "0",
+                "key": "synoDiskdiskStatus[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "disk status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "184ce71b168140e9a14388a28d860845",
+                "valuemap": {
+                  "name": "Synology_Disk_Status"
+                }
+              }
+            ],
+            "key": "synoDiskdiskName-[{#SNMPVALUE}]",
+            "name": "Synology disk",
+            "snmp_oid": "discovery[{#DISKNAME},1.3.6.1.4.1.6574.2.1.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "aa5e3f0b763a440ca19b9f73db83e06b"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Synology disk",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "disk"
+          },
+          {
+            "tag": "layer",
+            "value": "storage"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Synology"
+          }
+        ],
+        "template": "SNMP Synology disk",
+        "uuid": "959de155f5144aa2a74653cf99941240",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "warning",
+                "value": "2"
+              },
+              {
+                "newvalue": "critical",
+                "value": "3"
+              },
+              {
+                "newvalue": "failing",
+                "value": "4"
+              }
+            ],
+            "name": "Synology_Disk_Health",
+            "uuid": "4a39ef2e9eb34787be30eb267c197903"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "Normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "Initialized",
+                "value": "2"
+              },
+              {
+                "newvalue": "NotInitialized",
+                "value": "3"
+              },
+              {
+                "newvalue": "SystemPartitionFailed",
+                "value": "4"
+              },
+              {
+                "newvalue": "Crashed",
+                "value": "5"
+              }
+            ],
+            "name": "Synology_Disk_Status",
+            "uuid": "27a1bb1cd37340498352e568e3aab878"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

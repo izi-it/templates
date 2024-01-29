@@ -1,0 +1,180 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:49Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "TemplateSNMP Fiberstore memory by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Fiberstore memory equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "key": "memFreePercent",
+            "name": "Free memory in %",
+            "params": "100 * last(//memTotalFree)/last(//memTotalReal)",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "free memory in %"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "fiberstore"
+              }
+            ],
+            "type": "CALCULATED",
+            "units": "%",
+            "uuid": "fe8e0b3b1931499888f05edc3a704f37",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "memTotalFree",
+            "name": "Free memory",
+            "snmp_oid": ".1.3.6.1.4.1.52642.1.1.1.11",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "free memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "fiberstore"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "81cfce74c9ed4a83a4d5fc98606a133f",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "memTotalReal",
+            "name": "Total memory",
+            "snmp_oid": ".1.3.6.1.4.1.52642.1.1.1.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "total memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "fiberstore"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "4a1caa66f1db46fcb75a33ab2eca85e2",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "memUsed",
+            "name": "Used memory",
+            "params": "last(//memTotalReal) - last(//memTotalFree)",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "used memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "fiberstore"
+              }
+            ],
+            "type": "CALCULATED",
+            "units": "KB",
+            "uuid": "c4cf628a654d42aeae41634c6a7d6a7a",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "memUsedPercent",
+            "name": "Used memory in %",
+            "params": "100 - (100 * last(//memTotalFree)/last(//memTotalReal))",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "used memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "fiberstore"
+              }
+            ],
+            "type": "CALCULATED",
+            "units": "%",
+            "uuid": "b6b1e08a73e2495d961d1d8bfcdc9645",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Fiberstore memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Fiberstore"
+          }
+        ],
+        "template": "SNMP Fiberstore memory",
+        "uuid": "28e05d6a2da442fc84688b76d393d4d9"
+      }
+    ],
+    "version": "6.0"
+  }
+}

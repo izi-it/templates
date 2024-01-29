@@ -1,0 +1,61 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:51Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Huawei Switch S5700",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Huawei"
+          }
+        ],
+        "template": "SNMP Huawei Switch S5700",
+        "templates": [
+          {
+            "name": "SNMP Huawei Switch S5700 CPU"
+          },
+          {
+            "name": "SNMP Huawei Switch S5700 Device"
+          },
+          {
+            "name": "SNMP Huawei Switch S5700 Fan"
+          },
+          {
+            "name": "SNMP Huawei Switch S5700 Generic"
+          },
+          {
+            "name": "SNMP Huawei Switch S5700 Memory"
+          },
+          {
+            "name": "SNMP Huawei Switch S5700 Stack Health"
+          },
+          {
+            "name": "SNMP Huawei Switch S5700 Temperature"
+          }
+        ],
+        "uuid": "2f48431ad84947b7a9b7a59f36dc3232"
+      }
+    ],
+    "version": "6.0"
+  }
+}

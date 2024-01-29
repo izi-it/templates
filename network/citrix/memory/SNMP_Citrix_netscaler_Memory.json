@@ -1,0 +1,96 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:52Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "delay": "3m",
+            "key": "memSizeMB",
+            "name": "Memory size",
+            "snmp_oid": ".1.3.6.1.4.1.5951.4.1.1.41.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "citrix"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2aebf5764f2a4fbebc305258ac0fc81d"
+          },
+          {
+            "delay": "3m",
+            "key": "resMemUsage",
+            "name": "Memory usage",
+            "snmp_oid": ".1.3.6.1.4.1.5951.4.1.1.41.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "citrix"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "14f77d6155874bb89976b2d1382c4ad8"
+          }
+        ],
+        "name": "SNMP Citrix netscaler Memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "citrix"
+          }
+        ],
+        "template": "SNMP Citrix netscaler Memory",
+        "uuid": "c271c56d156346d09d46ac24c2d526c0"
+      }
+    ],
+    "version": "6.0"
+  }
+}

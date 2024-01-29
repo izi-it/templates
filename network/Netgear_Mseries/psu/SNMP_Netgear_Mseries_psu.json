@@ -1,0 +1,110 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:48Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Netgear Mseries psu made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "PSU State ==> [OID:.1.3.6.1.4.1.4526.10.43.1.7.1.3]",
+            "key": "boxServicesPowSupplyItemState",
+            "name": "PSU State",
+            "snmp_oid": ".1.3.6.1.4.1.4526.10.43.1.7.1.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "psu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Netgear Mseries"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "0b5a20d3fad14d14b8b9ef21a3116743",
+            "valuemap": {
+              "name": "Netgear_Psu_State"
+            }
+          }
+        ],
+        "name": "SNMP Netgear Mseries psu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "psu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Netgear Mseries"
+          }
+        ],
+        "template": "SNMP Netgear Mseries psu",
+        "uuid": "105b3f20d73d415c8998aadd71f7ea3c",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "notpresent",
+                "value": "1"
+              },
+              {
+                "newvalue": "operational",
+                "value": "2"
+              },
+              {
+                "newvalue": "failed",
+                "value": "3"
+              },
+              {
+                "newvalue": "powering",
+                "value": "4"
+              },
+              {
+                "newvalue": "nopower",
+                "value": "5"
+              },
+              {
+                "newvalue": "notpowering",
+                "value": "6"
+              },
+              {
+                "newvalue": "incompatible",
+                "value": "7"
+              }
+            ],
+            "name": "Netgear_Psu_State",
+            "uuid": "c1cd5ac1cc314317ad1ccc4c58b05dbf"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

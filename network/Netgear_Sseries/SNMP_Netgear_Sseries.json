@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:55Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Netgear Sseries by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Netgear Sseries equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Netgear Sseries",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Netgear Sseries"
+          }
+        ],
+        "template": "SNMP Netgear Sseries",
+        "templates": [
+          {
+            "name": "SNMP Netgear Sseries fan"
+          },
+          {
+            "name": "SNMP Netgear Sseries memory"
+          },
+          {
+            "name": "SNMP Netgear Sseries psu"
+          },
+          {
+            "name": "SNMP Netgear Sseries temperature"
+          }
+        ],
+        "uuid": "62638b1cd6304206a9fe2aa994a1e74f"
+      }
+    ],
+    "version": "6.0"
+  }
+}

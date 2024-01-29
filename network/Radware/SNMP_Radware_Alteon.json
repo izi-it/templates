@@ -1,0 +1,99 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:53Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      },
+      {
+        "name": "Templates/IZI-IT",
+        "uuid": "a3002296d8da409584ee71838ac571f4"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates"
+          },
+          {
+            "name": "Templates/IZI-IT"
+          }
+        ],
+        "name": "SNMP Radware Alteon",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Radware"
+          }
+        ],
+        "template": "SNMP Radware Alteon",
+        "templates": [
+          {
+            "name": "SNMP Radware Alteon CPU"
+          },
+          {
+            "name": "SNMP Radware Alteon Generic"
+          }
+        ],
+        "uuid": "771a0c92497f4a54844e9c9a14aaffb7",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "Up",
+                "value": "0"
+              },
+              {
+                "newvalue": "Down",
+                "value": "1"
+              },
+              {
+                "newvalue": "Admin-Down",
+                "value": "2"
+              },
+              {
+                "newvalue": "Warning",
+                "value": "3"
+              },
+              {
+                "newvalue": "Shutdown",
+                "value": "4"
+              },
+              {
+                "newvalue": "Error",
+                "value": "5"
+              }
+            ],
+            "name": "RADWARE Alteon",
+            "uuid": "bfc45b3a783d4d6aa2eb303b5dac3a4b"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "Down",
+                "value": "0"
+              },
+              {
+                "newvalue": "Up",
+                "value": "1"
+              }
+            ],
+            "name": "Service state",
+            "uuid": "1bad3a33ed704a66b429990cfa9f24eb"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

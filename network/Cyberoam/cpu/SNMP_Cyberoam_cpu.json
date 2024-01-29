@@ -1,0 +1,72 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:51Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Cyberoam cpu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to Check cpu usages Cyberoam equipments",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Check cpu  usage",
+            "key": "cpuPercentUsage",
+            "name": "CPU Percent Usage",
+            "snmp_oid": ".1.3.6.1.4.1.21067.2.1.2.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu percent usage"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "cyberoam"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "3e55d6226c1f4ff98f929487c4c46175",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Cyberoam cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Cyberoam"
+          }
+        ],
+        "template": "SNMP Cyberoam cpu",
+        "uuid": "6608c36f01dc4fea8abe7819a04444e8"
+      }
+    ],
+    "version": "6.0"
+  }
+}

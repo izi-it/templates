@@ -1,0 +1,123 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:43Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket psu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The current state of the power supply being instrumented: normal or notPresent\n => [ OID:1.3.6.1.4.1.9148.3.3.1.5.1.1.4]",
+                "key": "apEnvMonPowerSupplyState[{#SNMPINDEX}]",
+                "name": "{#PSU}: PSU State",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.3.1.5.1.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "ba66c9b756ff4b478beede188c233d5f",
+                "valuemap": {
+                  "name": "Acmepacket_PSU_Status"
+                }
+              }
+            ],
+            "key": "apEnvMonPowerSupplyStatusDescr-[{#SNMPVALUE}]",
+            "name": "Acmepacket psu",
+            "snmp_oid": "discovery[{#PSU},1.3.6.1.4.1.9148.3.3.1.5.1.1.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "27e4b8f46a13427cb15fb71ee98ee718"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Acmepacket psu",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP Acmepacket psu",
+        "uuid": "74360e73fed74bf4ba42e38ecbef47df",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "initial",
+                "value": "1"
+              },
+              {
+                "newvalue": "normal",
+                "value": "2"
+              },
+              {
+                "newvalue": "minor",
+                "value": "3"
+              },
+              {
+                "newvalue": "major",
+                "value": "4"
+              },
+              {
+                "newvalue": "critical",
+                "value": "5"
+              },
+              {
+                "newvalue": "shutdown",
+                "value": "6"
+              },
+              {
+                "newvalue": "notPresent",
+                "value": "7"
+              },
+              {
+                "newvalue": "notFunctioning",
+                "value": "8"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "9"
+              }
+            ],
+            "name": "Acmepacket_PSU_Status",
+            "uuid": "3c9bc2a8ef1e4f24b6c03a3f039c0519"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

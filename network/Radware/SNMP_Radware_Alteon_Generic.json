@@ -1,0 +1,1537 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:41Z",
+    "graphs": [
+      {
+        "graph_items": [
+          {
+            "color": "1A7C11",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "MpMemStatsFree"
+            }
+          },
+          {
+            "color": "F63100",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "MpMemStatsTotal"
+            },
+            "sortorder": "1"
+          }
+        ],
+        "name": "Memory Usage",
+        "uuid": "46796f991d4647d1b70e7e88db3fce6b"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "1A7C11",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "mpCpuStatsUtil1Second"
+            }
+          },
+          {
+            "color": "F63100",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "mpCpuStatsUtil4Seconds"
+            },
+            "sortorder": "1"
+          },
+          {
+            "color": "2774A4",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "mpCpuStatsUtil64Seconds"
+            },
+            "sortorder": "2"
+          }
+        ],
+        "name": "MP CPU Utilization",
+        "uuid": "69db17942dbb43bf8bd54d05e1da7c6d"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "1A7C11",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "slbStatSpMaintCurBindings"
+            }
+          },
+          {
+            "color": "F63100",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "slbStatMaintCurBindings4Seconds"
+            },
+            "sortorder": "1"
+          },
+          {
+            "color": "2774A4",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "slbStatMaintCurBindings64"
+            },
+            "sortorder": "2"
+          }
+        ],
+        "name": "Sessions",
+        "uuid": "704f13ebb8db49258100eb973fe8049e"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "1A7C11",
+            "drawtype": "FILLED_REGION",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "MeanThroughputUsage"
+            }
+          },
+          {
+            "color": "F63100",
+            "item": {
+              "host": "SNMP Radware Alteon Generic",
+              "key": "SNMP-Throughput-bps"
+            },
+            "sortorder": "1"
+          }
+        ],
+        "name": "Throughput (bps)",
+        "uuid": "794a39d24b9c4351b1d54ed4e17f1797"
+      }
+    ],
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      },
+      {
+        "name": "Templates/IZI-IT",
+        "uuid": "a3002296d8da409584ee71838ac571f4"
+      }
+    ],
+    "templates": [
+      {
+        "discovery_rules": [
+          {
+            "delay": "30m",
+            "filter": {
+              "conditions": [
+                {
+                  "formulaid": "A",
+                  "macro": "{#VIP}",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "value": "{$VIP_EXCLUDED}"
+                }
+              ]
+            },
+            "item_prototypes": [
+              {
+                "delay": "3m",
+                "description": "(0)Up, (1)Down, (2)Admin-Down,\n(3)Warning, (4)Shutdown, (5)Error",
+                "key": "rad.vip.status.https.[{#VIP}]",
+                "name": "{#VIP}",
+                "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.3.21.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "VIP"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Radware"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])=5",
+                    "manual_close": "YES",
+                    "name": "{#VIP} error",
+                    "priority": "WARNING",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])<>5",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "4d7f466309c6479fa84ba2f9ec8d8f8b"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])=1",
+                    "manual_close": "YES",
+                    "name": "{#VIP} is down - HTTPS unavailable",
+                    "priority": "HIGH",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])<>1",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "f7e791d9894e4841b9d8b343037862ea"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])=2 or last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])=4",
+                    "manual_close": "YES",
+                    "name": "{#VIP} port has been put down by admin",
+                    "priority": "INFO",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "62448f2d45cb43b887005b694dad39e3"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])=3",
+                    "manual_close": "YES",
+                    "name": "{#VIP} warning",
+                    "priority": "AVERAGE",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.https.[{#VIP}])<>3",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "0133b8bb38b74f3c88a30e7d6aba1ddb"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "addf3fb48dc041cc9eb330ee8cb3dbd7",
+                "valuemap": {
+                  "name": "RADWARE Alteon"
+                }
+              }
+            ],
+            "key": "ViphttpsTableIndex",
+            "name": "HTTPS VIP discovery",
+            "snmp_oid": "discovery[{#VIP},.1.3.6.1.4.1.1872.2.5.4.3.21.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "92cd0476d459485ab5589e1fb58b820c"
+          },
+          {
+            "delay": "30m",
+            "filter": {
+              "conditions": [
+                {
+                  "formulaid": "A",
+                  "macro": "{#VIP}",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "value": "{$VIP_EXCLUDED}"
+                }
+              ]
+            },
+            "item_prototypes": [
+              {
+                "delay": "3m",
+                "description": "(0)Up, (1)Down, (2)Admin-Down,\n(3)Warning, (4)Shutdown, (5)Error",
+                "key": "rad.vip.http.status.[{#VIP}]",
+                "name": "{#VIP}",
+                "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.2.19.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "VIP"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Radware"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])=5",
+                    "manual_close": "YES",
+                    "name": "{#VIP} error",
+                    "priority": "WARNING",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])<>5",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "7bee6859d5814e33bbd8b5b25b1d310f"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])=1",
+                    "manual_close": "YES",
+                    "name": "{#VIP} is down - HTTP unavailable",
+                    "priority": "HIGH",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])<>1",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "b2a35196f1fb4ce2adb39c9a0fe99c3b"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])=2 or last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])=4",
+                    "manual_close": "YES",
+                    "name": "{#VIP} port has been put down by admin",
+                    "priority": "INFO",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "afbddea64e8840d0ba0f7475462b510e"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])=3",
+                    "manual_close": "YES",
+                    "name": "{#VIP} warning",
+                    "priority": "AVERAGE",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.http.status.[{#VIP}])<>3",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "7adda8f9c3b74d97965b3be91728176b"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9d55a97086154cd89a11e3806c6d1cb8",
+                "valuemap": {
+                  "name": "RADWARE Alteon"
+                }
+              }
+            ],
+            "key": "ViphttpTableIndex",
+            "name": "HTTP VIP discovery",
+            "snmp_oid": "discovery[{#VIP},.1.3.6.1.4.1.1872.2.5.4.2.19.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "e21e6ff0bc8848dbac6804c66b53bf63"
+          },
+          {
+            "delay": "30m",
+            "filter": {
+              "conditions": [
+                {
+                  "formulaid": "A",
+                  "macro": "{#VIP}",
+                  "value": "{$VIP_EXCLUDED}"
+                },
+                {
+                  "formulaid": "B",
+                  "macro": "{#VIP}",
+                  "value": "{$VIP_STD_EXCLUDED}"
+                }
+              ]
+            },
+            "item_prototypes": [
+              {
+                "description": "(0)Up, (1)Down, (2)Admin-Down,\n(3)Warning, (4)Shutdown, (5)Error",
+                "key": "radware.vip.status.[{#VIP}]",
+                "name": "{#VIP}",
+                "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.3.21.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "VIP"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Radware"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])=5",
+                    "manual_close": "YES",
+                    "name": "{#VIP} error",
+                    "priority": "WARNING",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])<>5",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "bb17dbe1b223463fa4a8d64370921b46"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])=1",
+                    "manual_close": "YES",
+                    "name": "{#VIP} is down",
+                    "priority": "HIGH",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])<>1",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "797ddab6fe1a418194c9c01a66b1ea4e"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])=2 or last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])=4",
+                    "manual_close": "YES",
+                    "name": "{#VIP} port has been put down by admin",
+                    "priority": "INFO",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "e6a30ff0e93e4aa0954164e9848049de"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])=3",
+                    "manual_close": "YES",
+                    "name": "{#VIP} warning",
+                    "priority": "AVERAGE",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/radware.vip.status.[{#VIP}])<>3",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "c8413a8cf013448bb35b76ebefea66be"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "8673d848cabb4de49e2edb917ddb8ca6",
+                "valuemap": {
+                  "name": "RADWARE Alteon"
+                }
+              }
+            ],
+            "key": "VipIndex",
+            "name": "VIP discovery",
+            "snmp_oid": "discovery[{#VIP},.1.3.6.1.4.1.1872.2.5.4.3.21.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "54db57d893384899bcb296c40f99d530"
+          },
+          {
+            "delay": "30m",
+            "filter": {
+              "conditions": [
+                {
+                  "formulaid": "A",
+                  "macro": "{#VIP}",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "value": "{$VIP_EXCLUDED}"
+                }
+              ]
+            },
+            "item_prototypes": [
+              {
+                "delay": "3m",
+                "description": "(0)Up, (1)Down, (2)Admin-Down,\n(3)Warning, (4)Shutdown, (5)Error",
+                "key": "rad.vip.status.sftp.[{#VIP}]",
+                "name": "{#VIP}",
+                "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.3.21.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "VIP"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Radware"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])=5",
+                    "manual_close": "YES",
+                    "name": "{#VIP} error",
+                    "priority": "WARNING",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])<>5",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "7adc2803b38e4cdcb8557d33d95ee198"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])=1",
+                    "manual_close": "YES",
+                    "name": "{#VIP} is down - SFTP unavailable",
+                    "priority": "HIGH",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])<>1",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "5da1e942d95345309c852aacc492d74d"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])=2 or last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])=4",
+                    "manual_close": "YES",
+                    "name": "{#VIP} port has been put down by admin",
+                    "priority": "INFO",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "334b0d84a620404ba9b1f098a01633d5"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])=3",
+                    "manual_close": "YES",
+                    "name": "{#VIP} warning",
+                    "priority": "AVERAGE",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.status.sftp.[{#VIP}])<>3",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "b516f9d303754e34bd037807b45fc882"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "e09436f9a1a34416bc7db6fb471abdef",
+                "valuemap": {
+                  "name": "RADWARE Alteon"
+                }
+              }
+            ],
+            "key": "VipsftpTableIndex",
+            "name": "SFTP VIP discovery",
+            "snmp_oid": "discovery[{#VIP},.1.3.6.1.4.1.1872.2.5.4.3.21.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "665e32fb397044c9b1e7f6d9df9e1402"
+          },
+          {
+            "delay": "30m",
+            "filter": {
+              "conditions": [
+                {
+                  "formulaid": "A",
+                  "macro": "{#VIP}",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "value": "{$VIP_EXCLUDED}"
+                }
+              ]
+            },
+            "item_prototypes": [
+              {
+                "description": "(0)Up, (1)Down, (2)Admin-Down,\n(3)Warning, (4)Shutdown, (5)Error",
+                "key": "rad.vip.xmpps.status.[{#VIP}]",
+                "name": "{#VIP}",
+                "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.3.21.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "VIP"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Radware"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])=5",
+                    "manual_close": "YES",
+                    "name": "{#VIP} error",
+                    "priority": "WARNING",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])<>5",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "1eb2fcf750944007aa98adb389c0d978"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])=1",
+                    "manual_close": "YES",
+                    "name": "{#VIP} is down - XMPP not available",
+                    "priority": "HIGH",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])<>1",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "8c65279b7c7e42de8169daeb3d0104a4"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])=2 or last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])=4",
+                    "manual_close": "YES",
+                    "name": "{#VIP} port has been put down by admin",
+                    "priority": "INFO",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "2978ae4bfe554cd388b03b23a997bd57"
+                  },
+                  {
+                    "expression": "last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])=3",
+                    "manual_close": "YES",
+                    "name": "{#VIP} warning",
+                    "priority": "AVERAGE",
+                    "recovery_expression": "last(/SNMP Radware Alteon Generic/rad.vip.xmpps.status.[{#VIP}])<>3",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "VIP"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Radware"
+                      }
+                    ],
+                    "uuid": "f7e3d6152cb34abaa50c471380eb0892"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "36145b7263504fa29cb9147b65a0df67",
+                "valuemap": {
+                  "name": "RADWARE Alteon"
+                }
+              }
+            ],
+            "key": "VipxmppsTableIndex",
+            "name": "XMPPS VIP discovery",
+            "snmp_oid": "discovery[{#VIP},.1.3.6.1.4.1.1872.2.5.4.3.21.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "79d30a4fc27144f786d8e0e59ce704ab"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          },
+          {
+            "name": "Templates/IZI-IT"
+          }
+        ],
+        "items": [
+          {
+            "delay": "3m",
+            "key": "agActiveImageName",
+            "name": "System current image version",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.1.1.92.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "System information"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "979253e66d26429d85ceb366f133574f",
+            "value_type": "TEXT"
+          },
+          {
+            "delay": "3m",
+            "key": "agSwitchUpTime",
+            "name": "System uptime",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.3.11.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "System information"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "5a93512987154b2f929defaac48e4f54",
+            "value_type": "TEXT"
+          },
+          {
+            "delay": "3m",
+            "key": "altSwSlbSessAttac",
+            "name": "SLB attack has been detected",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.7.0.23",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "System information"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "6581dc9581ec47d9869e5da9987336d7"
+          },
+          {
+            "delay": "3m",
+            "key": "altSwSlbSynAttack",
+            "name": "SYN attack has been detected",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.7.0.20",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "System information"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "eb2c9f57c40d4a91b4d06140b6137f23"
+          },
+          {
+            "delay": "3m",
+            "key": "haCurCfgMode",
+            "name": "System HA mode",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.3.1.21.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "HA Status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9538c8ce75b94746b336245cd25dabda"
+          },
+          {
+            "delay": "3m",
+            "description": "Init/Backup/Master/Holdoff",
+            "key": "haSwitchInfoState",
+            "name": "High availability status",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.3.3.14.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "HA Status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "47764d45c7c94d59827575cf4e1ff40f",
+            "value_type": "TEXT"
+          },
+          {
+            "delay": "3m",
+            "key": "icmpping[{HOST.IP}]",
+            "name": "Switch status",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "System information"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "triggers": [
+              {
+                "expression": "last(/SNMP Radware Alteon Generic/icmpping[{HOST.IP}])=0",
+                "manual_close": "YES",
+                "name": "{HOST.HOST} is down",
+                "priority": "DISASTER",
+                "recovery_expression": "last(/SNMP Radware Alteon Generic/icmpping[{HOST.IP}])=1",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "System information"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Radware"
+                  }
+                ],
+                "uuid": "86a52920855943089dfb60ef01d8dddc"
+              }
+            ],
+            "type": "SIMPLE",
+            "uuid": "67f2f6849aa845238d0c585dbd3d0bb7"
+          },
+          {
+            "delay": "3m",
+            "key": "MeanThroughputUsage",
+            "name": "Mean throughput of ports in bits per second",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.12.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Throughput Usage"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "bps",
+            "uuid": "aa9aabb1fa8740d7a3a1999d4f935d61"
+          },
+          {
+            "delay": "3m",
+            "key": "mpCpuStatsUtil1Second",
+            "name": "MP CPU utilization over 1 sec",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "CPU"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "afec407b624f4003a95499c147dda44c"
+          },
+          {
+            "delay": "3m",
+            "key": "mpCpuStatsUtil4Seconds",
+            "name": "MP CPU utilization over 4 sec",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.2.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "CPU"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "78fd530e07d5403180d50fe3ffcfb005"
+          },
+          {
+            "delay": "3m",
+            "key": "mpCpuStatsUtil64Seconds",
+            "name": "MP CPU utilization over 64 sec",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.2.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "CPU"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "39da4a65427544daa8dc39bcea5e1f63"
+          },
+          {
+            "delay": "3m",
+            "key": "MpMemStatsFree",
+            "name": "System Memory stats - Free",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.8.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "Mb",
+            "uuid": "cb8149570af5475db6d179349176ab7e"
+          },
+          {
+            "delay": "3m",
+            "key": "MpMemStatsTotal",
+            "name": "System Memory stats  \u2013 total",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.8.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "Mb",
+            "uuid": "34607dd2d1f64305848e3dcf3fbae4a2"
+          },
+          {
+            "delay": "3m",
+            "key": "slbStatMaintCurBindings4Seconds",
+            "name": "The Current Number of session in the  session table in the last 4 seconds",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.2.5.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Session Utilization"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "98369d37876c46a491c3ded2879b3544"
+          },
+          {
+            "delay": "3m",
+            "key": "slbStatMaintCurBindings64",
+            "name": "The Current Number of session in the  session table in the last 64 seconds",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.2.5.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Session Utilization"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a21b2ec6fc59419fb1100f4ea388d020"
+          },
+          {
+            "delay": "3m",
+            "key": "slbStatSpMaintCurBindings",
+            "name": "The Current Number of session in the  session table",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.4.2.5.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Session Utilization"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "0dd662c1d4f0407cbeec2e7977e7eb7e"
+          },
+          {
+            "delay": "3m",
+            "description": "Peak throughput of ports in bits per second",
+            "key": "SNMP-Throughput-bps",
+            "name": "Peak throughput of ports in bits per second",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.12.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Throughput Usage"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "bps",
+            "uuid": "de6cc996904649a79273c8e136714cbd"
+          },
+          {
+            "delay": "3m",
+            "description": "spStatsCpuUtil4Seconds",
+            "key": "spStatsCpuUtil1Seconds",
+            "name": "SP CPU utilization over 1 sec",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.2.4.1.1.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "CPU"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "fa96895f7f4e421b9d297d77221465b1"
+          },
+          {
+            "delay": "3m",
+            "key": "switchCapSLBSessionsCurrEnt",
+            "name": "Current number of entries for  SLB sessions in  device",
+            "snmp_oid": ".1.3.6.1.4.1.1872.2.5.1.3.9.3.44.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Session Utilization"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Radware"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f6619e40b8774c57ae6a7a3681a3a642"
+          }
+        ],
+        "macros": [
+          {
+            "description": "VIP \u00e0 exclure de la d\u00e9couverte",
+            "macro": "{$VIP_EXCLUDED}",
+            "value": "TEST|test|TST|tst"
+          },
+          {
+            "description": "VIP standards \u00e0 exclure de la d\u00e9couverte",
+            "macro": "{$VIP_STD_EXCLUDED}",
+            "value": "_HTTPS|_https|_HTTP|_http|_SFTP|_sftp|_XMPPS|_xmppw"
+          }
+        ],
+        "name": "SNMP Radware Alteon Generic",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Radware"
+          }
+        ],
+        "template": "SNMP Radware Alteon Generic",
+        "uuid": "05a8c1c7f75f4ac2b0d9436197a5c349",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "Up",
+                "value": "0"
+              },
+              {
+                "newvalue": "Down",
+                "value": "1"
+              },
+              {
+                "newvalue": "Admin-Down",
+                "value": "2"
+              },
+              {
+                "newvalue": "Warning",
+                "value": "3"
+              },
+              {
+                "newvalue": "Shutdown",
+                "value": "4"
+              },
+              {
+                "newvalue": "Error",
+                "value": "5"
+              }
+            ],
+            "name": "RADWARE Alteon",
+            "uuid": "2fc49df36be14d1997d96a52a9b1d1ab"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "Down",
+                "value": "0"
+              },
+              {
+                "newvalue": "Up",
+                "value": "1"
+              }
+            ],
+            "name": "Service state",
+            "uuid": "00ed69edce434d69ab4c447a06b7b6ca"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

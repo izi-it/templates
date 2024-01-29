@@ -1,0 +1,169 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:31Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Perle ids temperature by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Perle ids temperature  equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check temperature.",
+            "item_prototypes": [
+              {
+                "key": "perleEnvMonTemperatureState[{#SNMPINDEX}]",
+                "name": "Temperature {#SENSOR}: State",
+                "snmp_oid": ".1.3.6.1.4.1.1966.22.12.1.2.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "perle ids"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "59405cc878e8470aaf5b644224902894",
+                "valuemap": {
+                  "name": "Perle_Ids_status"
+                }
+              },
+              {
+                "key": "perleEnvMonTemperatureStatusDescr[{#SNMPINDEX}]",
+                "name": "Temperature {#SENSOR}: Description",
+                "snmp_oid": ".1.3.6.1.4.1.1966.22.12.1.2.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "perle ids"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "cec3864dc7a54931a2752c01de43ac7e"
+              },
+              {
+                "key": "perleEnvMonTemperatureStatusValue[{#SNMPINDEX}]",
+                "name": "Temperature {#SENSOR}: Current temperature",
+                "snmp_oid": ".1.3.6.1.4.1.1966.22.12.1.2.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Perle ids"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "79e97453783948588fac3cf7eefe60e4",
+                "valuemap": {
+                  "name": "Perle_Ids_status"
+                }
+              }
+            ],
+            "key": "perleEnvMonTemperatureStatusEntry-[{#SNMPVALUE}]",
+            "name": "Perle Ids Temperature",
+            "snmp_oid": "discovery[{#SENSOR},1.3.6.1.4.1.1966.22.12.1.2.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "ff8ba806be904b39ac097167ee99f04d"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Perle ids temperature",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "temperature"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "perle ids"
+          }
+        ],
+        "template": "SNMP Perle ids temperature",
+        "uuid": "9a9365de0b3342c08a0dea5a027fae5b",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "warning",
+                "value": "2"
+              },
+              {
+                "newvalue": "critical",
+                "value": "3"
+              },
+              {
+                "newvalue": "shutdown",
+                "value": "4"
+              },
+              {
+                "newvalue": "notPresent",
+                "value": "5"
+              },
+              {
+                "newvalue": "notFunctioning",
+                "value": "6"
+              }
+            ],
+            "name": "Perle_Ids_status",
+            "uuid": "ad212c570a7e46c9abfd33283882e8e5"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

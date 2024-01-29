@@ -1,0 +1,301 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:49Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Nutanix by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Nutanix vmusage equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Average latency ==> [ OID:.1.3.6.1.4.1.41263.10.1.12]",
+                "key": "vmAverageLatency[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Average latency",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.12.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "average latency"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9f4f8707a6444a9a8a815970d686423b",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "CPU Usage percentage ==> [ OID:.1.3.6.1.4.1.41263.10.1.7]",
+                "key": "vmCpuUsagePercent[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: CPU Usage",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu usage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "1a1d3d5d690a4c2d9243782131ca5ce1",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Memory usage percentage of the VM ==> [ OID:.1.3.6.1.4.1.41263.10.1.9]",
+                "key": "vmMemoryUsagePercent[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Memory Usage",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "memory usage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "ec59c677333d462298e4271b02faf8d5",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Available memory  ==> [ OID:.1.3.6.1.4.1.41263.10.1.8]",
+                "key": "vmMemory[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Available Memory",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "available memory"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "8378842d86064de39b02700de586686e"
+              },
+              {
+                "description": "Power state of the VM==> [ OID:.1.3.6.1.4.1.41263.10.1.5]",
+                "key": "vmPowerState[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Power state of the VM",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "power state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "efd678dacacc4b17a3512cc5f49ad487",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Number of read io operations served per second on  this vm ==> [ OID:.1.3.6.1.4.1.41263.10.1.10]",
+                "key": "vmReadIOPerSecond[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Number of read io operations",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vmReadIOPerSecond"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "804bbf1b12ea4926887957d5636a14b9"
+              },
+              {
+                "description": "Total number of bytes received on the vm ==> [ OID:.1.3.6.1.4.1.41263.10.1.14]",
+                "key": "vmRxBytes[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Total number of bytes received",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.14.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "number of bytes received"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "7e155c5b4e3740ccb3372d3ffa8718e6",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Total number of bytes transmitted from the vm ==> [ OID:.1.3.6.1.4.1.41263.10.1.15]",
+                "key": "vmTxBytes[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Total number of bytes transmitted",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.15.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "number of bytes transmitted"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "8533ea778f0948c1b61b91aa6edbdcf3",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of write io operations served per second on  this vm ==> [ OID:.1.3.6.1.4.1.41263.10.1.11]",
+                "key": "vmWriteIOPerSecond[{#SNMPINDEX}]",
+                "name": "{#VM_NAME}: Number of write io operations",
+                "snmp_oid": ".1.3.6.1.4.1.41263.10.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vmWriteIOPerSecond"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "18847be8bee14af79d035fe2e00a5318"
+              }
+            ],
+            "key": "vmName-[{#SNMPVALUE}]",
+            "name": "Nutanix vmusage",
+            "snmp_oid": "discovery[{#VM_NAME},1.3.6.1.4.1.41263.10.1.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "934cbd3dbc60486e8cb960523acc474a"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Nutanix vmusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "vmusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Nutanix"
+          }
+        ],
+        "template": "SNMP Nutanix vmusage",
+        "uuid": "2ca63df85bad4f78aa8eebd63084e13d"
+      }
+    ],
+    "version": "6.0"
+  }
+}

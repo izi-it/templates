@@ -1,0 +1,123 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:44Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Meru alarms made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "This object describes Critical Alarms Count ==> [OID:.1.3.6.1.4.1.15983.1.1.3.1.13.16]",
+            "key": "mwSystemGeneralTotalCritAlarms",
+            "name": "Critical Alarms Count",
+            "snmp_oid": ".1.3.6.1.4.1.15983.1.1.3.1.13.16",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "critical-alarms"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "meru"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "064449db6c2446df8ebcdf8e4bb8c00d"
+          },
+          {
+            "description": "This object describes Major Alarms Count ==> [OID:.1.3.6.1.4.1.15983.1.1.3.1.13.17]",
+            "key": "mwSystemGeneralTotalMajorAlarms",
+            "name": "Major Alarms Count",
+            "snmp_oid": ".1.3.6.1.4.1.15983.1.1.3.1.13.17",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "major-alarms"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "meru"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "874450c991be4600900736f3b5598777"
+          },
+          {
+            "description": "This object describes Minor Alarms Count ==> [OID:.1.3.6.1.4.1.15983.1.1.3.1.13.18]",
+            "key": "mwSystemGeneralTotalMinorAlarms",
+            "name": "Minor Alarms Count",
+            "snmp_oid": ".1.3.6.1.4.1.15983.1.1.3.1.13.18",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "minor-alarms"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "meru"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8bd8bcfbb5b44cd0af682b3219780997"
+          }
+        ],
+        "name": "SNMP Meru alarms",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "alarms"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Meru"
+          }
+        ],
+        "template": "SNMP Meru alarms",
+        "uuid": "f1efb8a3da644738ba2ad56f443a0062"
+      }
+    ],
+    "version": "6.0"
+  }
+}

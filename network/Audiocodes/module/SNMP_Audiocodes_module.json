@@ -1,0 +1,163 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:37Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Audiocodes module by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Audiocodes equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Field Replace Unit module's status. AC INI-Param: N/A\n ==> [ OID:.1.3.6.1.4.1.5003.9.10.10.4.21.1.14]",
+                "key": "acSysModuleFRUstatus[{#SNMPINDEX}]",
+                "name": "Module {#MODULE_INDEX}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.5003.9.10.10.4.21.1.14.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "module status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "4a74d4a35d244805983019a8bcd9d818",
+                "valuemap": {
+                  "name": "Audiocodes_Module_Status"
+                }
+              },
+              {
+                "description": "Is the module present or missing. AC INI-Param: N/A ==> [ OID:1.3.6.1.4.1.5003.9.10.10.4.21.1.4]",
+                "key": "acSysModulePresence[{#SNMPINDEX}]",
+                "name": "Module {#MODULE_INDEX}: Existence",
+                "snmp_oid": ".1.3.6.1.4.1.5003.9.10.10.4.21.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "module presence"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "a41ed21b51c1432bb777146b454f93ad",
+                "valuemap": {
+                  "name": "Audiocodes_Module_Existence"
+                }
+              }
+            ],
+            "key": "acSysModuleIndex-[{#SNMPVALUE}]",
+            "name": "Audiocodes module",
+            "snmp_oid": "discovery[{#MODULE_INDEX},1.3.6.1.4.1.5003.9.10.10.4.21.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "5a788e4b99d7451daa267e9202d8d1c7"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Audiocodes module",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "module"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Audiocodes"
+          }
+        ],
+        "template": "SNMP Audiocodes module",
+        "uuid": "ac0bd8f8f1bd4c1080925201c64283d8",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "present",
+                "value": "1"
+              },
+              {
+                "newvalue": "missing",
+                "value": "2"
+              }
+            ],
+            "name": "Audiocodes_Module_Existence",
+            "uuid": "64c9881208a747e59416f65a466ffe86"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "moduleNotExist",
+                "value": "1"
+              },
+              {
+                "newvalue": "moduleExistOk",
+                "value": "2"
+              },
+              {
+                "newvalue": "moduleOutOfService",
+                "value": "3"
+              },
+              {
+                "newvalue": "moduleBackToServiceStart",
+                "value": "4"
+              },
+              {
+                "newvalue": "moduleMismatch",
+                "value": "5"
+              },
+              {
+                "newvalue": "moduleFaulty",
+                "value": "6"
+              },
+              {
+                "newvalue": "notApplicable",
+                "value": "7"
+              }
+            ],
+            "name": "Audiocodes_Module_Status",
+            "uuid": "41dae3c05d914ef5a4720a314a25806e"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

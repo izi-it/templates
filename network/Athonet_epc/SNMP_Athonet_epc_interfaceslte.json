@@ -1,0 +1,494 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:47Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Athonet epc interfaceslte by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Athonet epc equipments using SNMP protocol\n\nCheck lte interfaces.",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Percentage of succesfull PDN context activation => [OID:1.3.6.1.4.1.35805.10.2.2.99.1.15]",
+                "key": "iLteActivatedPDNContext[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Percentage of succesfull PDN context activation",
+                "snmp_oid": "1.3.6.1.4.1.35805.10.2.2.99.1.15.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "pdn context success"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "16e46797545c4219a751bb77536a9070",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of active sessions from users => [OID:.1.3.6.1.4.1.35805.10.2.2.99.1.9]",
+                "key": "iLteActiveSessions[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of active sessions from users",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "sessions active"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "ce7a4c6392284e709ca157c136ec8e1e"
+              },
+              {
+                "description": "Number of connected users=>[OID:.1.3.6.1.4.1.35805.10.2.2.99.1.7]",
+                "key": "iLteConnectedUsers[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of connected users",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "users connected"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "af4ded6082df4598957c921e199a0c25"
+              },
+              {
+                "description": "Number of idle users => [OID:.1.3.6.1.4.1.35805.10.2.2.99.1.8]",
+                "key": "iLteIdleUsers[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of idle users",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "users idle"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bda84ea98a7e44ef9c03ea8fddd10715"
+              },
+              {
+                "description": "Incoming traffic going through the interface =>[OID:.1.3.6.1.4.1.35805.10.2.2.99.1.5]",
+                "key": "iLteLoadPktIn[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Incoming traffic",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic in"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B/s",
+                "uuid": "c0473942d0ac49248e1c0584c9769a4e",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Outgoing traffic going through the interface =>[OID:.1.3.6.1.4.1.35805.10.2.2.99.1.6]",
+                "key": "iLteLoadPktOut[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Outgoing traffic",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic out"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B/s",
+                "uuid": "e8d672c958944b1ba4e691a1158fabfd",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of PDN Context reject with cause 'Insufficent Resources'=>[OID:.1.3.6.1.4.1.35805.10.2.2.99.1.25",
+                "key": "iLtePDNRejInsufRes[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of PDN Context reject - Insufficent Resources",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.25.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "pdn rej insuf res"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "2be015d6fefb49e3ab0f13d51640de19"
+              },
+              {
+                "description": "Number of PDN Context reject with cause 'Missing or unknown APN'\n =>[OID:.1.3.6.1.4.1.35805.10.2.2.99.1.26]",
+                "key": "iLtePDNRejNoApn[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of PDN Context reject - Missing or unknown APN",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "pdn rej no apn"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "f09dd4b0585540388f6180dd2d3f5f63"
+              },
+              {
+                "description": "Number of PDN Context reject with cause 'Request service option not subscribed'  => [OID:.1.3.6.1.4.1.35805.10.2.2.99.1.27]",
+                "key": "iLtePDNRejNoSubscribed[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of PDN Context reject - Request service option not subscribe",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.27.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "pdn rej no sub"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "ca7de64ff89d415bbe6ede2fdaf1b12d"
+              },
+              {
+                "description": "S1AP Status=> [ OID:.1.3.6.1.4.1.35805.10.2.2.99.1.4]",
+                "key": "iLteS1APState[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: S1AP Status",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "s1ap status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "eb15c45245c44f2d8b2e1dd0452f8a24",
+                "valuemap": {
+                  "name": "Athonet_Epc_Status"
+                }
+              },
+              {
+                "description": "SCTP status => [ OID:.1.3.6.1.4.1.35805.10.2.2.99.1.3]",
+                "key": "iLteSCTPState[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: SCTP Status",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "sctp status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "faa96cecaa5f43e7b9a9a5a4f3307dcb",
+                "valuemap": {
+                  "name": "Athonet_Epc_Status"
+                }
+              },
+              {
+                "description": "Number of succesfull attach request\n =>[OID:.1.3.6.1.4.1.35805.10.2.2.99.1.12]",
+                "key": "iLteSuccesfullAttach[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of succesfull attach request",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.12.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "attach req success"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "121aca0ecf5241848d09b1562a5fac3b"
+              },
+              {
+                "description": "Number of attach request\n =>[OID:.1.3.6.1.4.1.35805.10.2.2.99.1.11]",
+                "key": "iLteTotalAttachReq[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of attach request",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "attach req total"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "678f890498914ede970984d265016984"
+              },
+              {
+                "description": "Number of succesfull PDN context activation=> [OID:.1.3.6.1.4.1.35805.10.2.2.99.1.14]",
+                "key": "iLteTotalPDNActReq[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of succesfull PDN context activation",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.14.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "iLteTotalPDNActReq"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "fdbf354ad20f446d876bebf38d04103e"
+              },
+              {
+                "description": "Number of UE context request release with cause 'Radio Connection with UE lost =>[OID:'.1.3.6.1.4.1.35805.10.2.2.99.1.24]",
+                "key": "iLteUERelReqRadioLost[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of UE context request release - Radio Connection with UE lost",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.24.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "ue release req radio lost"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "141f1b7bbd2c466db88bc0cc5fe036a7"
+              },
+              {
+                "description": "Number of UE context request release => [OID:.1.3.6.1.4.1.35805.10.2.2.99.1.23]",
+                "key": "iLteUERelReq[{#SNMPINDEX}]",
+                "name": "Interface LTE {#IFLTE_HUMANNAME}: Number of UE context request release",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.99.1.23.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "ue release req"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "b439bdd7210a4908915e09184d5ce14a"
+              }
+            ],
+            "key": "iLteHumanName-[{#SNMPVALUE}]",
+            "name": "Athonet epc interfaceslte",
+            "snmp_oid": "discovery[{#IFLTE_HUMANNAME},1.3.6.1.4.1.35805.10.2.2.99.1.28]",
+            "type": "SNMP_AGENT",
+            "uuid": "1d9d23dbbf7f4432a2671be56c49b8e4"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Athonet epc interfaceslte",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Athonet epc"
+          }
+        ],
+        "template": "SNMP Athonet epc interfaceslte",
+        "uuid": "308ec05aff92442ea83c18509cb038d2",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "down",
+                "value": "0"
+              },
+              {
+                "newvalue": "up",
+                "value": "1"
+              }
+            ],
+            "name": "Athonet_Epc_Status",
+            "uuid": "73700ddc3fa0412093d748fa9b3dd26d"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

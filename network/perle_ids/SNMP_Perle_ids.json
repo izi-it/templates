@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:27Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Perle ids by  automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Perle ids equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Perle ids",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "perle ids"
+          }
+        ],
+        "template": "SNMP Perle ids",
+        "templates": [
+          {
+            "name": "SNMP Perle ids alarms"
+          },
+          {
+            "name": "SNMP Perle ids  psu"
+          },
+          {
+            "name": "SNMP Perle ids systemusage"
+          },
+          {
+            "name": "SNMP Perle ids temperature"
+          }
+        ],
+        "uuid": "853cc35e03aa423590b1df659e519640"
+      }
+    ],
+    "version": "6.0"
+  }
+}

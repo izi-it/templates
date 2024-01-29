@@ -1,0 +1,133 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:52Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Stonesoft by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Stonesoft clusterstate equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Node status ==> [ OID:.1.3.6.1.4.1.1369.6.1.1.3.0]",
+                "key": "nodeOperState[{#SNMPINDEX}]",
+                "name": "Cluster Node {#NODEMEMBER_ID}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.1369.6.1.1.3.0.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "node status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stonesoft"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "36bb4321276a4355b165a93c3d6fdc03"
+              }
+            ],
+            "key": "nodeMemberId-[{#SNMPVALUE}]",
+            "name": "Stonesoft clusterstate",
+            "snmp_oid": "discovery[{#NODEMEMBER_ID},1.3.6.1.4.1.1369.6.1.1.2.0]",
+            "type": "SNMP_AGENT",
+            "uuid": "350da65ffeee44359a406e8d126eacd3"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Stonesoft clusterstate",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "clusterstate"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "stonesoft"
+          }
+        ],
+        "template": "SNMP Stonesoft clusterstate",
+        "uuid": "44d8ba4d4794492aaff508faac429b77",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "online",
+                "value": "1"
+              },
+              {
+                "newvalue": "goingOnline",
+                "value": "2"
+              },
+              {
+                "newvalue": "lockedOnline",
+                "value": "3"
+              },
+              {
+                "newvalue": "goingLockedOnline",
+                "value": "4"
+              },
+              {
+                "newvalue": "offline",
+                "value": "5"
+              },
+              {
+                "newvalue": "goingOffline",
+                "value": "6"
+              },
+              {
+                "newvalue": "lockedOffline",
+                "value": "7"
+              },
+              {
+                "newvalue": "goingLockedOffline",
+                "value": "8"
+              },
+              {
+                "newvalue": "standby",
+                "value": "9"
+              },
+              {
+                "newvalue": "goingStandby",
+                "value": "10"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "0"
+              }
+            ],
+            "name": "Stonesoft_ClusterState",
+            "uuid": "d2c4f213e76e4a229c5ac2c7181c2d4b"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

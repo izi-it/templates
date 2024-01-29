@@ -1,0 +1,112 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:33Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template to check SNMP Barracuda cloudgen equipments using SNMP protocol by izi-it",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check box services status.",
+            "item_prototypes": [
+              {
+                "key": "boxServiceState[{#SNMPINDEX}]",
+                "name": "Boxservice {#BOXSERVICE_NAME}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.10704.1.0.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "boxservice state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Barracuda"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "3285a8f31c3749e1b98950b828cf8d7e",
+                "valuemap": {
+                  "name": "Barracuda_Boxservice_Status"
+                }
+              }
+            ],
+            "key": "boxServiceName-[{#SNMPVALUE}]",
+            "name": "Barracuda cloudgen boxservice",
+            "snmp_oid": "discovery[{#BOXSERVICE_NAME},1.3.6.1.4.1.10704.1.0.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "be00f084d1b3432a94879073b4945e39"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Barracuda cloudgen boxservice",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "boxservice"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Barracuda cloudgen"
+          }
+        ],
+        "template": "SNMP Barracuda cloudgen boxservice",
+        "uuid": "34ab068e460c443e9104f8b32adf0e19",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "unknown",
+                "value": "-1"
+              },
+              {
+                "newvalue": "stopped",
+                "value": "0"
+              },
+              {
+                "newvalue": "started",
+                "value": "1"
+              },
+              {
+                "newvalue": "blocked",
+                "value": "2"
+              },
+              {
+                "newvalue": "removed",
+                "value": "4"
+              }
+            ],
+            "name": "Barracuda_Boxservice_Status",
+            "uuid": "103a5a3951804569a7dc8d99a34a3fab"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

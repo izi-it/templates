@@ -1,0 +1,151 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:45Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket temperature by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Current state of the temperature\n=> [ OID:.1.3.6.1.4.1.9148.3.3.1.3.1.1.5]",
+                "key": "apEnvMonTemperatureState[{#SNMPINDEX}]",
+                "name": "[{#TEMPERATURE}: State",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.3.1.3.1.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature sensor state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "6a7b713c3ba346cd82e3b73f69adcc85",
+                "valuemap": {
+                  "name": "Acmepacket_Temperature_Status"
+                }
+              },
+              {
+                "description": "Environmental monitor Temperature Status Value\n==> [ OID:.1.3.6.1.4.1.9148.3.3.1.3.1.1.4]",
+                "key": "apEnvMonTemperatureStatusValue[{#SNMPINDEX}]",
+                "name": "{#TEMPERATURE}: Value",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.3.1.3.1.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature value"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "775a28f1b6b346ccb69707eb018ee121",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "apEnvMonTemperatureStatusDescr-[{#SNMPVALUE}]",
+            "name": "Acmepacket temperature",
+            "snmp_oid": "discovery[{#TEMPERATURE},1.3.6.1.4.1.9148.3.3.1.3.1.1.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "0f1e1a9bb95e4d45a971b16eff2c7928"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Acmepacket  temperature",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP Acmepacket  temperature",
+        "uuid": "5102969f77824f58883e892c36631b18",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "initial",
+                "value": "1"
+              },
+              {
+                "newvalue": "normal",
+                "value": "2"
+              },
+              {
+                "newvalue": "minor",
+                "value": "3"
+              },
+              {
+                "newvalue": "major",
+                "value": "4"
+              },
+              {
+                "newvalue": "critical",
+                "value": "5"
+              },
+              {
+                "newvalue": "shutdown",
+                "value": "6"
+              },
+              {
+                "newvalue": "notPresent",
+                "value": "7"
+              },
+              {
+                "newvalue": "notFunctioning",
+                "value": "8"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "9"
+              }
+            ],
+            "name": "Acmepacket_Temperature_Status",
+            "uuid": "db51baf2abaa45adab7c2c8f6d41d07a"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

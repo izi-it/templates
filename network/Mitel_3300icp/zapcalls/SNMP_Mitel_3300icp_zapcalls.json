@@ -1,0 +1,135 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:54Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Mitel 3300icp zapcalls by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Mitel 3300icp equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "This is the number of calls admitted through this zone access point by this ICP since the system was started or the zone access point was created, or since the cumulative statistics were cleared.\n[OID:.1.3.6.1.4.1.1027.4.1.1.2.5.1.1.2.1.5]",
+                "key": "mitelBWMCumCACAdmissions[{#SNMPINDEX}]",
+                "name": "Zone Access Point Label {#ZAP_LABEL}: Number of calls admitted",
+                "snmp_oid": ".1.3.6.1.4.1.1027.4.1.1.2.5.1.1.2.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "number of calls admitted"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Mitel 3300icp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "635f95abedd541dd8663c15b30e1aa99"
+              },
+              {
+                "description": "This is the ratio of mitelBWMCACRejections to the sum of mitelBWMCACRejections and mitelBWMCACAdmissions (i.e. rejections to all calls) expressed as a percentage.\n[OID:.1.3.6.1.4.1.1027.4.1.1.2.5.1.1.2.1.7]",
+                "key": "mitelBWMCumCACRejectionRatio[{#SNMPINDEX}]",
+                "name": "Zone Access Point Label {#ZAP_LABEL}: Rejected calls ratio",
+                "snmp_oid": ".1.3.6.1.4.1.1027.4.1.1.2.5.1.1.2.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "rejected calls ratio"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Mitel 3300icp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "9925e63ce39a4406b21cdbba866ebad4",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "This is the number of calls rejected due to bandwidth being fully utilized at this zone access point by this ICP since the system was started or the zone access point was created, or since the cumulative statistics were cleared.\n[OID:.1.3.6.1.4.1.1027.4.1.1.2.5.1.1.2.1.6]",
+                "key": "mitelBWMCumCACRejections[{#SNMPINDEX}]",
+                "name": "Zone Access Point Label {#ZAP_LABEL}: Number of calls rejected",
+                "snmp_oid": ".1.3.6.1.4.1.1027.4.1.1.2.5.1.1.2.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "number of calls rejected"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Mitel 3300icp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "602d24b667d840858756bde3e7908166"
+              }
+            ],
+            "key": "mitelBWMCurrentZAPLabel-[{#SNMPVALUE}]",
+            "name": "Mitel 3300icp zapcalls",
+            "snmp_oid": "discovery[{#ZAP_LABEL},1.3.6.1.4.1.1027.4.1.1.2.5.1.1.2.1.4]",
+            "type": "SNMP_AGENT",
+            "uuid": "9d76e55d304343aab4b4ace574ebe99c"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Mitel 3300icp zapcalls",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "zapcalls"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Mitel 3300icp"
+          }
+        ],
+        "template": "SNMP Mitel 3300icp zapcalls",
+        "uuid": "51abbf6386f04bff8ef00ab7606a13f9"
+      }
+    ],
+    "version": "6.0"
+  }
+}

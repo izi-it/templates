@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:48Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Meru made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Meru",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Meru"
+          }
+        ],
+        "template": "SNMP Meru",
+        "templates": [
+          {
+            "name": "SNMP Meru alarms"
+          },
+          {
+            "name": "SNMP Meru cpu"
+          },
+          {
+            "name": "SNMP Meru memory"
+          },
+          {
+            "name": "SNMP Meru wireless"
+          }
+        ],
+        "uuid": "d3473600d3024e339f4c35a3ec8489ce"
+      }
+    ],
+    "version": "6.0"
+  }
+}

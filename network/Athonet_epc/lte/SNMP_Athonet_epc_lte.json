@@ -1,0 +1,413 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:48Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Athonet epc lte made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck aggregate statistics.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Number of succesfull PDN context activation ==> [OID:.1.3.6.1.4.1.35805.10.2.2.11]",
+            "key": "lteActivatedPDNContext",
+            "name": "Number of succesfull PDN context activation",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.11",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pdn context success"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f9495e9bdc5f472a868d37c477722cde"
+          },
+          {
+            "description": "Number of active sessions from users ==> [OID:.1.3.6.1.4.1.35805.10.2.2.4]",
+            "key": "lteActiveConnections",
+            "name": "Number of active sessions from users",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "sessions active"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a6d5e7015f7f42a2bf1f067274085476"
+          },
+          {
+            "description": "Incoming traffic going through the interface==> [OID:.1.3.6.1.4.1.35805.10.2.2.5]",
+            "key": "lteLoadPktInGi",
+            "name": "Incoming traffic going through the interface",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "traffic in"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B/s",
+            "uuid": "407ab7b4b85040f28b1acf76a2141089",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Outgoing traffic going through the interface ==> [OID:.1.3.6.1.4.1.35805.10.2.2.6]",
+            "key": "lteLoadPktOutGi",
+            "name": "Outgoing traffic going through the interface",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "traffic out"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B/s",
+            "uuid": "a4b27483421c4f14ac405cb986823216",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Number of PDN Context reject with cause 'Insufficent Resources' ==> [OID:.1.3.6.1.4.1.35805.10.2.2.21]",
+            "key": "ltePDNRejInsufRes",
+            "name": "Number of PDN Context reject - Insufficent Resources",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.21",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pdn rej insuf res"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a82961e4d96048eb9dbc2f97e104d200"
+          },
+          {
+            "description": "Number of PDN Context reject with cause 'Missing or unknown APN'\t==> [OID:.1.3.6.1.4.1.35805.10.2.2.22]",
+            "key": "ltePDNRejNoApn",
+            "name": "Number of PDN Context reject - Missing or unknown APN",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.22",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pdn rej no apn"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2b258cff0b7b4438bcb658976553b1ea"
+          },
+          {
+            "description": "Number of PDN Context reject with cause 'Request service option not subscribed'\t==> [OID:.1.3.6.1.4.1.35805.10.2.2.23]",
+            "key": "ltePDNRejNoSubscribed",
+            "name": "Number of PDN Context reject - Request service option not subscribed",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.23",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pdn rej no sub"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9cc62475cdc2405d850dfa93daa5aa83"
+          },
+          {
+            "description": "Number of succesfull attach request  ==> [OID:.1.3.6.1.4.1.35805.10.2.2.8]",
+            "key": "lteSuccesfullAttach",
+            "name": "Number of succesfull attach request",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.8",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "attach req success"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "42fb0ef418454416af91a30a0038fdc7"
+          },
+          {
+            "description": "Number total of attach request\t==> [OID:.1.3.6.1.4.1.35805.10.2.2.7]",
+            "key": "lteTotalAttachReq",
+            "name": "Number total of attach request",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.7",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "attach req total"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8bcc00daa08744e3a4fe6b6549df0832"
+          },
+          {
+            "description": "Number of succesfull PDN context activation ==> [OID:.1.3.6.1.4.1.35805.10.2.2.10]",
+            "key": "lteTotalPDNActReq",
+            "name": "Number total of PDN",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.10",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pdn context total"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4eb0b63968384988b0e4911371ac6587"
+          },
+          {
+            "description": "Number of UE context request release ==> [OID:.1.3.6.1.4.1.35805.10.2.2.19]",
+            "key": "lteUERelReq",
+            "name": "Number of UE context request release",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.19",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ue release req"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "ad6179aec69a4aeba349840febed4668"
+          },
+          {
+            "description": "Number of UE context request release with cause 'Radio Connection with UE lost'\t==> [OID:.1.3.6.1.4.1.35805.10.2.2.20]",
+            "key": "lteUERelReqRadioLost",
+            "name": "Number of UE context request release - Radio Connection with UE lost",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.20",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ue release req radio lost"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "5c14ac333b34431fafa8532a51b4368d"
+          },
+          {
+            "description": "Number of connected users\t ==> [OID:.1.3.6.1.4.1.35805.10.2.2.1]",
+            "key": "lteUsersConnected",
+            "name": "Number of connected users",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "users connected"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9eab54557d7f41db8681d43ee4bbc133"
+          },
+          {
+            "description": "Number of idle users ==> [OID:.1.3.6.1.4.1.35805.10.2.2.2]",
+            "key": "lteUsersIdle",
+            "name": "Number of idle users",
+            "snmp_oid": ".1.3.6.1.4.1.35805.10.2.2.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "users idle"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Athonet epc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "5e904a6754924a6db9d9bac7f2cc320c"
+          }
+        ],
+        "name": "SNMP Athonet epc lte",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "lte"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Athonet epc"
+          }
+        ],
+        "template": "SNMP Athonet epc lte",
+        "uuid": "b7db3ce74f8c4ef086b3f22d6d6c5d34"
+      }
+    ],
+    "version": "6.0"
+  }
+}

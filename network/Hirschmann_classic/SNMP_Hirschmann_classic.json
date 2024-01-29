@@ -1,0 +1,65 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:53Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Hirschmann classic by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Hirschmann classic",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Hirschmann classic"
+          }
+        ],
+        "template": "SNMP Hirschmann classic",
+        "templates": [
+          {
+            "name": "SNMP Hirschmann classic configuration"
+          },
+          {
+            "name": "SNMP Hirschmann classic cpu"
+          },
+          {
+            "name": "SNMP Hirschmann classic fan"
+          },
+          {
+            "name": "SNMP Hirschmann classic led"
+          },
+          {
+            "name": "SNMP Hirschmann classic memory"
+          },
+          {
+            "name": "SNMP Hirschmann classic processcount"
+          },
+          {
+            "name": "SNMP Hirschmann classic psu"
+          },
+          {
+            "name": "SNMP Hirschmann classic temperature"
+          }
+        ],
+        "uuid": "12f068a8e3cf4698932c3d1bc555f496"
+      }
+    ],
+    "version": "6.0"
+  }
+}

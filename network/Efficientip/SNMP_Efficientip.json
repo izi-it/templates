@@ -1,0 +1,50 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:28Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Efficientip  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Efficientip",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Efficientip"
+          }
+        ],
+        "template": "SNMP Efficientip",
+        "templates": [
+          {
+            "name": "SNMP Efficientip dhcpusage"
+          },
+          {
+            "name": "SNMP Efficientip dnsusage"
+          },
+          {
+            "name": "SNMP Efficientip status"
+          }
+        ],
+        "uuid": "f174bca7f5f346a7aa0b50cc1e48fcb2"
+      }
+    ],
+    "version": "6.0"
+  }
+}

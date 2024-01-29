@@ -1,0 +1,191 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:55Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Purestorage stats  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The count of each disk I/ O bad sector => [OID:.1.3.6.1.4.1.6574.2.1.1.9]",
+                "history": "0",
+                "key": "diskBadSector[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Bad Sector",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "bad sector"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9cba9a246c634512af447677ea7b35a6"
+              },
+              {
+                "description": "Current disk health status => [OID:.1.3.6.1.4.1.6574.2.1.1.13]",
+                "history": "0",
+                "key": "diskHealthStatus[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Health status",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.13.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "health status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "5b5e646982c34a8badf9990b67d7750d"
+              },
+              {
+                "description": "The estimate remain life of each disk => [OID:.1.3.6.1.4.1.6574.2.1.1.11]",
+                "history": "0",
+                "key": "diskRemainLife[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Remain Life",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "remain life"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "e087dd64470746aab5d7448f9060e6a5"
+              },
+              {
+                "description": "Disk temperature => [OID:.1.3.6.1.4.1.6574.2.1.1.6]",
+                "history": "0",
+                "key": "diskTemperature[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Temperature",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "disk temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "\u00b0C",
+                "uuid": "9ace0c82c5a8411ab66d5c0926783fcf",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Current disk status => [OID:.1.3.6.1.4.1.6574.2.1.1.5]\n\nNormal(1)*",
+                "history": "0",
+                "key": "synoDiskdiskStatus[{#SNMPINDEX}]",
+                "name": "Disk {#DISKNAME}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.6574.2.1.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "disk status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "1380d892830c4acc8dbd45cf341a8807"
+              }
+            ],
+            "key": "purePerformance-[{#SNMPVALUE}]",
+            "name": "Purestorage stats",
+            "snmp_oid": "discovery[{#PUREPERFORMANCE},1.3.6.1.4.1.40482.4]",
+            "type": "SNMP_AGENT",
+            "uuid": "f3e2eb9fb78e464f98bf334807afc2a8"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Purestorage stats",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "stats"
+          },
+          {
+            "tag": "layer",
+            "value": "storage"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Purestorage"
+          }
+        ],
+        "template": "SNMP Purestorage stats",
+        "uuid": "f8697a5a06d54eb38b5537630e9eb946"
+      }
+    ],
+    "version": "6.0"
+  }
+}

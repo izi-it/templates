@@ -1,0 +1,146 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:43Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Polycom rmx  videoconferencingusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Polycom rmx videoconferencingusage equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "key": "callActiveCallsSummaryVideoTotalCalls",
+            "name": "Calls video active",
+            "snmp_oid": ".1.3.6.1.4.1.13885.110.1.4.4.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "polycom rmx"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "d72d1ce65af5481e98bd7f0e2fec0cde"
+          },
+          {
+            "description": "callActiveCallsSummaryVoiceTotalCalls",
+            "key": "callActiveCallsSummaryVoiceTotalCalls",
+            "name": "Calls voice active",
+            "snmp_oid": ".1.3.6.1.4.1.13885.110.1.4.4.1.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "polycom rmx"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f8042d49ecc749a9929e6bc7fcf8c85e"
+          },
+          {
+            "key": "callNewCallsLastMinTotal",
+            "name": "Calls new",
+            "snmp_oid": ".1.3.6.1.4.1.13885.110.1.4.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "polycom rmx"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a50f15f4b86b4a2784f1c0c1ab952562"
+          },
+          {
+            "key": "conferenceNumberActiveConferences",
+            "name": "Conferences active",
+            "snmp_oid": ".1.3.6.1.4.1.13885.110.1.5.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "polycom rmx"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4475cc162169448a8c4b13358c0dd4ea"
+          }
+        ],
+        "name": "SNMP Polycom rmx videoconferencingusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "videoconferencingusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "polycom rmx"
+          }
+        ],
+        "template": "SNMP Polycom rmx videoconferencingusage",
+        "uuid": "c20b3d5204de4ab7ba75f53ed25b1fcf"
+      }
+    ],
+    "version": "6.0"
+  }
+}

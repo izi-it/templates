@@ -1,0 +1,104 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:46Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "TemplateSNMP Fiberstore power by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Fiberstore power equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Power status:\n1 ==> noAlert\n2 ==> alert\n3 ==> unsupported\n[OID:.1.3.6.1.4.1.52642.1.37.1.2.1.7]",
+                "key": "devMPowerAlertStatus[{#SNMPINDEX}]",
+                "name": "PSU {#PSU}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.52642.1.37.1.2.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Fiberstore"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "c26b5ec4df0145aeb73965cc70a2814f",
+                "valuemap": {
+                  "name": "Fiberstone_PSU_Status"
+                }
+              }
+            ],
+            "key": "devMPowerIndex-[{#SNMPVALUE}]",
+            "name": "Fiberstore psu",
+            "snmp_oid": "discovery[{#PSU},1.3.6.1.4.1.52642.1.37.1.2.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "4ede9f7a9f654e8792266df33c10bc24"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Fiberstore psu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "power"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Fiberstore"
+          }
+        ],
+        "template": "SNMP Fiberstore psu",
+        "uuid": "3e0c6919208e43889fb090ee6b12a09a",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "noAlert",
+                "value": "1"
+              },
+              {
+                "newvalue": "alert",
+                "value": "2"
+              },
+              {
+                "newvalue": "unsupported",
+                "value": "3"
+              }
+            ],
+            "name": "Fiberstone_PSU_Status",
+            "uuid": "12eedbfa12684896aac8346aa03d5c1d"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

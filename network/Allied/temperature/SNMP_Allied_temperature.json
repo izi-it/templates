@@ -1,0 +1,153 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:41:00Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Allied temperature by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Allied equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The current reading of this temperature sensor in tenths of a degree Celsius.\n=> [ OID:.1.3.6.1.4.1.207.8.4.4.3.12.3.1.5]",
+                "key": "atEnvMonv2TemperatureCurrent[{#SNMPINDEX}]",
+                "name": "Temperature {#TEMPERATURE}: Value",
+                "snmp_oid": ".1.3.6.1.4.1.207.8.4.4.3.12.3.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature value"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Allied"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "\u00b0C",
+                "uuid": "1e33f89415654d0fa2f295bfa4555b84"
+              },
+              {
+                "description": "An indication of whether this temperature sensor is currently in an alarm condition. A value of 'outOfRange' indicates that its current reading is outside its threshold range, \n'inRange' indicates that the current reading is acceptable.\n => [ OID:.1.3.6.1.4.1.207.8.4.4.3.12.3.1.7]",
+                "key": "atEnvMonv2TemperatureStatus[{#SNMPINDEX}]",
+                "name": "Temperature {#TEMPERATURE}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.207.8.4.4.3.12.3.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "temperature status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Allied"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "25506634b4994697bd8f192f10675a2c",
+                "valuemap": {
+                  "name": "Allied_Temperature_Status"
+                }
+              },
+              {
+                "description": "The maximum acceptable reading of this temperature sensor in tenths of a degree Celsius => [ OID:.1.3.6.1.4.1.207.8.4.4.3.12.3.1.6]",
+                "key": "atEnvMonv2TemperatureUpperThreshold[{#SNMPINDEX}]",
+                "name": "Temperature {#TEMPERATURE}: Maximum acceptable",
+                "snmp_oid": ".1.3.6.1.4.1.207.8.4.4.3.12.3.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "max temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Allied"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "\u00b0C",
+                "uuid": "90dd32739df74de69014275084e16ef2"
+              }
+            ],
+            "key": "atEnvMonv2TemperatureDescription-[{#SNMPVALUE}]",
+            "name": "Allied temperature",
+            "snmp_oid": "discovery[{#TEMPERATURE},1.3.6.1.4.1.207.8.4.4.3.12.3.1.4]",
+            "type": "SNMP_AGENT",
+            "uuid": "c2601324f55d4da980757fd2f99d1048"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Allied temperature",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "temperature"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Allied"
+          }
+        ],
+        "template": "SNMP Allied temperature",
+        "uuid": "5b07fc675cf144f78451d80bd7c27b1f",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "outOfRange",
+                "value": "1"
+              },
+              {
+                "newvalue": "inRange",
+                "value": "2"
+              }
+            ],
+            "name": "Allied_Temperature_Status",
+            "uuid": "06967d6cf24a44139fceac744f0526cd"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

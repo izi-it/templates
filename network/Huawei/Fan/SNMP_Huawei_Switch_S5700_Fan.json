@@ -1,0 +1,227 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:53Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "item_prototypes": [
+              {
+                "delay": "3m",
+                "description": "The value of this object identifies the fan rotational speed. The value is a specific percentage of the full speed.",
+                "key": "hwEntityFanSpeed[{#SNMPINDEX}]",
+                "name": "Fan module [{#SNMPINDEX}] speed (%)",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.10.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Fan"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Huawei"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "expression": "min(/SNMP Huawei Switch S5700 Fan/hwEntityFanSpeed[{#SNMPINDEX}],5m)>={$TEMP_WARN} and min(/SNMP Huawei Switch S5700 Fan/hwEntityFanSpeed[{#SNMPINDEX}],5m)<{$TEMP_CRIT}",
+                    "manual_close": "YES",
+                    "name": "Fan module [{#SNMPINDEX}] speed is above 60% (Possible high temperature!)",
+                    "priority": "WARNING",
+                    "recovery_expression": "min(/SNMP Huawei Switch S5700 Fan/hwEntityFanSpeed[{#SNMPINDEX}],5m)<{$TEMP_WARN}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "Fan"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Huawei"
+                      }
+                    ],
+                    "uuid": "201555d67e904cb7a04a0fbc9cce7e34"
+                  },
+                  {
+                    "expression": "min(/SNMP Huawei Switch S5700 Fan/hwEntityFanSpeed[{#SNMPINDEX}],5m)>={$TEMP_CRIT}",
+                    "manual_close": "YES",
+                    "name": "Fan module [{#SNMPINDEX}] speed is above 70% (Possible high temperature!)",
+                    "priority": "HIGH",
+                    "recovery_expression": "min(/SNMP Huawei Switch S5700 Fan/hwEntityFanSpeed[{#SNMPINDEX}],5m)<{$TEMP_WARN}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "Fan"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Huawei"
+                      }
+                    ],
+                    "uuid": "0456cb4cd48a45eca43f6ac7f3db0110"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "c7a03beb2b94455f8651e0a771b37d0b"
+              },
+              {
+                "delay": "3m",
+                "description": "The object indicates the fan state.\tINTEGER{normal(1),abnormal(2)}",
+                "key": "hwEntityFanState[{#SNMPINDEX}]",
+                "name": "Fan module [{#SNMPINDEX}] state",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.10.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Fan"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Huawei"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "description": "INTEGER{normal(1),abnormal(2)}",
+                    "expression": "last(/SNMP Huawei Switch S5700 Fan/hwEntityFanState[{#SNMPINDEX}],#1)<>1",
+                    "manual_close": "YES",
+                    "name": "Fan module [{#SNMPINDEX}] state is ABNORMAL",
+                    "priority": "WARNING",
+                    "recovery_expression": "last(/SNMP Huawei Switch S5700 Fan/hwEntityFanState[{#SNMPINDEX}],#1)=1",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "Fan"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Huawei"
+                      }
+                    ],
+                    "uuid": "6b22f83fda1749b283a054e9fb43d6e1"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0c7a1f1ba72e460c8657a077958241af"
+              }
+            ],
+            "key": "hwEntityFan",
+            "name": "Discovery: Fan",
+            "snmp_oid": "discovery[{#SNMPVALUE}, 1.3.6.1.4.1.2011.5.25.31.1.1.10.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "cf73cd76cf6c4da1b2bebc1a7b7e90db"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Huawei Switch S5700 Fan",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "Fan"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Huawei"
+          }
+        ],
+        "template": "SNMP Huawei Switch S5700 Fan",
+        "uuid": "926147ee7c0545b392b58b810d1cc185",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "abnormal",
+                "value": "2"
+              }
+            ],
+            "name": "hwEntityFanState",
+            "uuid": "22bd043ba8054bf8aa3e85d9989e6060"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

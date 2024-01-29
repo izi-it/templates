@@ -1,0 +1,269 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:50Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Stonesoft memory by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Stonesoft equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Amount of memory used as buffers ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.7.0]",
+            "key": "fwMemBytesBuffers",
+            "name": "Buffers used memory",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.7.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory used as buffers"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "83c59c47806e4a48852277e9c777cecc",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Amount of memory used as cached ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.8.0]",
+            "key": "fwMemBytesCached",
+            "name": "Cached used memory",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.8.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory used as cached"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "7678e5d5fd39462da62adc31410b5e77",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Number of available bytes of physical memory ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.4.0]",
+            "key": "fwMemBytesTotal",
+            "name": "Total physical memory",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "total physical memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "402285a5bc5a437fb2eb0500b246a094",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Amount  of unused bytes of physical memory ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.6.0]",
+            "key": "fwMemBytesUnused",
+            "name": "Unused physical memory",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.6.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "unused physical memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "f8b15e68c3754d9cbb12f6272accb7a5",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Amount of physical memory being in use  ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.5.0]",
+            "key": "fwMemBytesUsed",
+            "name": "Used physical memory",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.5.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "used physical memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "59d758c6be6743ce97a8e2fd89f62ff3",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Total swap space ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.1.0]",
+            "key": "fwSwapBytesTotal",
+            "name": "Total swap space",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Total swap space"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "22b1ffce690e457f9b59964000f3b53e",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Amount of unused space of swap ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.3.0]",
+            "key": "fwSwapBytesUnused",
+            "name": "Unused space of swap",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "unused space of swap"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "e1340841d463475c9128aff122252c37",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Used space of swap ==> [OID:.1.3.6.1.4.1.1369.5.2.1.11.2.2.0]",
+            "key": "fwSwapBytesUsed",
+            "name": "Used space of swap",
+            "snmp_oid": ".1.3.6.1.4.1.1369.5.2.1.11.2.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "used space of swap"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stonesoft"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "32d965fb10124a42a2e0147f2bb43d3a",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Stonesoft memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Stonesoft"
+          }
+        ],
+        "template": "SNMP Stonesoft memory",
+        "uuid": "45c171f1449a4b659cc59defa39b6ba0"
+      }
+    ],
+    "version": "6.0"
+  }
+}

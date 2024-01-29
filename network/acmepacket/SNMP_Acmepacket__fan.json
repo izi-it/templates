@@ -1,0 +1,151 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:42Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket fan by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The current state of the fan being instrumented.\n => [ OID:1.3.6.1.4.1.9148.3.3.1.4.1.1.5]",
+                "key": "apEnvMonFanState[{#SNMPINDEX}]",
+                "name": "{#FAN}: Fan State",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.3.1.4.1.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9c627f193b3746259dbb3e17688072d7",
+                "valuemap": {
+                  "name": "Acmepacket_Fan_Status"
+                }
+              },
+              {
+                "description": "The current percentage measurement of the fan speed.\n==> [ OID:.1.3.6.1.4.1.9148.3.3.1.4.1.1.4",
+                "key": "apEnvMonFanStatusValue[{#SNMPINDEX}]",
+                "name": "{#FAN}: Fan speed",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.3.1.4.1.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan speed"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "daf13075630645d4b9143bf802852cde",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "apEnvMonFanStatusDescr-[{#SNMPVALUE}]",
+            "name": "Acmepacket fan",
+            "snmp_oid": "discovery[{#FAN},1.3.6.1.4.1.9148.3.3.1.4.1.1.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "7caacad54beb46bf8f1a4327d9b9c975"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Acmepacket  fan",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP Acmepacket  fan",
+        "uuid": "9c707a43be0944889f6164576769168e",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "initial",
+                "value": "1"
+              },
+              {
+                "newvalue": "normal",
+                "value": "2"
+              },
+              {
+                "newvalue": "minor",
+                "value": "3"
+              },
+              {
+                "newvalue": "major",
+                "value": "4"
+              },
+              {
+                "newvalue": "critical",
+                "value": "5"
+              },
+              {
+                "newvalue": "shutdown",
+                "value": "6"
+              },
+              {
+                "newvalue": "notPresent",
+                "value": "7"
+              },
+              {
+                "newvalue": "notFunctioning",
+                "value": "8"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "9"
+              }
+            ],
+            "name": "Acmepacket_Fan_Status",
+            "uuid": "5ea847c5ebbf428cbe31478a58b21cb0"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

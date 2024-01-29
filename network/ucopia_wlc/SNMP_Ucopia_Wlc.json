@@ -1,0 +1,843 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:25Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Indicates the status of Autodisconnect service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disa\u2026",
+            "key": "autodisconnect",
+            "name": "Autodisconnect service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "521ab98cbe2c4aafab72ee043ab39bcc",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Check Processor temperature (in degree Celsius)",
+            "key": "cpuTemperature",
+            "name": "Processor temperature (in degree Celsius)",
+            "snmp_oid": ".1.3.6.1.4.1.31218.3.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "temperature"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "utopia wlc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a80520aa83714c85a61ece2dec87da1f"
+          },
+          {
+            "description": "Indicates status of DHCP server.\n(1) running service is running\n(2) stopped service is stopped or crashed\n(3) disabled service is \u2026",
+            "key": "dhcpServer",
+            "name": "DHCP server status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.8",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "c194a5746e1f4ea392ae738a2981bf82",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Check the Disk temperature (in degree Celsius).",
+            "key": "diskTemperature",
+            "name": "Disk temperature (in degree Celsius)",
+            "snmp_oid": ".1.3.6.1.4.1.31218.3.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "disk temperature"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "utopia wlc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9a939fa8b12f45d4808458bfcf476ec3",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Indicates the status of DNS Server service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled\u2026",
+            "key": "dnsServer",
+            "name": "DNS Server service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.9",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "e3538194d007448f924078a2cfea86c3",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of High-Availability service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) D\u2026",
+            "key": "highAvailability",
+            "name": "High-Availability service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.11",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "89bdeb902c2d497db42b1ba6e847135f",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Check High Availability Status",
+            "key": "highAvailabilityStatus",
+            "name": "High Availability Status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.3.7",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "9eb6d7121d2241a5abd241e67e85a4fc",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Ucopia wlc Ha Status"
+            }
+          },
+          {
+            "description": "Indicates the status of LDAP Directory service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disa\u2026",
+            "key": "ldapDirectory",
+            "name": "LDAP Directory service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.12",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "30890cbbbc0c41cc93ad1b5d8e6d8d67",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of LDAP Replication Manager service\n(1) Running, service is running\n(2) Stopped, service is stopped or crash\u2026",
+            "key": "ldapReplicationManager",
+            "name": "LDAP Replication Manager service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.13",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "594d5f309f564282983c714235ecb9db",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Check The number of users that the license allow to be connected simulteaneously.",
+            "key": "licenseUsers",
+            "name": "Number of users that the license allow to be connected simulteaneously",
+            "snmp_oid": ".1.3.6.1.4.1.31218.3.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "netwok"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a070a5755d244f29a12a709d8cbfd5d9"
+          },
+          {
+            "description": "Indicates the status of PMSClient service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled,\u2026",
+            "key": "pmsClient",
+            "name": "PMSClient service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.20",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "5d421da859924a0fb25ef598c791ae78",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Portal service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled",
+            "key": "portal",
+            "name": "Portal service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "88fe5caeab5a4bdeab0502957fcc7688",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Printing Server service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Dis\u2026",
+            "key": "printingServer",
+            "name": "Printing Server service status",
+            "snmp_oid": "'.1.3.6.1.4.1.31218.4.7",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "8f171837f57f4fb29c887885c27d8316",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Radius Server service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disab\u2026",
+            "key": "radiusServer",
+            "name": "Radius Server service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.15",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "1fc2210f548d4fcea856c8fd263ecc71",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Samba service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled, ser\u2026",
+            "key": "samba",
+            "name": "Samba service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.16",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "5868fff1864147679f1564a5d361bc57",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of SQL Server service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled\u2026",
+            "key": "sqlServer",
+            "name": "SQL Server service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "9c3f4c7c38714c1ea8cafffb8e579ddd",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Ssh service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled, servi\u2026",
+            "key": "ssh",
+            "name": "Ssh service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.17",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "a9a4448962fb4a23a1879618fdb6b71b",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Static IP Manager service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) D\u2026",
+            "key": "staticIpManager",
+            "name": "Static IP Manager service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.10",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "e5d21b5d347440ad944e3fe4ae89801e",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Syslog service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled, se\u2026",
+            "key": "syslog",
+            "name": "Syslog service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.18",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia. wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "9887e91f18f842e69843b71c1ee2a364",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Time Server service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disable\u2026",
+            "key": "timeServer",
+            "name": "Time Server service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.14",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "f31df37ca9d64e45be28ab007d328390",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Check the number of connected users on this controller.",
+            "key": "totalConnectedUsers",
+            "name": "Number of connected users",
+            "snmp_oid": ".1.3.6.1.4.1.31218.3.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wld"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "3e60a957e1414d35bb1e0cfb67e98b15"
+          },
+          {
+            "description": "Indicates the status of URL sniffer service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disable\u2026",
+            "key": "urlSniffer",
+            "name": "URL sniffer service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "56f5cf3ec204403ab62b51a25019dab9",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Users Log service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled,\u2026",
+            "key": "usersLog",
+            "name": "Users Log service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.19",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "5915ade4bea34aa6848b09db4293ce5f",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Indicates the status of Web Proxy service\n(1) Running, service is running\n(2) Stopped, service is stopped or crashed\n(3) Disabled,\u2026",
+            "key": "webProxy",
+            "name": "Web Proxy service status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "8b5db42d73be48bab6123d2ed8fd7a71",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          },
+          {
+            "description": "Check Web Server Status",
+            "key": "webServer",
+            "name": "Web Server Status",
+            "snmp_oid": ".1.3.6.1.4.1.31218.4.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "ucopia wlc"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "892a653ed9944d0ea6e6a011206f1419",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Utopia Wlc SC Status"
+            }
+          }
+        ],
+        "name": "SNMP Ucopia Wlc",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "ucopia wlc"
+          }
+        ],
+        "template": "SNMP Ucopia Wlc",
+        "templates": [
+          {
+            "name": "SNMP Ucopia Wlc system"
+          }
+        ],
+        "uuid": "02f06ee2ee974f30b6c191b58cb7e3bf",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "standalone",
+                "value": "0"
+              },
+              {
+                "newvalue": "master",
+                "value": "1"
+              },
+              {
+                "newvalue": "active",
+                "value": "2"
+              },
+              {
+                "newvalue": "passive",
+                "value": "3"
+              }
+            ],
+            "name": "Ucopia wlc Ha Status",
+            "uuid": "2373bea655ce4c5fb35da0ed6313b317"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "running",
+                "value": "1"
+              },
+              {
+                "newvalue": "stopped",
+                "value": "2"
+              },
+              {
+                "newvalue": "disabled",
+                "value": "3"
+              }
+            ],
+            "name": "Utopia Wlc SC Status",
+            "uuid": "f9143127de9a4715af605cb3dcdea689"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

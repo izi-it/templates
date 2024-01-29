@@ -1,0 +1,158 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:43Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Synology upgrade made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n\nCheck upgrade status",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Model name of this NAS  ==> [OID:.1.3.6.1.4.1.6574.1.5.1]",
+            "key": "modelName",
+            "name": "Model name of this NAS",
+            "snmp_oid": ".1.3.6.1.4.1.6574.1.5.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "model name"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "synology"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "2e135f3602434b33add3b49f7c969735",
+            "value_type": "CHAR"
+          },
+          {
+            "description": "Checks whether a new version or update of DSM is available ==> [OID:.1.3.6.1.4.1.6574.1.5.4]",
+            "key": "upgradeAvailable",
+            "name": "Upgrade Available",
+            "snmp_oid": ".1.3.6.1.4.1.6574.1.5.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "upgradeAvailable"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "synology"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "b2d3bc0175d2496dbcd380e03362937d",
+            "valuemap": {
+              "name": "Synology_Upgrade_Available"
+            }
+          },
+          {
+            "description": "The version of DSM  ==> [OID:.1.3.6.1.4.1.6574.1.5.3]",
+            "key": "version",
+            "name": "The version of DSM",
+            "snmp_oid": ".1.3.6.1.4.1.6574.1.5.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "version"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "synology"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "638e7edbc07a44dd82e43a5438c58cc8",
+            "value_type": "CHAR"
+          }
+        ],
+        "name": "SNMP Synology upgrade",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "upgrade"
+          },
+          {
+            "tag": "layer",
+            "value": "storage"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Synology"
+          }
+        ],
+        "template": "SNMP Synology upgrade",
+        "uuid": "844fdb9ed5224fcfbdc42b7f14b055ad",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "available",
+                "value": "1"
+              },
+              {
+                "newvalue": "unavailable",
+                "value": "2"
+              },
+              {
+                "newvalue": "connecting",
+                "value": "3"
+              },
+              {
+                "newvalue": "disconnected",
+                "value": "4"
+              },
+              {
+                "newvalue": "others",
+                "value": "5"
+              }
+            ],
+            "name": "Synology_Upgrade_Available",
+            "uuid": "a863b8ae497a42a7881a64ec9f8d5ad2"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

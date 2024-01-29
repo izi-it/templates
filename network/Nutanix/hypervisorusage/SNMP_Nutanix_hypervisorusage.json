@@ -1,0 +1,246 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:47Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Nutanix by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Nutanix hypervisorusage equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Average IO latency per micro second of the hypervisor ==> [ OID:.1.3.6.1.4.1.41263.9.1.11]",
+                "key": "hypervisorAverageLatency[{#SNMPINDEX}]",
+                "name": "Hypervisor {#HYPERVISOR_NAME}: Average Latency",
+                "snmp_oid": ".1.3.6.1.4.1.41263.9.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "average latency"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "ddbb7c64331b40d4a247c7c8d03de9ae",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "CPU usage percent of the hypervisor ==> [ OID:.1.3.6.1.4.1.41263.9.1.6]",
+                "key": "hypervisorCpuUsagePercent[{#SNMPINDEX}]",
+                "name": "Hypervisor {#HYPERVISOR_NAME}: CPU Usage",
+                "snmp_oid": ".1.3.6.1.4.1.41263.9.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu usage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "6c413a8a62b34a279bbd4368b3783924"
+              },
+              {
+                "description": "Memory usage percentage on the hypervisor  ==> [ OID:.1.3.6.1.4.1.41263.9.1.8]",
+                "key": "hypervisorMemoryUsagePercent[{#SNMPINDEX}]",
+                "name": "Hypervisor {#HYPERVISOR_NAME}: Memory usage",
+                "snmp_oid": ".1.3.6.1.4.1.41263.9.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "memory usage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "f7ea9a0768c74eeca003a14366650eb6",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Total memory available on the hypervisor in bytes ==> [ OID:.1.3.6.1.4.1.41263.9.1.7]",
+                "key": "hypervisorMemory[{#SNMPINDEX}]",
+                "name": "Hypervisor {#HYPERVISOR_NAME}: Avalaible Memory",
+                "snmp_oid": ".1.3.6.1.4.1.41263.9.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "available memory"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "b",
+                "uuid": "3d68cc1827d640cf9c10ea4497efb152",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of Read IO Operations served per second on this hypervisor ==> [ OID:.1.3.6.1.4.1.41263.9.1.9]",
+                "key": "hypervisorReadIOPerSecond[{#SNMPINDEX}]",
+                "name": "Hypervisor {#HYPERVISOR_NAME}: Number of Read IO Operations",
+                "snmp_oid": ".1.3.6.1.4.1.41263.9.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "hypervisorReadIOPerSecond"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "7e697db8d56e4bcb95eeab4fa5b62ff5",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Total number of VM configured on the hypervisor ==> [ OID:.1.3.6.1.4.1.41263.9.1.4]",
+                "key": "hypervisorVmCount[{#SNMPINDEX}]",
+                "name": "Hypervisor {#HYPERVISOR_NAME}: Number of VM configured",
+                "snmp_oid": ".1.3.6.1.4.1.41263.9.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total number of vm"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "7006ca3b331a4af8ac2c962ba0ac2b84"
+              },
+              {
+                "description": "Number of Write IO Operations served per second on this hypervisor ==> [ OID:.1.3.6.1.4.1.41263.9.1.10]",
+                "key": "hypervisorWriteIOPerSecond[{#SNMPINDEX}]",
+                "name": "Hypervisor {#HYPERVISOR_NAME}: Number of Write IO Operations",
+                "snmp_oid": ".1.3.6.1.4.1.41263.9.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "hypervisorWriteIOPerSecond"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "nutanix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "b9df42eafbf84ef884315b492f8c0a04",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "dstDiskId-[{#SNMPVALUE}]",
+            "name": "Nutanix hypervisorusage",
+            "snmp_oid": "discovery[{#HYPERVISOR_NAME},1.3.6.1.4.1.41263.9.1.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "b532d64e57104a8897d602bfb041047b"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Nutanix hypervisorusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "hypervisorusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Nutanix"
+          }
+        ],
+        "template": "SNMP Nutanix hypervisorusage",
+        "uuid": "133bd6d15e2a460f921948cca1e6bd00"
+      }
+    ],
+    "version": "6.0"
+  }
+}

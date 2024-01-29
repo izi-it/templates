@@ -1,0 +1,324 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:57Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Versa appqospolicy by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Versa equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "item_prototypes": [
+              {
+                "key": "appQosPolicyDropByteCount[{#SNMPINDEX}]",
+                "name": "APP QOS ORGANISATION {#ORG_NAME}: Dropped bytes",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "dropped bytes"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "4986a9dd370e4fb6b2a88e6bc089b075",
+                "value_type": "FLOAT"
+              },
+              {
+                "key": "appQosPolicyDropPktCount[{#SNMPINDEX}]",
+                "name": "APP QOS ORGANISATION {#ORG_NAME}: Dropped packets",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "dropped packets"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "b0e6ad3258f444c79b33c6ce33c1f3f5"
+              },
+              {
+                "key": "appQosPolicyForwardByteCount[{#SNMPINDEX}]",
+                "name": "APP QOS ORGANISATION {#ORG_NAME}: Forward bytes",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.12.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "forwad bytes"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "cad03b87845647828e46b600785e8d61",
+                "value_type": "FLOAT"
+              },
+              {
+                "key": "appQosPolicyForwardPktCount[{#SNMPINDEX}]",
+                "name": "APP QOS POLICY {#POLICY_NAME}: Forward packets",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "forwad packets"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "d6f881df26ba453588d0de968fbbc3f3"
+              },
+              {
+                "key": "appQosPolicyHitCount[{#SNMPINDEX}]",
+                "name": "APP QOS ORGANISATION {#ORG_NAME}: Hit count",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Hit count"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "e2a76308d5044fbe876ad082f65c2e05"
+              },
+              {
+                "key": "appQosPolicyName[{#SNMPINDEX}]",
+                "name": "APP QOS ORGANISATION {#ORG_NAME}: Policy name",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "policy name"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "4bb6c999504243cd9bc9a7b926e98457",
+                "value_type": "CHAR"
+              },
+              {
+                "key": "appQosPolicyRuleName[{#SNMPINDEX}]",
+                "name": "APP QOS ORGANISATION {#ORG_NAME}: Rule name",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "rule name"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "ce94467f23ad4442a3f4cfee2868a218",
+                "value_type": "CHAR"
+              },
+              {
+                "key": "qosPolicySessionDenyCount[{#SNMPINDEX}]",
+                "name": "APP QOS ORGANISATION {#ORG_NAME}: Sessions deny",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.5.1.1.13.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "sessions deny"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "fed1e5a7d89047c2963e7f17590e5deb"
+              }
+            ],
+            "key": "appqosPolicyName-[{#SNMPVALUE}]",
+            "lifetime": "0",
+            "name": "Versa appqospolicyname",
+            "snmp_oid": "discovery[{#ORG_NAME},1.3.6.1.4.1.42359.2.2.1.2.1.5.2.1.5]",
+            "type": "SNMP_AGENT",
+            "uuid": "f3b180c9abb640e09759c538e9263ffe"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Versa appqospolicy",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "versa"
+          }
+        ],
+        "template": "SNMP Versa appqospolicy",
+        "uuid": "644a042050354ced9a35b68d65e19f33"
+      }
+    ],
+    "version": "6.0"
+  }
+}

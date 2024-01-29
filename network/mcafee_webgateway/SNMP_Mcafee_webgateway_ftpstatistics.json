@@ -1,0 +1,154 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:36Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Mcafee webgateway ftpstatistics by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Mcafee webgateway ftpstatistics equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Monitors the change in number of bytes transferred from Client to Proxy using FTP protocol.\n[OID: 1.3.6.1.4.1.1230.2.7.2.4.2]",
+            "key": "stFtpBytesFromClient",
+            "name": "Number of bytes transferred from Client to Proxy using FTP protocol",
+            "snmp_oid": ".1.3.6.1.4.1.1230.2.7.2.4.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "FtpBytesFromClient"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mcafee webgateway"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2580920755b04c5bb18955b41ba3a101"
+          },
+          {
+            "delay": "2m",
+            "description": "Monitors the change in number of bytes transferred from server(s) to proxy using the FTP protocol. [OID: 1.3.6.1.4.1.1230.2.7.2.4.3]",
+            "key": "stFtpBytesFromServer",
+            "name": "Number of bytes transferred from server(s) to proxy using the FTP protocol.",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "10m"
+                ],
+                "type": "DISCARD_UNCHANGED_HEARTBEAT"
+              }
+            ],
+            "snmp_oid": ".1.3.6.1.4.1.1230.2.7.2.4.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "stFtpBytesFromServer"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mcafee webgateway"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "60b9bb9e63b64f95953342ef30134361"
+          },
+          {
+            "description": "Monitors the change in number of connections that have been blocked by the Media-Type filter. [OID: 1.3.6.1.4.1.1230.2.7.2.1.6.0]",
+            "key": "stFtpBytesToClient",
+            "name": "Number of bytes transferred from proxy to client(s) using the FTP protocol",
+            "snmp_oid": ".1.3.6.1.4.1.1230.2.7.2.4.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "stFtpBytesToClient"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mcafee webgateway"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "24ffc2e50d704bd8b1f2e17e43ea6f5b"
+          },
+          {
+            "description": "Monitors the change in Number of bytes transferred from proxy to server(s) using the FTP protocol. [OID: 1.3.6.1.4.1.1230.2.7.2.4.5]",
+            "key": "stFtpBytesToServer",
+            "name": "Number of bytes transferred from proxy to server(s) using the FTP protocol",
+            "snmp_oid": ".1.3.6.1.4.1.1230.2.7.2.4.5.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "stFtpBytesToServer"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "mcafee webgateway"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "36fe2574af694e97a69090f32c4ece87"
+          }
+        ],
+        "name": "SNMP Mcafee webgateway ftpstatistics",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "mcafee webgateway"
+          }
+        ],
+        "template": "SNMP Mcafee webgateway ftpstatistics",
+        "uuid": "c0156931911b47418c5dfd39198ae58e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:34Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Perle ids systemusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Perle ids systemusage equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Check CPU utilization",
+            "key": "perleAverageCPUUtilization",
+            "name": "CPU utilization",
+            "snmp_oid": ".1.3.6.1.4.1.1966.22.44.1.24.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "perle ids"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "d8628fe0628e4911bb090b2f39682b89"
+          },
+          {
+            "description": "Check Flashdisk free space",
+            "key": "perleFlashdisk",
+            "name": "Flashdisk free space",
+            "snmp_oid": ".1.3.6.1.4.1.1966.22.44.1.26.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "disk"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "perle ids"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "69c590ae26a5432e85d607f9ce9cee8a"
+          },
+          {
+            "description": "Check  Available Memory",
+            "key": "perleMemory",
+            "name": "Available Memory",
+            "snmp_oid": ".1.3.6.1.4.1.1966.22.44.1.25.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "perle ids"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "73a3623d84b74bde83744be1898d7a3f"
+          }
+        ],
+        "name": "SNMP Perle ids systemusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "system"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "perle ids"
+          }
+        ],
+        "template": "SNMP Perle ids systemusage",
+        "uuid": "be74c85676ec4efbb185ca10cb01cfe8"
+      }
+    ],
+    "version": "6.0"
+  }
+}

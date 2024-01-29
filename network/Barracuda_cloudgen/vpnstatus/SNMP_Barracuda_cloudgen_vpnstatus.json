@@ -1,0 +1,104 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:35Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template to check SNMP Barracuda cloudgen equipments using SNMP protocol by izi-it",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check VPNs status.",
+            "item_prototypes": [
+              {
+                "key": "vpnState[{#SNMPINDEX}]",
+                "name": "VPN {#VPN_NAME}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.10704.1.6.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vpn status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Barracuda"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "441c30d0aff74b9690dcc80c19ff6634",
+                "valuemap": {
+                  "name": "Barracuda_VPN_Status"
+                }
+              }
+            ],
+            "key": "vpnName-[{#SNMPVALUE}]",
+            "name": "Barracuda cloudgen vpnstatus",
+            "snmp_oid": "discovery[{#VPN_NAME},1.3.6.1.4.1.10704.1.6.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "53c6e1dc0ab543dea4e3c4d7ed362590"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Barracuda cloudgen vpnstatus",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "vpnstatus"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Barracuda cloudgen"
+          }
+        ],
+        "template": "SNMP Barracuda cloudgen vpnstatus",
+        "uuid": "060e220f013c48938494a8b3241c610a",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "down",
+                "value": "-1"
+              },
+              {
+                "newvalue": "down-disabled",
+                "value": "0"
+              },
+              {
+                "newvalue": "active",
+                "value": "1"
+              }
+            ],
+            "name": "Barracuda_VPN_Status",
+            "uuid": "24127b2755f94bd782d63180eea5d595"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

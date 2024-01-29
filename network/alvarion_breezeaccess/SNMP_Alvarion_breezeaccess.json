@@ -1,0 +1,44 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:35Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Alvarion breezeaccess by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Alvarion breezeaccess  equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Alvarion breezeaccess",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "alvarion breezeaccess"
+          }
+        ],
+        "template": "SNMP Alvarion breezeaccess",
+        "templates": [
+          {
+            "name": "SNMP Alvarion breezeaccess radiostatus"
+          }
+        ],
+        "uuid": "4756e035debc482085b8f0c1a0089a3f"
+      }
+    ],
+    "version": "6.0"
+  }
+}

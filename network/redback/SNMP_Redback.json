@@ -1,0 +1,62 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:32Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Redbackby automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Redback equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Redback",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "redback"
+          }
+        ],
+        "template": "SNMP Redback",
+        "templates": [
+          {
+            "name": "SNMP Redback cpu"
+          },
+          {
+            "name": "SNMP Redback disk"
+          },
+          {
+            "name": "SNMP Redback fan"
+          },
+          {
+            "name": "SNMP Redback memory"
+          },
+          {
+            "name": "SNMP Redback psu"
+          },
+          {
+            "name": "SNMP Redback temperature"
+          },
+          {
+            "name": "SNMP Redback voltage"
+          }
+        ],
+        "uuid": "41ea8e610f4744209f5b43ccf183f499"
+      }
+    ],
+    "version": "6.0"
+  }
+}

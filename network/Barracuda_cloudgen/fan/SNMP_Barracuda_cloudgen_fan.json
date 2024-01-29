@@ -1,0 +1,121 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:27Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template to check SNMP Barracuda cloudgen equipments using SNMP protocol by izi-it",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check fan status.",
+            "filter": {
+              "conditions": [
+                {
+                  "formulaid": "A",
+                  "macro": "{#SENSOR_TYPE}",
+                  "value": "1"
+                }
+              ]
+            },
+            "item_prototypes": [
+              {
+                "description": "S",
+                "key": "hwSensorType[{#SNMPINDEX}]",
+                "name": "Fan {#FAN}: Type",
+                "snmp_oid": ".1.3.6.1.4.1.10704.1.4.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan type"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Barracuda"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "ec4d13e0599045bd944ed13e000ee4a6",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Fan sensor value",
+                "key": "hwSensorValue[{#SNMPINDEX}]",
+                "name": "Fan {#FAN}: Value",
+                "snmp_oid": ".1.3.6.1.4.1.10704.1.4.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan value"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Barracuda cloudgen"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "rpm",
+                "uuid": "d3d9dca6ed004ebb9f96696f0d274247",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "hwSensorName-[{#SNMPVALUE}]",
+            "name": "Barracuda cloudgen fan",
+            "snmp_oid": "discovery[{#FAN},1.3.6.1.4.1.10704.1.4.1.1,{#SENSOR_TYPE},1.3.6.1.4.1.10704.1.4.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "6bcc08e1ffcd4368aff0595e016cc7e2"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Barracuda cloudgen fan",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "fan"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Barracuda cloudgen"
+          }
+        ],
+        "template": "SNMP Barracuda cloudgen fan",
+        "uuid": "a9fae96ff4d843ec82a093bac0a2cf65"
+      }
+    ],
+    "version": "6.0"
+  }
+}

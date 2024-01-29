@@ -1,0 +1,103 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:53Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "TemplateSNMP Hirschmann hios fan made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Indicates the operational state of the associated fan  ==> [OID:.1.3.6.1.4.1.248.14.1.3.1.3]",
+                "key": "hmFanState[{#SNMPINDEX}]",
+                "name": "Fan {#FAN}: State",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.3.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann hios"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "083ddd2a18ec44cb8d66a2014e4348cc",
+                "valuemap": {
+                  "name": "Hirschman_Hios_Fan_State"
+                }
+              }
+            ],
+            "key": "hmFanID-[{#SNMPVALUE}]",
+            "name": "Hirschmann hios fan",
+            "snmp_oid": "discovery[{#FAN},1.3.6.1.4.1.248.14.1.3.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "cd7e9bbeacbd40f28edae93b05d5bc66"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Hirschmann hios fan",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "fan"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Hirschmann hios"
+          }
+        ],
+        "template": "SNMP Hirschmann hios fan",
+        "uuid": "545bdb0320e34ec8974336798ed8e43d",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "not-available",
+                "value": "1"
+              },
+              {
+                "newvalue": "available-and-ok",
+                "value": "2"
+              },
+              {
+                "newvalue": "available-but-failure",
+                "value": "3"
+              }
+            ],
+            "name": "Hirschman_Hios_Fan_State",
+            "uuid": "f2b9c2523adc4b739ffda5a282191427"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

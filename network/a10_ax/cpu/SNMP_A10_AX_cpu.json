@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:26Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP A10 AX cpu made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck CPU usage.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "key": "axSysCpuUsageValueAtPeriod",
+            "name": "CPU usage value at given period, 1-sec, 5-sec, 10-sec, 30-sec, and 60-sec.",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.3.6.1.3",
+            "type": "SNMP_AGENT",
+            "uuid": "c9c07379185343928f8a56fa5665c20d",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP A10 AX cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "a10 ax"
+          }
+        ],
+        "template": "SNMP A10 AX cpu",
+        "uuid": "86ba6da017034a18b3dec2ab1d5c159f"
+      }
+    ],
+    "version": "6.0"
+  }
+}

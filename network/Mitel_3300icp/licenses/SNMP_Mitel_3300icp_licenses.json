@@ -1,0 +1,149 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:52Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Mitel 3300icp licenses made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "The number of the device license purchased ==> [OID:.1.3.6.1.4.1.1027.4.1.1.2.1.2.3.0]",
+            "key": "mitelIpera3000IPDevLicPurchased",
+            "name": "The number of the device license purchased",
+            "snmp_oid": ".1.3.6.1.4.1.1027.4.1.1.2.1.2.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "device license purchased"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Mitel 3300icp"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "71afab7ec5db4e9c9741bb0ce13d744e"
+          },
+          {
+            "description": "The number of the device license used\n==> [OID:.1.3.6.1.4.1.1027.4.1.1.2.1.2.4.0]",
+            "key": "mitelIpera3000IPDevLicUsed",
+            "name": "The number of the device license used",
+            "snmp_oid": ".1.3.6.1.4.1.1027.4.1.1.2.1.2.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "device license used"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Mitel 3300icp"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "46a23a8a9bd74156bca4a4bcc4ae28a5"
+          },
+          {
+            "description": "The number of the user license purchased.\n==> [OID:.1.3.6.1.4.1.1027.4.1.1.2.1.2.1.0]",
+            "key": "mitelIpera3000IPUsrLicPurchased",
+            "name": "The number of the user license purchased",
+            "snmp_oid": ".1.3.6.1.4.1.1027.4.1.1.2.1.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "licenses purchased"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Mitel 3300icp"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2656b77a94004370b0c23405bb4144d5"
+          },
+          {
+            "description": "The number of the user license used.\n==> [OID:.1.3.6.1.4.1.1027.4.1.1.2.1.2.2.0]",
+            "key": "mitelIpera3000IPUsrLicUsed",
+            "name": "The number of the user license used",
+            "snmp_oid": ".1.3.6.1.4.1.1027.4.1.1.2.1.2.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "license used."
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Mitel 3300icp"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "d1cdbe05d021415788ac2c9830521936"
+          }
+        ],
+        "name": "SNMP Mitel 3300icp licenses",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "licenses"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Mitel 3300icp"
+          }
+        ],
+        "template": "SNMP Mitel 3300icp licenses",
+        "uuid": "e66d6b82b3ed4aa18317ca3264e8e1e8"
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:51Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Ruckus zonedirector system by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Ruckus zonedirector equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Number of system CPU utilization percent ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.5.58]",
+            "key": "ruckusZDSystemCPUUtil",
+            "name": "Number of system CPU utilization",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.5.58",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu utilization"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "846b8fcc91f348c99bd7e8c6c7439e27",
+            "value_type": "FLOAT",
+            "valuemap": {
+              "name": "Ruckus_Peer-Connected_Status"
+            }
+          },
+          {
+            "description": "Memory size ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.5.60]",
+            "key": "ruckusZDSystemMemorySize",
+            "name": "Memory size",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.5.60",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory size"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "MB",
+            "uuid": "610069d0725141a6a7a95386af5e75dc",
+            "value_type": "FLOAT",
+            "valuemap": {
+              "name": "Ruckus_Peer-Connected_Status"
+            }
+          },
+          {
+            "description": "Memory utilization in % ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.5.59]",
+            "key": "ruckusZDSystemMemoryUtil",
+            "name": "Memory utilization",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.5.59",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory used prct"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "491570fe9819468b95912d7b718d1ab8",
+            "value_type": "FLOAT",
+            "valuemap": {
+              "name": "Ruckus_Peer-Connected_Status"
+            }
+          },
+          {
+            "description": "Peer zd connected status ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.1.31]",
+            "key": "ruckusZDSystemPeerConnectedStatus",
+            "name": "Peer zd connected status",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.1.31",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "peer connected status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "668b752722d94cae8bb6de71264374da",
+            "valuemap": {
+              "name": "Ruckus_Peer-Connected_Status"
+            }
+          },
+          {
+            "description": "Number of AP ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.15.1]",
+            "key": "ruckusZDSystemStatsNumAP",
+            "name": "Number of AP",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.15.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Number of AP"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "96510b85615f477aaead47a2d680abf8",
+            "valuemap": {
+              "name": "Ruckus_Peer-Connected_Status"
+            }
+          },
+          {
+            "description": "Number of known rogue devices\n==> [OID:1.3.6.1.4.1.25053.1.2.1.1.1.15.3]",
+            "key": "ruckusZDSystemStatsNumRogue",
+            "name": "Number of known rogue devices",
+            "snmp_oid": "1.3.6.1.4.1.25053.1.2.1.1.1.15.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "rogues"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8a32b8efbe8641b6b0cf0e8f7c9bf20d",
+            "valuemap": {
+              "name": "Ruckus_Peer-Connected_Status"
+            }
+          },
+          {
+            "description": "Number of authorized client devices ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.15.2]",
+            "key": "ruckusZDSystemStatsNumSta",
+            "name": "Number of authorized client devices",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.15.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "authorized clients"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "1d03fed19a6945f1a43a5d13933ba4de",
+            "valuemap": {
+              "name": "Ruckus_Peer-Connected_Status"
+            }
+          },
+          {
+            "description": "Total received bytes of wireless interfaces\n==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.15.6]",
+            "key": "ruckusZDSystemStatsWLANTotalRxBytes",
+            "name": "Total received bytes of wireless interfaces",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.15.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "traffic in"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "2509d963f07647b9afb9ad4a2ce9bc67",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Total transmitted bytes of wireless interfaces ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.15.9]",
+            "key": "ruckusZDSystemStatsWLANTotalTxBytes",
+            "name": "Total transmitted bytes of wireless interfaces",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.15.9",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "traffic out"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "B",
+            "uuid": "7d0c87dce06c4f7d8d462f130a69bec9",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Current zd system status: \nif enable smart redundancy, the status is master or standby, \nif disable smart redundancy,the status is noredundancy ==> [OID:.1.3.6.1.4.1.25053.1.2.1.1.1.1.30]",
+            "key": "ruckusZDSystemStatus",
+            "name": "Current zd system status",
+            "snmp_oid": ".1.3.6.1.4.1.25053.1.2.1.1.1.1.30",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "system status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Ruckus zonedirector"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "affbcbfe938c42d188e54a1879b63c97",
+            "valuemap": {
+              "name": "Ruckus_System_Status"
+            }
+          }
+        ],
+        "name": "SNMP Ruckus zonedirector system",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "system"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Ruckus zonedirector"
+          }
+        ],
+        "template": "SNMP Ruckus zonedirector system",
+        "uuid": "170148bf489a42a3a188db925f10179e",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "connected",
+                "value": "1"
+              },
+              {
+                "newvalue": "disconnected",
+                "value": "2"
+              }
+            ],
+            "name": "Ruckus_Peer-Connected_Status",
+            "uuid": "3b5e2461d1fa4c888cb2c6c64f38fa46"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "master",
+                "value": "1"
+              },
+              {
+                "newvalue": "standby",
+                "value": "2"
+              },
+              {
+                "newvalue": "noredundancy",
+                "value": "3"
+              }
+            ],
+            "name": "Ruckus_System_Status",
+            "uuid": "16c4c6b395b14e91a905cff81cdf15ed"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

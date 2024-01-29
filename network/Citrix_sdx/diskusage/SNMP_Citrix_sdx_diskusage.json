@@ -1,0 +1,165 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:48Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Citrix srx diskusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck disks.",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Size of the disk (bytes)  ==> [ OID:.1.3.6.1.4.1.5951.6.2.1000.3.1.10]",
+                "key": "diskSize[{#SNMPINDEX}]",
+                "name": "{#DISK_NAME}: Size",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.3.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "disk size"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "2c3d7e449fa74f3da44eaf7c3c05ef54",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Total blocks read  ==> [ OID:.1.3.6.1.4.1.5951.6.2.1000.3.1.7]",
+                "key": "diskTotalBlocksRead[{#SNMPINDEX}]",
+                "name": "{#DISK_NAME}: Total blocks read",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.3.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Total blocks read"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "188c1a8767244ec38f3aeff7b95032a4",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Total blocks written ==> [ OID:.1.3.6.1.4.1.5951.6.2.1000.3.1.8]",
+                "key": "diskTotalBlocksWritten[{#SNMPINDEX}]",
+                "name": "{#DISK_NAME}: Total blocks written",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.3.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Total blocks written"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "7f4c592f3af042c69ed84d515d1d6dae",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Utilization of the disk (bytes) ==> [ OID:..1.3.6.1.4.1.5951.6.2.1000.3.1.9]",
+                "key": "diskUtilized[{#SNMPINDEX}]",
+                "name": "{#DISK_NAME}: Utilization",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.3.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "disk utilization"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "b49ef437a3cc4bf19b678fae0ebe1b3a",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "citrixdiskName-[{#SNMPVALUE}]",
+            "name": "Citrix sdx diskusage",
+            "snmp_oid": "discovery[{#DISK_NAME},1.3.6.1.4.1.5951.6.2.1000.3.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "74ddcf44d7e1400e9faea1926ebf1d1c"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Citrix sdx diskusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "diskusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Citrix sdx"
+          }
+        ],
+        "template": "SNMP Citrix sdx diskusage",
+        "uuid": "aa63fa246e5b4fb6bf5d78c0541d18ca"
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:44Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Digi portserverts made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Digi portserverts",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Digi portserverts"
+          }
+        ],
+        "template": "SNMP Digi portserverts",
+        "templates": [
+          {
+            "name": "SNMP Digi portserverts cpu"
+          },
+          {
+            "name": "SNMP Digi portserverts memory"
+          }
+        ],
+        "uuid": "d53534a7580f4847aa609ef17421a424"
+      }
+    ],
+    "version": "6.0"
+  }
+}

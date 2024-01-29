@@ -1,0 +1,206 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:41Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Sonus sbc callstats by automate@izi-it\n\nCheck Call statistics\n\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The number of calls blocked per channel per port. Only applicable to ISDN ports.\n ==> [ OID:.1.3.6.1.4.1.177.15.1.5.1.2.1.18]",
+                "key": "uxPTBlockedCalls[{#SNMPINDEX}]",
+                "name": "Port {#PORT_INDEX}: Number of calls blocked per channel per port",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.5.1.2.1.18.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "calls blocked"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "7f44445c667a4f0e927d374105479ba4"
+              },
+              {
+                "description": "The number of calls answered on this port. Not applicable to CAS ports.\n ==> [ OID:.1.3.6.1.4.1.177.15.1.5.1.2.1.7]",
+                "key": "uxPTConnectedCalls[{#SNMPINDEX}]",
+                "name": "Port {#PORT_INDEX}: Number of calls answered",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.5.1.2.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "calls answered"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "fe34b333ada74706b1cdc11ac59cc0e5"
+              },
+              {
+                "description": "The current number of calls active on this port. Not applicable to CAS ports.\n==> [ OID:.1.3.6.1.4.1.177.15.1.5.1.2.1.5]",
+                "key": "uxPTCurrentCalls[{#SNMPINDEX}]",
+                "name": "Port {#PORT_INDEX}: Current number of calls active",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.5.1.2.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "calls active"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "07c82efd5d3241569480ac0d3e2ade6b"
+              },
+              {
+                "description": "The number of errors on this port. Not applicable to CAS ports.\n==> [ OID:.1.3.6.1.4.1.177.15.1.5.1.2.1.9",
+                "key": "uxPTErroredCalls[{#SNMPINDEX}]",
+                "name": "Port {#PORT_INDEX}: Number of errors",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.5.1.2.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "errors"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bf02d533c5404e859c8aff3110bc4537"
+              },
+              {
+                "description": "The number of calls refused on this port. Not applicable to CAS ports.\n==> [ OID:.1.3.6.1.4.1.177.15.1.5.1.2.1.8]",
+                "key": "uxPTRefusedCalls[{#SNMPINDEX}]",
+                "name": "Port {#PORT_INDEX}: Number of calls refused",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.5.1.2.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "calls refused"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "910e66ef8551452994e11ff741cb5c3a"
+              },
+              {
+                "description": "The total number of calls received on this port. Not applicable to CAS ports.\n ==> [ OID:.1.3.6.1.4.1.177.15.1.5.1.2.1.6]",
+                "key": "uxPTTotalCalls[{#SNMPINDEX}]",
+                "name": "Port {#PORT_INDEX}: Total number of calls received",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.5.1.2.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "calls received"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bf8944adf5904ff6955b9d7799fc561a"
+              }
+            ],
+            "key": "uxPTIndex-[{#SNMPVALUE}]",
+            "name": "Sonus sbc callstats",
+            "snmp_oid": "discovery[{#PORT_INDEX},1.3.6.1.4.1.177.15.1.5.1.2.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "d2b418e230cd4e79901779c23c6695ad"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Sonus sbc callstats",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "SNMP Sonus sbc"
+          }
+        ],
+        "template": "SNMP Sonus sbc callstats",
+        "uuid": "dfa2dc68e84144cdbc8bd7d9fca1cbfa"
+      }
+    ],
+    "version": "6.0"
+  }
+}

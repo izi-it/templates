@@ -1,0 +1,72 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:28Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Oneaccess cpu  by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Oneaccess equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "key": "oacSysCpuUsed",
+            "name": "CPU Used",
+            "snmp_oid": ".1.3.6.1.4.1.13191.10.3.3.1.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "oneaccess"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "636545bf0c0747179ca97c38fb634bbe",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Oneaccess cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Oneaccess"
+          }
+        ],
+        "template": "SNMP Oneaccess cpu",
+        "uuid": "b3cff4e61b654e359588ac767d87f197"
+      }
+    ],
+    "version": "6.0"
+  }
+}

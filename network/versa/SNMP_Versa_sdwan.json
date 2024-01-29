@@ -1,0 +1,291 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:58Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Versa sdwan by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Versa equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "item_prototypes": [
+              {
+                "key": "sdwanPolicyHitCount[{#SNMPINDEX}]",
+                "name": "WAN ORGANISATION {#ORG_NAME}: Hit count",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Hit count"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "217c6c2c0f3748afb9766520d736aa6f"
+              },
+              {
+                "key": "sdwanPolicyName[{#SNMPINDEX}]",
+                "name": "WAN ORGANISATION {#ORG_NAME}: Policy name",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "policy name"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "bf7f1314541d4bf18536a22546b3ad8c",
+                "value_type": "CHAR"
+              },
+              {
+                "key": "sdwanPolicyRuleName[{#SNMPINDEX}]",
+                "name": "WAN ORGANISATION {#ORG_NAME}: Rule name",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "rule name"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "5594029295924e16b08ad7f3e5be1034",
+                "value_type": "CHAR"
+              },
+              {
+                "key": "sdwanPolicyRxBytesTunnel[{#SNMPINDEX}]",
+                "name": "WAN  ORGANISATION {#ORG_NAME}: Traffic in",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.16.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic in"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "2434e2eca99f4127a7e733a40466c579",
+                "value_type": "FLOAT"
+              },
+              {
+                "key": "sdwanPolicyRxPktsTunnel[{#SNMPINDEX}]",
+                "name": "WAN ORGANISATION {#ORG_NAME}: Packets  in",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.15.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "packets in"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "a980449c04bf419d90a71a972e4bb975"
+              },
+              {
+                "key": "sdwanPolicyTxBytesTunnel[{#SNMPINDEX}]",
+                "name": "WAN  ORGANISATION {#ORG_NAME}: Traffic out",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.14.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic out"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "0dc3ad1ffc0349a8b9ab1f80bd67ae3e",
+                "value_type": "FLOAT"
+              },
+              {
+                "key": "sdwanPolicyTxPktsTunnel[{#SNMPINDEX}]",
+                "name": "WAN ORGANISATION {#ORG_NAME}: Packets out",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      "10m"
+                    ],
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.13.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "packets out"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "versa"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "fb35ca97e81146e185ab91481c34b7df"
+              }
+            ],
+            "key": "sdwanPolicyOrgName-[{#SNMPVALUE}]",
+            "lifetime": "0",
+            "name": "Versa sdwan",
+            "snmp_oid": "discovery[{#ORG_NAME},1.3.6.1.4.1.42359.2.2.1.2.1.10.1.1.5]",
+            "type": "SNMP_AGENT",
+            "uuid": "ec1b95b083c14bdb880c9320f024e641"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Versa sdwan",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "versa"
+          }
+        ],
+        "template": "SNMP Versa sdwan",
+        "uuid": "ad1ec1d559a04a36a2d619ac0e9e2b87"
+      }
+    ],
+    "version": "6.0"
+  }
+}

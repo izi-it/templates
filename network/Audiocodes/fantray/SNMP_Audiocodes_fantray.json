@@ -1,0 +1,159 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:39Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Audiocodes fantray by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Audiocodes equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Is the Fan-Tray present or missing. AC INI-Param: N/A\n ==> [OID:.1.3.6.1.4.1.5003.9.10.10.4.22.1.3]",
+                "key": "acSysFanTrayExistence[{#SNMPINDEX}]",
+                "name": "Fantray {#FANTRAY_INDEX}: Existence",
+                "snmp_oid": ".1.3.6.1.4.1.5003.9.10.10.4.22.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fantray existence"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "36aa25e9d211472c87d30c289c14ed5e",
+                "valuemap": {
+                  "name": "Audiocodes_Fantray_Existence"
+                }
+              },
+              {
+                "description": "The Severity of the whole fan tray according to the current active alarm in the alarm table: Critical, Major or cleared. AC INI-Param: N/A\n==> [ OID:.1.3.6.1.4.1.5003.9.10.10.4.22.1.6]",
+                "key": "acSysFanTraySeverity[{#SNMPINDEX}]",
+                "name": "Fantray {#FANTRAY_INDEX}: Severity",
+                "snmp_oid": ".1.3.6.1.4.1.5003.9.10.10.4.22.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fantray severity"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9e6fb08695d943f98dd3cb2e149646b8",
+                "valuemap": {
+                  "name": "Audiocodes_Fantray_Status"
+                }
+              }
+            ],
+            "key": "acSysFanTrayIndex-[{#SNMPVALUE}]",
+            "name": "Audiocodes fantray",
+            "snmp_oid": "discovery[{#FANTRAY_INDEX},1.3.6.1.4.1.5003.9.10.10.4.22.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "cf6a3ee6ec444af798d68f3add786ffe"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Audiocodes fantray",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "fantray"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Audiocodes"
+          }
+        ],
+        "template": "SNMP Audiocodes fantray",
+        "uuid": "3e762246e50441088c1fec32be552986",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "present",
+                "value": "1"
+              },
+              {
+                "newvalue": "missing",
+                "value": "2"
+              }
+            ],
+            "name": "Audiocodes_Fantray_Existence",
+            "uuid": "1beb9049b6b64e1fab895aa19780ac34"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "cleared",
+                "value": "0"
+              },
+              {
+                "newvalue": "indeterminate",
+                "value": "1"
+              },
+              {
+                "newvalue": "warning",
+                "value": "2"
+              },
+              {
+                "newvalue": "minor",
+                "value": "3"
+              },
+              {
+                "newvalue": "major",
+                "value": "4"
+              },
+              {
+                "newvalue": "critical",
+                "value": "5"
+              }
+            ],
+            "name": "Audiocodes_Fantray_Status",
+            "uuid": "0e7677605b2f49c68b7b73392dd3dfcc"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

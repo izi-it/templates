@@ -1,0 +1,83 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:43Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Raisecom pon temperature by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Raisecom pon temperature equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check temperature.",
+            "item_prototypes": [
+              {
+                "description": "The current temperature of the device.",
+                "key": "pon_raisecomTemperatureValue[{#SNMPINDEX}]",
+                "name": "Temperature {#SENSOR}: Current temperature",
+                "snmp_oid": ".1.3.6.1.4.1.8886.1.27.2.1.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "pon temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "raisecom"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0246e6a4d33943bcb8f8a1289793df95",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "pon_raisecomShelfTemperature-[{#SNMPVALUE}]",
+            "name": "Raisecom Pon Temperature",
+            "snmp_oid": "discovery[{#SENSOR},1.3.6.1.4.1.8886.1.27.2.1.1.10]",
+            "type": "SNMP_AGENT",
+            "uuid": "c908a83242744cfe88b34256f2b471bc"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Raisecom pon temperature",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "pon temperature"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Raisecom"
+          }
+        ],
+        "template": "SNMP Raisecom pon temperature",
+        "uuid": "92a874e5b6c44596b1a835906011c549"
+      }
+    ],
+    "version": "6.0"
+  }
+}

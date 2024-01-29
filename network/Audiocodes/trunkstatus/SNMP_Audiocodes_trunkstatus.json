@@ -1,0 +1,301 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:30Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Audiocodes trunkstatusby automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Audiocodes trunkstatus equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Average value within the period time.\n==> [ OID:.1.3.6.1.4.1.5003.10.10.2.21.1.4]",
+                "key": "acPMTrunkUtilizationAverage[{#SNMPINDEX}]",
+                "name": "Trunk {#TRUNK_NAME}: Average Utilization",
+                "snmp_oid": ".1.3.6.1.4.1.5003.10.10.2.21.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "utilization average"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "ba7c202730584fd4aa8632d6e12076fb",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Maximum value within the period time ==> [ OID:.1.3.6.1.4.1.5003.10.10.2.21.1.5]",
+                "key": "acPMTrunkUtilizationMax[{#SNMPINDEX}]",
+                "name": "Trunk {#TRUNK_NAME}: Maximum Utilization",
+                "snmp_oid": ".1.3.6.1.4.1.5003.10.10.2.21.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "maximum utilization"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "cfec572577f64f71b3dff112ac47a6d0",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Total since last reset ==> [ OID:.1.3.6.1.4.1.5003.10.10.2.21.1.12]",
+                "key": "acPMTrunkUtilizationTotal[{#SNMPINDEX}]",
+                "name": "Trunk {#TRUNK_NAME}: Total Utilization",
+                "snmp_oid": ".1.3.6.1.4.1.5003.10.10.2.21.1.12.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total utilization"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "13aec107ee4c47cd8d9aa2ed77178a1b",
+                "valuemap": {
+                  "name": "Audiocodes_Deactivate_Status"
+                }
+              },
+              {
+                "description": "Deactivating a trunk forces AIS alarm on that trunk. \nDeactivation is used for trunk maintenance without locking the trunk. \nActivating the trunk will stop the alarm on the trunk. \nnotAvailable(0) appears when the trunk is locked. \nThe trunk can't be SET to this state. \nAccess: Online. \nAC INI-Param: N/A\n==> [ OID:.1.3.6.1.4.1.5003.9.10.9.1.1.1.1.1.11]",
+                "key": "acTrunkDeactivate[{#SNMPINDEX}]",
+                "name": "Trunk {#TRUNK_NAME}: Deactivating alarms",
+                "snmp_oid": ".1.3.6.1.4.1.5003.9.10.9.1.1.1.1.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "deactivating alarms"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9beb72edbf60411b91139842f74beb44",
+                "valuemap": {
+                  "name": "Audiocodes_Deactivate_Status"
+                }
+              },
+              {
+                "description": "Describes the trunk's alarm status. \n1 - Disabled. \n2 - Active - OK. \n3 - LOS/LOF Alarm. \n4 - AIS Alarm.\n5 - RAI Alram.\n6 - D-Channel Alarm. \n7 - Lower Layer Down. AC INI-Param: N/A\n==> [ OID:.1.3.6.1.4.1.5003.9.10.9.2.1.1.1.7]",
+                "key": "acTrunkStatusAlarm[{#SNMPINDEX}]",
+                "name": "Trunk {#TRUNK_NAME}: Alarm status",
+                "snmp_oid": ".1.3.6.1.4.1.5003.9.10.9.2.1.1.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "alarm status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "3b19b2aef06a47d08865fe826247d26c",
+                "valuemap": {
+                  "name": "Audiocodes_Alarm_Status"
+                }
+              },
+              {
+                "description": "Describes the trunk's D channel status.\n 0 - dChannelEstablished\n 1 - dChannelNotEstablished \n10 - dChannelNotApplicable. \nAC INI-Param: N/A\n==> [ OID:.1.3.6.1.4.1.5003.9.10.9.2.1.1.1.6]",
+                "key": "acTrunkStatusDChannel[{#SNMPINDEX}]",
+                "name": "Trunk {#TRUNK_NAME}: D channel status",
+                "snmp_oid": ".1.3.6.1.4.1.5003.9.10.9.2.1.1.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "trunk d channel status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Audiocodes"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "1c6194ef40434df1b04fb6e47bf67ca8",
+                "valuemap": {
+                  "name": "Audiocodes_DChannel_Status"
+                }
+              }
+            ],
+            "key": "acTrunkName-[{#SNMPVALUE}]",
+            "name": "Audiocodes trunkstatus",
+            "snmp_oid": "discovery[{#TRUNK_NAME},1.3.6.1.4.1.5003.9.10.9.1.1.1.1.1.13]",
+            "type": "SNMP_AGENT",
+            "uuid": "debac04abf5e4d3d9d28bdf8fffbb575"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Audiocodes trunkstatus",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "trunkstatus"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Audiocodes"
+          }
+        ],
+        "template": "SNMP Audiocodes trunkstatus",
+        "uuid": "2c5c6ab3d00d43e7b446301eaf376ac5",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "greyDisabled",
+                "value": "0"
+              },
+              {
+                "newvalue": "greenActive",
+                "value": "1"
+              },
+              {
+                "newvalue": "redLosLof",
+                "value": "2"
+              },
+              {
+                "newvalue": "blueAis",
+                "value": "3"
+              },
+              {
+                "newvalue": "yellowRai",
+                "value": "4"
+              },
+              {
+                "newvalue": "orangeDChannel",
+                "value": "5"
+              },
+              {
+                "newvalue": "purpleLowerLayerDown",
+                "value": "6"
+              },
+              {
+                "newvalue": "darkOrangeNFASAlarm",
+                "value": "7"
+              }
+            ],
+            "name": "Audiocodes_Alarm_Status",
+            "uuid": "a4bfa0f78921469090230422c51b66f3"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "dChannelEstablished",
+                "value": "0"
+              },
+              {
+                "newvalue": "dChannelNotEstablished",
+                "value": "1"
+              },
+              {
+                "newvalue": "dChannelNotApplicable",
+                "value": "10"
+              }
+            ],
+            "name": "Audiocodes_DChannel_Status",
+            "uuid": "c5fa035895674dbfa2b725ff7f6ee83f"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "notAvailable",
+                "value": "0"
+              },
+              {
+                "newvalue": "deActivated",
+                "value": "1"
+              },
+              {
+                "newvalue": "activated",
+                "value": "2"
+              }
+            ],
+            "name": "Audiocodes_Deactivate_Status",
+            "uuid": "697e9666340e43cf9bd725c523de102d"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

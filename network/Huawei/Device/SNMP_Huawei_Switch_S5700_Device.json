@@ -1,0 +1,82 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:56Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "item_prototypes": [
+              {
+                "delay": "15m",
+                "key": "hwMemberStackDeviceType[{#SNMPINDEX}]",
+                "name": "Unit-[$1] Switch type",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.183.1.20.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Device"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Huawei"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "e115cbce250a4f72b5ca836403ae9b44",
+                "value_type": "CHAR"
+              }
+            ],
+            "key": "hwMemberStackDeviceType",
+            "name": "Discovery: Stack member device type",
+            "snmp_oid": "discovery[{#SNMPVALUE}, 1.3.6.1.4.1.2011.5.25.183.1.20.1.5]",
+            "type": "SNMP_AGENT",
+            "uuid": "f11ef61878d44ed6b4905dff5a0309cf"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Huawei Switch S5700 Device",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "Device"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Huawei"
+          }
+        ],
+        "template": "SNMP Huawei Switch S5700 Device",
+        "uuid": "f5e74cd36f674eacaceab6d4e29817a7"
+      }
+    ],
+    "version": "6.0"
+  }
+}

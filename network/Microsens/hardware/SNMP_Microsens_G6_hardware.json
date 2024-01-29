@@ -1,0 +1,327 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:49Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Microsens G6 hardware made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Fan state\n ==> [OID:.1.3.6.1.4.1.3181.10.6.1.31.103]",
+            "key": "hardwareFanStatus",
+            "name": "Fan State",
+            "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.31.103",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "fan state"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Microsens G6"
+              }
+            ],
+            "triggers": [
+              {
+                "expression": "count(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=2",
+                "name": "Fan state is degraded",
+                "priority": "WARNING",
+                "recovery_expression": "count(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=0 or\ncount(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=1 or\ncount(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=4",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Microsens G6"
+                  }
+                ],
+                "uuid": "799b7eaefd024f83b3c7304955b45198"
+              },
+              {
+                "expression": "count(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=3",
+                "name": "Fan state is fail",
+                "priority": "HIGH",
+                "recovery_expression": "count(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=0 or\ncount(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=1 or\ncount(/SNMP Microsens G6 hardware/hardwareFanStatus,#3)=4",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Microsens G6"
+                  }
+                ],
+                "uuid": "148dc5fe1ebb487aa15fbbca94f465dc"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4240d34a429e4f4a88cf46a3b239a450",
+            "valuemap": {
+              "name": "Microsens_Fan_Status"
+            }
+          },
+          {
+            "description": "Power supply state\n ==> [OID:.1.3.6.1.4.1.3181.10.6.1.31.100]",
+            "key": "hardwarePowerSupply1Status",
+            "name": "PSU 1 State",
+            "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.31.100",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "psu1 state"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Microsens G6"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "6ed8172553f3460cbd753c81a621f142",
+            "valuemap": {
+              "name": "Microsens_Psu_Status"
+            }
+          },
+          {
+            "description": "Power supply state\n ==> [OID:.1.3.6.1.4.1.3181.10.6.1.31.101]",
+            "key": "hardwarePowerSupply2Status",
+            "name": "PSU 2 State",
+            "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.31.101",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "psu2 state"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Microsens G6"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "367fd40ea8be48f593bdba1a67589524",
+            "valuemap": {
+              "name": "Microsens_Psu_Status"
+            }
+          },
+          {
+            "description": "Current status of SD card\n ==> [OID:.1.3.6.1.4.1.3181.10.6.1.31.104]",
+            "key": "hardwareSdCardStatus",
+            "name": "Sd-Card State",
+            "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.31.104",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "sd-card state"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Microsens G6"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "50367da0a6654f1ab9ed4a3021ae8cac",
+            "valuemap": {
+              "name": "Microsens_SD_Status"
+            }
+          },
+          {
+            "description": "Temperature value in centigrade\n ==> [OID:.1.3.6.1.4.1.3181.10.6.1.30.104]",
+            "key": "systemTemperature",
+            "name": "Temperature value",
+            "snmp_oid": ".1.3.6.1.4.1.3181.10.6.1.30.104",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "temperature value"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Microsens G6"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "centigrade",
+            "uuid": "77e72900e0084545991b8e044f179cf1",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Microsens G6 hardware",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "hardware"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Microsens"
+          }
+        ],
+        "template": "SNMP Microsens G6 hardware",
+        "uuid": "5397920f593d4472954ab00d725e59c2",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "unused",
+                "value": "0"
+              },
+              {
+                "newvalue": "unused",
+                "value": "1"
+              },
+              {
+                "newvalue": "degraded",
+                "value": "2"
+              },
+              {
+                "newvalue": "fail",
+                "value": "3"
+              },
+              {
+                "newvalue": "missing",
+                "value": "4"
+              }
+            ],
+            "name": "Microsens_Fan_Status",
+            "uuid": "834edc7187d64d9989024b20072373d3"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "ok",
+                "value": "0"
+              },
+              {
+                "newvalue": "overload",
+                "value": "1"
+              },
+              {
+                "newvalue": "inputLow",
+                "value": "2"
+              },
+              {
+                "newvalue": "fuseFail",
+                "value": "3"
+              },
+              {
+                "newvalue": "notApplicable",
+                "value": "4"
+              },
+              {
+                "newvalue": "unmanaged",
+                "value": "5"
+              },
+              {
+                "newvalue": "notInstalled",
+                "value": "6"
+              }
+            ],
+            "name": "Microsens_Psu_Status",
+            "uuid": "0d8057ae693a4c2eac8382b9e24551a2"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "empty",
+                "value": "0"
+              },
+              {
+                "newvalue": "inserted",
+                "value": "1"
+              },
+              {
+                "newvalue": "writeProtected",
+                "value": "2"
+              },
+              {
+                "newvalue": "writing",
+                "value": "3"
+              }
+            ],
+            "name": "Microsens_SD_Status",
+            "uuid": "15e52a0874c84b9e8051a2978b6f3963"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

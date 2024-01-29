@@ -1,0 +1,60 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:48Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Denyall made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nList reverse proxies.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Denyall",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Denyall"
+          }
+        ],
+        "template": "SNMP Denyall",
+        "templates": [
+          {
+            "name": "SNMP Denyall listreverseproxy"
+          }
+        ],
+        "uuid": "2b535df9ecde420fb3c84fa3f6868053",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "down",
+                "value": "0"
+              },
+              {
+                "newvalue": "ok",
+                "value": "1"
+              }
+            ],
+            "name": "Denial_Status",
+            "uuid": "4070c62acf124a4599535e97ec6835ac"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

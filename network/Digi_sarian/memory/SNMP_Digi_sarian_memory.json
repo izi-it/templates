@@ -1,0 +1,126 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:32Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Digi sarian memory  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck cpu usage (sarian-monitor.mib).",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "key": "digisarianfreeMemory",
+            "name": "Free Memory",
+            "snmp_oid": ".1.3.6.1.4.1.16378.10000.3.18.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "free memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Digi sarian"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "9cf6fedad02a4043936e46283a3cfa43",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "digisariantotalMemory",
+            "name": "Total Memory",
+            "snmp_oid": ".1.3.6.1.4.1.16378.10000.3.17.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "total memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Digi sarian"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "bf107b306f9a46f09c2425f9b318a8b8",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "digisarianUsedMemory",
+            "name": "Used Memory in %",
+            "params": "100*(last(//digisariantotalMemory)-last(//digisarianfreeMemory))/last(//digisariantotalMemory)",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "used memory"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Digi sarian"
+              }
+            ],
+            "type": "CALCULATED",
+            "units": "%",
+            "uuid": "b07eb0508d4545e7acbe478e35c54175",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Digi sarian memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Digi sarian"
+          }
+        ],
+        "template": "SNMP Digi sarian memory",
+        "uuid": "a346b9a758a5496bb50a5c37aaae6eaf"
+      }
+    ],
+    "version": "6.0"
+  }
+}

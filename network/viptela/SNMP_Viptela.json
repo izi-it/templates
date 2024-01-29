@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:30Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Viptela made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Viptela",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "viptela"
+          }
+        ],
+        "template": "SNMP Viptela",
+        "templates": [
+          {
+            "name": "Generic SNMP"
+          },
+          {
+            "name": "SNMP Viptela cpu"
+          },
+          {
+            "name": "SNMP Viptela disk"
+          },
+          {
+            "name": "SNMP Viptela memory"
+          }
+        ],
+        "uuid": "763b84be8ca0472da1703eac9a8186bf"
+      }
+    ],
+    "version": "6.0"
+  }
+}

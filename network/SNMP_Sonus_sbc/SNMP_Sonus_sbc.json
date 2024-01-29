@@ -1,0 +1,50 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:42Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Sonus sbc by automate@izi-it\n\n\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Sonus sbc",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "SNMP Sonus sbc"
+          }
+        ],
+        "template": "SNMP Sonus sbc",
+        "templates": [
+          {
+            "name": "SNMP Sonus sbc callstats"
+          },
+          {
+            "name": "SNMP Sonus sbc channels"
+          },
+          {
+            "name": "SNMP Sonus sbc dspstats"
+          }
+        ],
+        "uuid": "a5bd4194ac9a45a096852dccda56b131"
+      }
+    ],
+    "version": "6.0"
+  }
+}

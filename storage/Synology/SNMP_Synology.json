@@ -1,0 +1,65 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:49Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Synology made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Synology",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "storage"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Synology"
+          }
+        ],
+        "template": "SNMP Synology",
+        "templates": [
+          {
+            "name": "SNMP Synology disk"
+          },
+          {
+            "name": "SNMP Synology fan"
+          },
+          {
+            "name": "SNMP Synology ha"
+          },
+          {
+            "name": "SNMP Synology psu"
+          },
+          {
+            "name": "SNMP Synology raid"
+          },
+          {
+            "name": "SNMP Synology system"
+          },
+          {
+            "name": "SNMP Synology temperature"
+          },
+          {
+            "name": "SNMP Synology upgrade"
+          }
+        ],
+        "uuid": "d51a074d1d6041d8858504a91d072639"
+      }
+    ],
+    "version": "6.0"
+  }
+}

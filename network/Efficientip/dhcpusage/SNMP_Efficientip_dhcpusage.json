@@ -1,0 +1,80 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:59Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Efficientip dhcpusage  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "key": "eipDhcpStatValue[{#SNMPINDEX}]",
+                "name": "DHCP {#DHCP_NAME}: Statistic value",
+                "snmp_oid": ".1.3.6.1.4.1.2440.1.3.2.22.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "dhcpusage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Efficientip"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "794b0eb7c64d4dcd9915502cfa4fa866",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "eipDhcpStatName-[{#SNMPVALUE}]",
+            "name": "Efficientip dhcpusage",
+            "snmp_oid": "discovery[{#DHCP_NAME},1.3.6.1.4.1.2440.1.3.2.22.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "7eca63077bbc4630a5d7ac232fd44ebf"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Efficientip dhcpusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "dhcpusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Efficientip"
+          }
+        ],
+        "template": "SNMP Efficientip dhcpusage",
+        "uuid": "d19db0d12e474f989398597e51200f40"
+      }
+    ],
+    "version": "6.0"
+  }
+}

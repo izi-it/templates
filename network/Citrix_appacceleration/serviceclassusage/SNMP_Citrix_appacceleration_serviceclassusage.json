@@ -1,0 +1,239 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:57Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Citrix appacceleration serviceclassusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck service class usage.",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Number of accelerated octets received for the service class after compression.\n ==> [ OID:.1.3.6.1.4.1.3845.30.4.1.1.2.2.1.10]",
+                "key": "wsScsCompressReceivedOctets[{#SNMPINDEX}]",
+                "name": "Service class {#SERVICE_CLASSNAME}: Number of accelerated octets received",
+                "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.2.2.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "accelerated octets received"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix appacceleration"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "4ad8f53725ac46729facd118193707f7"
+              },
+              {
+                "description": "Number of accelerated octets sent for the service class after compression.\n==> [ OID:.1.3.6.1.4.1.3845.30.4.1.1.2.2.1.9]",
+                "key": "wsScsCompressSentOctets[{#SNMPINDEX}]",
+                "name": "Service class {#SERVICE_CLASSNAME}: Number of accelerated octets sent",
+                "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.2.2.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "accelerated octets sent"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix appacceleration"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "1e490f29018c4081b913ef09a09826b5",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Current number of accelerated connections for the service class. This is also available in the GUI Service Class Statistics Detail page. This counter is reset only on system restart  ==> [ OID.1.3.6.1.4.1.3845.30.4.1.1.2.2.1.3]",
+                "key": "wsScsCurrentAcceleratedConnections[{#SNMPINDEX}]",
+                "name": "Service class {#SERVICE_CLASSNAME}: Current number of accelerated connections",
+                "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.2.2.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "accelerated connections"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix appacceleration"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0b1f203bf0ef4e73b90e1f2bf51cc2da"
+              },
+              {
+                "description": "Number of accelerated octets received for the service class before compression.\n==> [ OID:1.3.6.1.4.1.3845.30.4.1.1.2.2.1.12]",
+                "key": "wsScsPreCompressReceivedOctets[{#SNMPINDEX}]",
+                "name": "Service class {#SERVICE_CLASSNAME}: Number of accelerated octets received before compression",
+                "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.2.2.1.12.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "accelerated octets received before compression"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix appacceleration"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "8a6e94ff8f104d849f64280f23918fc1",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of accelerated octets sent for the service class before compression.\n==> [ OID:.1.3.6.1.4.1.3845.30.4.1.1.2.2.1.11]",
+                "key": "wsScsPreCompressSentOctets[{#SNMPINDEX}]",
+                "name": "Service class {#SERVICE_CLASSNAME}: Number of accelerated octets sent before compression",
+                "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.2.2.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "accelerated octets sent before compression"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix appacceleration"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0c71dc3422fb4f64a3445fd55feebcf5"
+              },
+              {
+                "description": "Total number of accelerated connections for the service class. This is also available in the GUI Service Class Statistics Detail page. This counter is reset only on system restart.\n ==> [ OID:.1.3.6.1.4.1.3845.30.4.1.1.2.2.1.4]",
+                "key": "wsScsTotalAcceleratedConnections[{#SNMPINDEX}]",
+                "name": "Service class {#SERVICE_CLASSNAME}: Total number of accelerated connections",
+                "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.2.2.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total accelerated connections"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix appacceleration"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "74bf4ffddd20439e9c303282b5debf8a"
+              },
+              {
+                "description": "Total number of non-accelerated connections for the service class. This is also available in the GUI Service Class Statistics Detail page. This counter is reset only on system restart.\n  ==> [ OID:1.3.6.1.4.1.3845.30.4.1.1.2.2.1.6]",
+                "key": "wsScsTotalNonAcceleratedConnections[{#SNMPINDEX}]",
+                "name": "Service class {#SERVICE_CLASSNAME}: Total number of non-accelerated connections",
+                "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.2.2.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "non-accelerated connections"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix appacceleration"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "5c38259e1ba54b72b2906b1a43c53d5d"
+              }
+            ],
+            "key": "wsServiceClassName-[{#SNMPVALUE}]",
+            "name": "Citrix appacceleration serviceclassusage",
+            "snmp_oid": "discovery[{#SERVICE_CLASSNAME},1.3.6.1.4.1.3845.30.4.1.1.2.2.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "c0895e8ca7ef431c8b5b5432d482d042"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Citrix appacceleration serviceclassusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "serviceclassusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Citrix appacceleration"
+          }
+        ],
+        "template": "SNMP Citrix appacceleration serviceclassusage",
+        "uuid": "9c5eb7ee28f247aabf72864104acab7f"
+      }
+    ],
+    "version": "6.0"
+  }
+}

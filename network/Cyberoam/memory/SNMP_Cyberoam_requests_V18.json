@@ -1,0 +1,195 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:53Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Cyberoam requests by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to Check memory requests Cyberoam equipments",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "key": "sfosFTPHits",
+            "name": "Ftp Hits",
+            "snmp_oid": ".1.3.6.1.4.1.2604.5.1.2.8",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ftpHits"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "cyberoam"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "81151f7f50ec46bb811e6c88ba6430ee"
+          },
+          {
+            "key": "sfosHTTPHits",
+            "name": "Http hits",
+            "snmp_oid": ".1.3.6.1.4.1.2604.5.1.2.7",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Http hits"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "cyberoam"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8d87114df1584377bf319e6b35f975c4"
+          },
+          {
+            "key": "sfosImapHits",
+            "name": "Imap hits",
+            "snmp_oid": ".1.3.6.1.4.1.2604.5.1.2.9.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "imapHits"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "cyberoam"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "75747310bf994a93b566332f7eaedb94"
+          },
+          {
+            "key": "sfosLiveUsersCount",
+            "name": "Live users",
+            "snmp_oid": ".1.3.6.1.4.1.2604.5.1.2.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "liveUsers"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "cyberoam"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "5e192455a3d54dfdae159bc8b9085685"
+          },
+          {
+            "key": "sfosPOP3Hits",
+            "name": "Pop3 hits",
+            "snmp_oid": ".1.3.6.1.4.1.2604.5.1.2.9.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pop3Hits"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "cyberoam"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "af9fee59fa82444c986551953d1221db"
+          },
+          {
+            "key": "sfosSmtpHits",
+            "name": "Smtp hits",
+            "snmp_oid": ".1.3.6.1.4.1.2604.5.1.2.9.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "smtpHits"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "cyberoam"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4da4e9e1c2294377bd19f3505292e32b"
+          }
+        ],
+        "name": "SNMP Cyberoam requests V18",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Cyberoam"
+          }
+        ],
+        "template": "SNMP Cyberoam requests V18",
+        "uuid": "60a4bd2424234a048c8dbe6614f44381"
+      }
+    ],
+    "version": "6.0"
+  }
+}

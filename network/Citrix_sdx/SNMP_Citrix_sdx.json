@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:56Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Citrix srx by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Citrix srx equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Citrix sdx",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Citrix sdx"
+          }
+        ],
+        "template": "SNMP Citrix sdx",
+        "templates": [
+          {
+            "name": "SNMP Citrix sdx diskusage"
+          },
+          {
+            "name": "SNMP Citrix sdx hardware"
+          },
+          {
+            "name": "SNMP Citrix sdx srusage"
+          },
+          {
+            "name": "SNMP Citrix sdx xenusage"
+          }
+        ],
+        "uuid": "84ba2778fdde410d95b6f8fddfdc9ea2"
+      }
+    ],
+    "version": "6.0"
+  }
+}

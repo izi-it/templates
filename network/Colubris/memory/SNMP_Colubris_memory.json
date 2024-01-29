@@ -1,0 +1,157 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:29Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Colubris  memory by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck memory usage.",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Memory used by the buffers   ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.11.0]",
+            "key": "coUsInfoRamBuffer",
+            "name": "Memory used by the buffers",
+            "snmp_oid": ".1.3.6.1.4.1.8744.5.21.1.1.11.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Memory used by the buffers"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "3436a72adc81400588cfa3e1534d2873",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Memory used by the system cache ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.12.0]",
+            "key": "coUsInfoRamCached",
+            "name": "Memory used by the system cache",
+            "snmp_oid": "coUsInfoRamCached",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Memory used by the system cache"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "8e98da2edb3544fabfbfd7cc8b489e8d",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Available system RAM  ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.10.0]",
+            "key": "coUsInfoRamFree",
+            "name": "Available system RAM",
+            "snmp_oid": ".1.3.6.1.4.1.8744.5.21.1.1.10.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Available system RAM"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "dd5866031eec41b3b98a7c5fb3097de6",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Total system RAM ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.9.0]",
+            "key": "coUsInfoRamTotal",
+            "name": "Total system RAM",
+            "snmp_oid": ".1.3.6.1.4.1.8744.5.21.1.1.9.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Total system RAM"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "KB",
+            "uuid": "74234c476d904151adcd0109ce818a07",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Colubris memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Colubris"
+          }
+        ],
+        "template": "SNMP Colubris memory",
+        "uuid": "dc8582628330444baf07f3cdd6e42e97"
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:26Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP A10 AX made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check A10 AX equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP A10 AX",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "a10 ax"
+          }
+        ],
+        "template": "SNMP A10 AX",
+        "templates": [
+          {
+            "name": "SNMP A10 AX cpu"
+          },
+          {
+            "name": "SNMP A10 AX disk"
+          },
+          {
+            "name": "SNMP A10 AX globalstats"
+          },
+          {
+            "name": "SNMP A10 AX hardware"
+          },
+          {
+            "name": "SNMP A10 AX listvservers"
+          },
+          {
+            "name": "SNMP A10 AX memory"
+          },
+          {
+            "name": "SNMP A10 AX vserverusage"
+          }
+        ],
+        "uuid": "1381f62d4d3242e5be88dd29d45d4622"
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:57Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "item_prototypes": [
+              {
+                "delay": "3m",
+                "key": "hwEntityTemperature[{#SNMPINDEX}]",
+                "name": "Unit-[$1] Temperature",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Temperature"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Huawei"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "description": "The following thresholds are defined by the Vendor:\n- Huawei S5700 = 65\n- Huawei CE6810 = 50\n\nhwEntityTemperatureThreshold\n(1.3.6.1.4.1.2011.5.25.31.1.1.1.1.12)",
+                    "expression": "min(/SNMP Huawei Switch S5700 Temperature/hwEntityTemperature[{#SNMPINDEX}],5m)>={$TEMP_CRIT}",
+                    "manual_close": "YES",
+                    "name": "Unit-[{#SNMPINDEX}] Temperature ALERT",
+                    "priority": "HIGH",
+                    "recovery_expression": "min(/SNMP Huawei Switch S5700 Temperature/hwEntityTemperature[{#SNMPINDEX}],5m)<{$TEMP_CRIT}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "temperature"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Huawei"
+                      }
+                    ],
+                    "uuid": "bdf9fe7fd78e4b61ae4ffd7860f1e8e3"
+                  },
+                  {
+                    "description": "The following thresholds are defined by the Vendor:\n- Huawei S5700 = 65\n- Huawei CE6810 = 50\n\nhwEntityTemperatureThreshold\n(1.3.6.1.4.1.2011.5.25.31.1.1.1.1.12)",
+                    "expression": "min(/SNMP Huawei Switch S5700 Temperature/hwEntityTemperature[{#SNMPINDEX}],5m)>={$TEMP_WARN}",
+                    "manual_close": "YES",
+                    "name": "Unit-[{#SNMPINDEX}] Temperature WARNING",
+                    "priority": "WARNING",
+                    "recovery_expression": "min(/SNMP Huawei Switch S5700 Temperature/hwEntityTemperature[{#SNMPINDEX}],5m)<{$TEMP_WARN}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "temperature"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "Huawei"
+                      }
+                    ],
+                    "uuid": "ecf3750e1e3245cbab39bbc32577f9bb"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bcdab699b5854cab9c1f8ea0d106be18"
+              }
+            ],
+            "key": "hwEntityTemperature",
+            "name": "Discovery: Temperature",
+            "snmp_oid": "discovery[{#SNMPVALUE}, 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11]",
+            "type": "SNMP_AGENT",
+            "uuid": "ff3556733de64029ada54a77592a59bd"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "macros": [
+          {
+            "macro": "{$TEMP_CRIT}",
+            "value": "70"
+          },
+          {
+            "macro": "{$TEMP_WARN}",
+            "value": "60"
+          }
+        ],
+        "name": "SNMP Huawei Switch S5700 Temperature",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "temperature"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Huawei"
+          }
+        ],
+        "template": "SNMP Huawei Switch S5700 Temperature",
+        "uuid": "54b7f1c9f9724fe7afab414d1c9944f9"
+      }
+    ],
+    "version": "6.0"
+  }
+}

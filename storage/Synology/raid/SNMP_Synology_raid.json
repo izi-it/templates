@@ -1,0 +1,230 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:46Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Synology raid  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "description": "The name of each RAID in DSM",
+            "item_prototypes": [
+              {
+                "description": "The free size of volume / disk group => [OID:.1.3.6.1.4.1.6574.3.1.1.4]",
+                "key": "raidFreeSize[{#SNMPINDEX}]",
+                "name": "Raid {#RAID}: Free size",
+                "snmp_oid": ".1.3.6.1.4.1.6574.3.1.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "free size"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bbb2717c4d474390b55dd863af5918a8",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "The total size of volume / disk group => [OID:.1.3.6.1.4.1.6574.3.1.1.5]",
+                "key": "raidTotalSize[{#SNMPINDEX}]",
+                "name": "Raid {#RAID}: Total size",
+                "snmp_oid": ".1.3.6.1.4.1.6574.3.1.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total size"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "51b54938e5cf4dd99e0d84d4db57bd37",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "It shows the RAID status right now => [OID:.1.3.6.1.4.1.6574.3.1.1.3]",
+                "key": "synoRaidraidStatus[{#SNMPINDEX}]",
+                "name": "Raid {#RAID}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.6574.3.1.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "raid status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "storage"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "synology"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "46464b59783e477b8158c0dfdab2ef0c",
+                "valuemap": {
+                  "name": "Synology_Raid_Status"
+                }
+              }
+            ],
+            "key": "synoRaidraidName-[{#SNMPVALUE}]",
+            "name": "Synology raid",
+            "snmp_oid": "discovery[{#RAID},1.3.6.1.4.1.6574.3.1.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "124fdf88207449918b526d3ead9ef5d7"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Synology raid",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "raid"
+          },
+          {
+            "tag": "layer",
+            "value": "storage"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Synology"
+          }
+        ],
+        "template": "SNMP Synology raid",
+        "uuid": "1cab5357c20f4955be203cfe5f2cc0ff",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "Normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "Repairing",
+                "value": "2"
+              },
+              {
+                "newvalue": "Migrating",
+                "value": "3"
+              },
+              {
+                "newvalue": "Expanding",
+                "value": "4"
+              },
+              {
+                "newvalue": "Deleting",
+                "value": "5"
+              },
+              {
+                "newvalue": "Creating",
+                "value": "6"
+              },
+              {
+                "newvalue": "RaidSyncing",
+                "value": "7"
+              },
+              {
+                "newvalue": "RaidParityChecking",
+                "value": "8"
+              },
+              {
+                "newvalue": "RaidAssembling",
+                "value": "9"
+              },
+              {
+                "newvalue": "Canceling",
+                "value": "10"
+              },
+              {
+                "newvalue": "Degrade",
+                "value": "11"
+              },
+              {
+                "newvalue": "Crashed",
+                "value": "12"
+              },
+              {
+                "newvalue": "DataScrubbing",
+                "value": "13"
+              },
+              {
+                "newvalue": "RaidDeploying",
+                "value": "14"
+              },
+              {
+                "newvalue": "RaidUnDeploying",
+                "value": "15"
+              },
+              {
+                "newvalue": "RaidMountCache",
+                "value": "16"
+              },
+              {
+                "newvalue": "RaidUnmountCache",
+                "value": "17"
+              },
+              {
+                "newvalue": "RaidExpandingUnfinishedSHR",
+                "value": "18"
+              },
+              {
+                "newvalue": "RaidConvertSHRToPool",
+                "value": "19"
+              },
+              {
+                "newvalue": "RaidMigrateSHR1ToSHR2",
+                "value": "20"
+              },
+              {
+                "newvalue": "RaidUnknownStatus",
+                "value": "21"
+              }
+            ],
+            "name": "Synology_Raid_Status",
+            "uuid": "47a4dc9a3fff430e8184f5f90754941c"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

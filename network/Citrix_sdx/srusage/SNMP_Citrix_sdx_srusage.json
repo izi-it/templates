@@ -1,0 +1,137 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:49Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Citrix srx srusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck storage repositories.",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Physical size of the storage repository  ==> [ OID:.1.3.6.1.4.1.5951.6.2.1000.4.1.6]",
+                "key": "srSize[{#SNMPINDEX}]",
+                "name": "Storage repository {#SR_NAME}: Size",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.4.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "sr size"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "26a25ab7ebc24083bedcb36cf0f05a75",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Status of the storage repository - OK/ERROR  ==> [ OID:.1.3.6.1.4.1.5951.6.2.1000.4.1.7]",
+                "key": "srStatus[{#SNMPINDEX}]",
+                "name": "Storage repository {#SR_NAME}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.4.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "sr status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "7b894e722e1b4519b261c0690875da4f",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Physical utilization of the storage repository\n  ==> [ OID:.1.3.6.1.4.1.5951.6.2.1000.4.1.5]",
+                "key": "srUtilized[{#SNMPINDEX}]",
+                "name": "Storage repository {#SR_NAME}: Utilization",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.4.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "sr utilization"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0e1f67d92ff3448896a434353d0b0961",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "srName-[{#SNMPVALUE}]",
+            "name": "Citrix sdx srusage",
+            "snmp_oid": "discovery[{#SR_NAME},1.3.6.1.4.1.5951.6.2.1000.4.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "d6c45f2c16494767b7df0c7de2752626"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Citrix sdx srusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "srusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Citrix sdx"
+          }
+        ],
+        "template": "SNMP Citrix sdx srusage",
+        "uuid": "c8ea5e3d062b4ca3a984c2f3aa3a3830"
+      }
+    ],
+    "version": "6.0"
+  }
+}

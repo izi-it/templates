@@ -1,0 +1,502 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:51Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "TemplateSNMP Hirschmann classic led made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Status from the Fault LED  ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.2.4]",
+                "key": "hmLEDOctFault[{#SNMPINDEX}]",
+                "name": "LED {#LED}: State Fault",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.2.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "state fault"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "4b2c63f1e73248f4a1aeb4145c86858c",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the Power Supply 1 LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.2.1]",
+                "key": "hmLEDOctPowerSupply1[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Power Supply 1 State",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.2.1.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "led"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "c8fbc9591b224ce899f6a5c9e95c283d",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the Power Supply 2 LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.2.2]",
+                "key": "hmLEDOctPowerSupply2[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Power Supply 2 State",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.2.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu 2 led state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "361f9b1449574637a77cb8ed009c5f1a",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the RM (Redundancy Manager) LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.2.3]",
+                "key": "hmLEDOctRedundancyManager[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Status Redundancy Manager",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.2.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "redundancy manager led state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "7270ff72eecb47248e586dbca9147429",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              }
+            ],
+            "key": "hmLEDOctGroup-[{#SNMPVALUE}]",
+            "name": "Hirschmann classic ledoctgroup",
+            "snmp_oid": "discovery[{#LED},1.3.6.1.4.1.248.14.1.1.35.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "252d458b55f84bc895eb0852d2e25f5b"
+          },
+          {
+            "item_prototypes": [
+              {
+                "description": "Status from the Fault LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.1.4]",
+                "key": "hmLEDRSFault[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Status Fault",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "status fault"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "c5d5c503d04e4566b51f9c4d3f369798",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the PowerSupply LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.1.1]",
+                "key": "hmLEDRSPowerSupply[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Power Supply State",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.1.1.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu led state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "db9d2eb8c13a4e32b57e6ec42909fefd",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the RM (Redundancy Manager) LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.1.3]",
+                "key": "hmLEDRSRedundancyManager[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Status Redundancy Manager",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Status Redundancy Manager"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "752381429fc6401fa0a6915f390b32bd",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the Standby LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.1.2]",
+                "key": "hmLEDRStandby[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Status Standby",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Status Standby"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "14018fb063574f289989ef93d28f524c",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              }
+            ],
+            "key": "hmLEDRSGroup-[{#SNMPVALUE}]",
+            "name": "Hirschmann classic ledrsgroup",
+            "snmp_oid": "discovery[{#LED},1.3.6.1.4.1.248.14.1.1.35.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "d1ae4fcda0834ebdb5d2b8066c1b7936"
+          },
+          {
+            "item_prototypes": [
+              {
+                "description": "Status from the Fault LED  ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.3.4]",
+                "key": "hmLEDRSRFault[{#SNMPINDEX}]",
+                "name": "LED {#LED}: State Fault",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.3.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "state fault"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "aea1f2aca9e144d6a412e31a0dd76432",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the Power Supply LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.3.1]",
+                "key": "hmLEDRSRPowerSupply[{#SNMPINDEX}]",
+                "name": "LED {#LED}: Power Supply State",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.3.1.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "power supply led state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "5675a58a9d664760932765750a1f76f1",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the RM (Redundancy Manager) LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.3.3]",
+                "key": "hmLEDRSRRedundancyManager[{#SNMPINDEX}]",
+                "name": "LED {#LED}: State Redundancy Manager",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.3.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "state redundancy manager"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "1d680abab6104e3aa361a6a65e12c71b",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the Relay1 LED  ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.3.5]",
+                "key": "hmLEDRSRRelay1[{#SNMPINDEX}]",
+                "name": "LED {#LED}: State Relay 1",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.3.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "state relay 1"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "4e331f00dbfa4f51a3e4b97a6ae7ef5b",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the Relay 2 LED  ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.3.6]",
+                "key": "hmLEDRSRRelay2[{#SNMPINDEX}]",
+                "name": "LED {#LED}: State Relay 2",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.3.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "state relay 2"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "6d3657d87ae64438be3097df71f1d449",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              },
+              {
+                "description": "Status from the Standby LED ==> [OID:.1.3.6.1.4.1.248.14.1.1.35.3.2]",
+                "key": "hmLEDRSRStandby[{#SNMPINDEX}]",
+                "name": "LED {#LED}: State Standby",
+                "snmp_oid": ".1.3.6.1.4.1.248.14.1.1.35.3.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "state standby"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Hirschmann classic"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "5933204236d64f8891ba4209200d9d73",
+                "valuemap": {
+                  "name": "Hirschmann_Led_Status"
+                }
+              }
+            ],
+            "key": "hmLEDRSRGroup-[{#SNMPVALUE}]",
+            "name": "Hirschmann classic ledrsrgroup",
+            "snmp_oid": "discovery[{#LED},1.3.6.1.4.1.248.14.1.1.35.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "d54f1154e1c443b1a7b61c96a4081a95"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Hirschmann classic led",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "led"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Hirschmann classic"
+          }
+        ],
+        "template": "SNMP Hirschmann classic led",
+        "uuid": "c42ee8c320f94d169908f949202470ce",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "off",
+                "value": "1"
+              },
+              {
+                "newvalue": "green",
+                "value": "2"
+              },
+              {
+                "newvalue": "yellow",
+                "value": "3"
+              },
+              {
+                "newvalue": "red",
+                "value": "4"
+              }
+            ],
+            "name": "Hirschmann_Led_Status",
+            "uuid": "55191ccb07ce47fea0bdec41d4a6e78a"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

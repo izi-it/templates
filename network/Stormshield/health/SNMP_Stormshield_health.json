@@ -1,0 +1,307 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:28Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Stormshield by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Stormshield health equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Stormshield Firewall certificates current health status [OID: .1.3.6.1.4.1.11256.1.16.2.1.11]",
+                "key": "snsCertHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: Certificate current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "certificate"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "2bca24733fbf4746b4bac0ee73d489db",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall CPU current health status\n      - 'Good' if CPU load <= 90%\n      - 'Minor' if CPU load > 90% during a time lower than 5 minutes\n      - 'Major' if CPU load > 90% during a time higher than 5 minutes\n [OID:.1.3.6.1.4.1.11256.1.16.2.1.7]",
+                "key": "snsCPUHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: CPU current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "6213b80219d14038be3cc2091bf5c37d",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall CRLs current health status\n[OID:.1.3.6.1.4.1.11256.1.16.2.1.12]",
+                "key": "snsCRLHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: CRLs current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.12.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "crls"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "a2e912b7bf9b43df89111afc1c716c7b",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall disk current health status\n      - 'Good' if the disks works correctly\n      - 'Minor' if the disks does not work correctly\n      - 'Major' if the disks does not work correctly and have raised an alarm\n [OID:.1.3.6.1.4.1.11256.1.16.2.1.9]",
+                "key": "snsDiskHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: Disk current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "disk"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "1dc0ffea00a84456841251b95d4967e1",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall fans current health status\n      - 'Good' if the fans works correctly\n      - 'Minor' if the fans does not work correctly\n      - 'Major' if the fans does not work correctly and have raised an alarm\n [OID:.1.3.6.1.4.1.11256.1.16.2.1.6]",
+                "key": "snsFanHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: Fan current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "37fa0282b2f44e0ab58e264c1e853c14",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall HA link current health status:\n      - 'Good' if the HA link works correctly\n      - 'Minor' if the HA link does not work correctly (may be down)\n      - 'Major' if the HA link does not work (down)\n[OID:.1.3.6.1.4.1.11256.1.16.2.1.4]",
+                "key": "snsHaLinkHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: HA Link current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "link"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "3e4b0260eacc4b7eb6b618a327f91cb6",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall memory current health status:\n      - 'Good' if memory load <= 80%\n      - 'Minor' if memory load > 80% during a time lower than 15 minutes\n      - 'Major' if memory load > 80% during a time higher than 15 minutes\n [OID:.1.3.6.1.4.1.11256.1.16.2.1.8]",
+                "key": "snsMemHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: Memory current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "memory"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "a8b5c930716d4ca292f40c35e860bc8a",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall power supply current health status:\n      - 'Good' if the power supply works correctly\n      - 'Minor' if the power supply does not work correctly\n      - 'Major' if the power supply does not work correctly and have raised an alarm\n [OID:.1.3.6.1.4.1.11256.1.16.2.1.5]",
+                "key": "snsPowerSupplyHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: Power supply current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "bebb4f68354f42919ae58fae5682ab89",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Stormshield Firewall raid current health status;\n      - 'Good' if the raid works in optimal mode\n      - 'Minor' if the raid does not work in optimal mode\n      - 'Major' if the raid does not work in optimal mode and have raised an alarm\n [OID:.1.3.6.1.4.1.11256.1.16.2.1.10]",
+                "key": "snsRaidHealth[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: Raid current health status",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.16.2.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "raid"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "1c52aeea8f8d402aa581ba579e2f0154",
+                "value_type": "CHAR"
+              }
+            ],
+            "key": "snsSerialHealth-[{#SNMPVALUE}]",
+            "name": "Stormshield health",
+            "snmp_oid": "discovery[{#FW_SERIAL},1.3.6.1.4.1.11256.1.16.2.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "13ee0ce103e9470fb2b55574d3f3f8c3"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Stormshield health",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "health"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "stormshield"
+          }
+        ],
+        "template": "SNMP Stormshield health",
+        "uuid": "172267582270458db7fbfd22563d6c35"
+      }
+    ],
+    "version": "6.0"
+  }
+}

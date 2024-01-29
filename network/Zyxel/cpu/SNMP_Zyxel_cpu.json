@@ -1,0 +1,201 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:59Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Zyxel cpu made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck CPU usage.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "key": "sysCPU1MinUsage",
+            "name": "CPU 1Min Usage",
+            "snmp_oid": ".1.3.6.1.4.1.890.1.6.22.1.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "zyxel"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "90b2bb1c37a64e83957e0f62a8ffb2fc",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "sysCPU5MinUsage",
+            "name": "CPU 5Min Usage",
+            "snmp_oid": ".1.3.6.1.4.1.890.1.6.22.1.5.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "zyxel"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "1062dfbeac6b4e0b8c502e1e161e8123",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "sysCPU5SecUsage",
+            "name": "CPU 5Sec Usage",
+            "snmp_oid": ".1.3.6.1.4.1.890.1.6.22.1.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "zyxel"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "d2d68dabecd94dd2adf8733c20387434",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "sysMgmtCPU1MinUsage",
+            "name": "Mgmt CPU 1Min Usage",
+            "snmp_oid": ".1.3.6.1.4.1.890.1.15.3.2.8.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "zyxel"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "eb7b92198fac4b229732038bf297dc9f",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "sysMgmtCPU5MinUsage",
+            "name": "Mgmt CPU 5Min Usage",
+            "snmp_oid": ".1.3.6.1.4.1.890.1.15.3.2.9.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "zyxel"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "1b21b839836f42bd963e80272fead34b",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "sysMgmtCPU5SecUsage",
+            "name": "Mgmt CPU 5Sec Usage",
+            "snmp_oid": ".1.3.6.1.4.1.890.1.15.3.2.7.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "zyxel"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "db9fb24bcac24875afd32772da5803fd",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Zyxel cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Zyxel"
+          }
+        ],
+        "template": "SNMP Zyxel cpu",
+        "uuid": "8ca72081ad0140058a5ce6211dde28e3"
+      }
+    ],
+    "version": "6.0"
+  }
+}

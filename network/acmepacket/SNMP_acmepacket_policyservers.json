@@ -1,0 +1,306 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:46Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket policyservers by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Client Transactions Total ==> [ OID:.1.3.6.1.4.1.9148.3.13.1.1.2.3.1.5]",
+                "key": "apDiamRxExtPolSvrClientTrans[{#SNMPINDEX}]",
+                "name": "{#POLSVR_NAME}: Client Transactions Total",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.13.1.1.2.3.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "client transaction total"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "a776984f469e4837a63d244847f8b6f4"
+              },
+              {
+                "description": "Client transaction errors received   => [ OID:.1.3.6.1.4.1.9148.3.13.1.1.2.3.1.13]",
+                "key": "apDiamRxExtPolSvrCTErrorsRecvd[{#SNMPINDEX}]",
+                "name": "{#POLSVR_NAME}: Client transaction errors received",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.13.1.1.2.3.1.13.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "client transaction errors received"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "a2f2836e1bd440268b74b97aeac2cfde"
+              },
+              {
+                "description": "Server transactions total  => [ OID:1.3.6.1.4.1.9148.3.13.1.1.2.3.1.16",
+                "key": "apDiamRxExtPolSvrServerTransactions[{#SNMPINDEX}]",
+                "name": "{#POLSVR_NAME}: Server transactions total",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.13.1.1.2.3.1.16.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "server transactions total"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "21494ff1a14d4343b7c4eb92fa006edf"
+              },
+              {
+                "description": "Server transactions requests => [ OID:.1.3.6.1.4.1.9148.3.13.1.1.2.3.1.17]",
+                "key": "apDiamRxExtPolSvrSTReqRecvd[{#SNMPINDEX}]",
+                "name": "{#POLSVR_NAME}: Server transactions requests",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.13.1.1.2.3.1.17.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "server transactions requests"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "1276460a736b4b01bf98641d3f629568"
+              },
+              {
+                "description": "Number of current active outbound sessions\n ==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.5]",
+                "key": "apSigRealmStatsCurrentActiveSessionsOutbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Number of current active outbound sessions",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "current active sessions outbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9159578ee51444c393dfc6a35b092315"
+              },
+              {
+                "description": "Peg counts of number of times the Major Rfactor\nthreshold was exceeded during the lifetime. ==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.27]",
+                "key": "apSigRealmStatsTotalMajorRFactorExceeded[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Total rfactor",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.27.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total major rfactor exceeded"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "c4fcd9cc9d07446f903d0d295abd54fa"
+              },
+              {
+                "description": "Total Number of inbound sessions\n==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.7]",
+                "key": "apSigRealmStatsTotalSessionsInbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Total Number of inbound sessions",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total sessions inbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "3c50932f1ded45d6a66c1b6ec29d1671"
+              },
+              {
+                "description": "Total Number of outbound sessions\n==> [ OID:.1.3.6.1.4.1.9148.3.2.1.2.4.1.11]",
+                "key": "apSigRealmStatsTotalSessionsOutbound[{#SNMPINDEX}]",
+                "name": "{#REALM_NAME}: Total Number of outbound sessions",
+                "snmp_oid": ".1.3.6.1.4.1.9148.3.2.1.2.4.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "total sessions outbound"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "acmepacket"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0ee2218b5b754b6ea1254a47414188e1"
+              }
+            ],
+            "key": "apDiamRxExtPolSvrName-[{#SNMPVALUE}]",
+            "name": "Acmepacket policyservers",
+            "snmp_oid": "discovery[{#POLSVR_NAME},1.3.6.1.4.1.9148.3.13.1.1.2.3.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "8be4a2f170f44730854ddaaf0ff1e844"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP acmepacket policyservers",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP acmepacket policyservers",
+        "uuid": "fef9a7b3fdb44cbda2e276717641c2ca",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "unknown",
+                "value": "0"
+              },
+              {
+                "newvalue": "initial",
+                "value": "1"
+              },
+              {
+                "newvalue": "active",
+                "value": "2"
+              },
+              {
+                "newvalue": "standby",
+                "value": "3"
+              },
+              {
+                "newvalue": "outOfService",
+                "value": "4"
+              },
+              {
+                "newvalue": "unassigned",
+                "value": "5"
+              },
+              {
+                "newvalue": "activePending",
+                "value": "6"
+              },
+              {
+                "newvalue": "standbyPending",
+                "value": "7"
+              },
+              {
+                "newvalue": "outOfServicePending",
+                "value": "8"
+              },
+              {
+                "newvalue": "recovery",
+                "value": "9"
+              }
+            ],
+            "name": "Acme_Mapping_Redundancy",
+            "uuid": "d2f7c13434f44863aa626852d464a860"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:50Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Athonet epc by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Athonet epc equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Athonet epc",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Athonet epc"
+          }
+        ],
+        "template": "SNMP Athonet epc",
+        "templates": [
+          {
+            "name": "SNMP Athonet epc aggregate"
+          },
+          {
+            "name": "SNMP Athonet epc apns"
+          },
+          {
+            "name": "SNMP Athonet epc interfacesdiameter"
+          },
+          {
+            "name": "SNMP Athonet epc interfacesga"
+          },
+          {
+            "name": "SNMP Athonet epc interfaceslte"
+          },
+          {
+            "name": "SNMP Athonet epc license"
+          },
+          {
+            "name": "SNMP Athonet epc lte"
+          }
+        ],
+        "uuid": "51ab8648c85c47dd8f3203aa55fc2973"
+      }
+    ],
+    "version": "6.0"
+  }
+}

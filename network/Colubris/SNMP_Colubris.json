@@ -1,0 +1,56 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:31Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Colubris  by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Colubris",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Colubris"
+          }
+        ],
+        "template": "SNMP Colubris",
+        "templates": [
+          {
+            "name": "SNMP Colubris  apsuage"
+          },
+          {
+            "name": "SNMP Colubris  cpu"
+          },
+          {
+            "name": "SNMP Colubris loadaverage"
+          },
+          {
+            "name": "SNMP Colubris memory"
+          },
+          {
+            "name": "SNMP Colubris storage"
+          }
+        ],
+        "uuid": "546fea17f2154535a7e633b69c12a1b0"
+      }
+    ],
+    "version": "6.0"
+  }
+}

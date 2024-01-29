@@ -1,0 +1,139 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:52Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Citrix srx xenusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck xen hypervisors.",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "CPU Usage (%) of host ==> [ OID:1.3.6.1.4.1.5951.6.3.1.1.8]",
+                "key": "xenCpuUsage[{#SNMPINDEX}]",
+                "name": "Xen hypervisors {#XEN_HOSTNAME}: CPU Usage",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.3.1.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu usage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "5b1adbca5d4f4242b8b0007319dc3b22",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Free memory available (MB) in host ==> [ OID:.1.3.6.1.4.1.5951.6.3.1.1.10]",
+                "key": "xenMemoryFree[{#SNMPINDEX}]",
+                "name": "Xen hypervisors {#XEN_HOSTNAME}: Free memory",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.3.1.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "free memory"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "MB",
+                "uuid": "f55f71ea1bdf4939a88a847624ed65ef",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Total memory of host in MB ==> [ OID:.1.3.6.1.4.1.5951.6.3.1.1.9]",
+                "key": "xenMemoryTotal[{#SNMPINDEX}]",
+                "name": "Xen hypervisors {#XEN_HOSTNAME}: Total memory",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.3.1.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Total memory"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "MB",
+                "uuid": "964a7079c41e4325b276184b8700751f",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "xenHostname-[{#SNMPVALUE}]",
+            "name": "Citrix sdx xenusage",
+            "snmp_oid": "discovery[{#XEN_HOSTNAME},1.3.6.1.4.1.5951.6.3.1.1.3]",
+            "type": "SNMP_AGENT",
+            "uuid": "242f054bebab4616875da91d87e303b6"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Citrix sdx xenusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "xenusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Citrix sdx"
+          }
+        ],
+        "template": "SNMP Citrix sdx xenusage",
+        "uuid": "4223394d815a4c478e16bca9703e63bd"
+      }
+    ],
+    "version": "6.0"
+  }
+}

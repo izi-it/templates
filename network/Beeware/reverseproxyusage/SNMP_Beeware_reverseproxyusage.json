@@ -1,0 +1,181 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:39Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Beeware reverseproxyusage by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Beeware equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Used CPU  ==> [ OID:.1.3.6.1.4.1.30800.132.31.57]",
+                "key": "beewarecpu[{#SNMPINDEX}]",
+                "name": "Reverse Proxy {#RP_NAME}: CPU Utilization",
+                "snmp_oid": ".1.3.6.1.4.1.30800.132.31.57.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "beeware"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "426f468c05db49a28cea1052840f0e2a",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Memory Used ==> [ OID:.1.3.6.1.4.1.30800.132.117.57]",
+                "key": "beewarememory[{#SNMPINDEX}]",
+                "name": "Reverse Proxy {#RP_NAME}: Memory Used",
+                "snmp_oid": ".1.3.6.1.4.1.30800.132.117.57.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "memory usage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "beeware"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "MB",
+                "uuid": "c4ee83bdac414418aefe88aa12ffb287",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "nbchils ==> [ OID:.1.3.6.1.4.1.30800.132.119.57]",
+                "key": "beewarenbchils[{#SNMPINDEX}]",
+                "name": "Reverse Proxy {#RP_NAME}: NB chils",
+                "snmp_oid": ".1.3.6.1.4.1.30800.132.119.57.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "nbchils"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "beeware"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bdf627f07f864e54bd9fb8f6c93e5e60"
+              },
+              {
+                "description": "Status  ==> [ OID:.1.3.6.1.4.1.30800.132.133.57]",
+                "key": "beewarerunning[{#SNMPINDEX}]",
+                "name": "Reverse Proxy {#RP_NAME}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.30800.132.133.57.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "beeware"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "834344be3cb14849bfe62878b406be1c",
+                "valuemap": {
+                  "name": "Beeware_Status"
+                }
+              }
+            ],
+            "key": "beewarerp-[{#SNMPVALUE}]",
+            "name": "Beeware reverseproxyusage",
+            "snmp_oid": "discovery[{#RP_NAME},1.3.6.1.4.1.30800.132]",
+            "type": "SNMP_AGENT",
+            "uuid": "77e039fbc68e4ca29ac4ef7daaa46c1b"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Beeware reverseproxyusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "reverseproxyusage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Beeware"
+          }
+        ],
+        "template": "SNMP Beeware reverseproxyusage",
+        "uuid": "ec8a014d6aa347c5a87f9d1afd7d16a6",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "down",
+                "value": "0"
+              },
+              {
+                "newvalue": "running",
+                "value": "1"
+              }
+            ],
+            "name": "Beeware_Status",
+            "uuid": "513a62976ada4fc2a104e8c2e530da03"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

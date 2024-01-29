@@ -1,0 +1,117 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:55Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Citrix srx hardware by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck hardware.",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Health status of the resource - OK/ERROR ==> [OID:.1.3.6.1.4.1.5951.6.2.1000.1.1.7]",
+                "key": "hardwareResourceStatus[{#SNMPINDEX}]",
+                "name": "Hardware Resource {#HARDWARE_RESOURCENAME}: Health status",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.1.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "health status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "09048811dee44051a28d8d6d131bee78"
+              }
+            ],
+            "key": "hardwareResourceName-[{#SNMPVALUE}]",
+            "name": "Citrix sdx hardwareResourceName",
+            "snmp_oid": "discovery[{#HARDWARE_RESOURCENAME},1.3.6.1.4.1.5951.6.2.1000.1.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "cb1f52f0cb4145ba84646941dfd0c34e"
+          },
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "Health status of the resource - OK/ERROR ==> [OID:.1.3.6.1.4.1.5951.6.2.1000.2.1.7]",
+                "key": "softwareResourceStatus[{#SNMPINDEX}]",
+                "name": "Software Resource {#SOFTWARE_RESOURCENAME}: Health status",
+                "snmp_oid": ".1.3.6.1.4.1.5951.6.2.1000.2.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "software resource status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Citrix sdx"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bb9fc9091916497ab446ef2a737044f9"
+              }
+            ],
+            "key": "softwareResourceName-[{#SNMPVALUE}]",
+            "name": "Citrix sdx softwareResourceName",
+            "snmp_oid": "discovery[{#SOFTWARE_RESOURCENAME},1.3.6.1.4.1.5951.6.2.1000.2.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "79d6b9288d144d6d9cfc3eb427fd05f4"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Citrix sdx hardware",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "hardware"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Citrix sdx"
+          }
+        ],
+        "template": "SNMP Citrix sdx hardware",
+        "uuid": "e970ead74621442abbc4ef45e3d64251"
+      }
+    ],
+    "version": "6.0"
+  }
+}

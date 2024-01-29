@@ -1,0 +1,361 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:29Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The type of the vserver",
+                "key": "vsvrEntityType[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Type",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.64.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "65eec4a5c77c40568a9f355386755cd7",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "15m",
+                "description": "IP Adress of the vserver",
+                "key": "vsvrIpAddress[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Ip Address",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "a06f6df7e47443c8a711b0bee8b363c6",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "15m",
+                "description": "the port of the vserver",
+                "key": "vsvrPort[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Port",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "d95fc3445c0946d6bdf5a46a0f774162",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "3m",
+                "description": "Current state of the server. There are seven possible values : UP(7), DOWN(1), UNKNOWN(2), BUSY(3), OFS(Out oF Service)(4), TROFS(TRansition Out oF Service)(5), TROFS_DOWN(Down when going Out of service)(8)",
+                "key": "vsvrState[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Status",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "34b6a168634f42319ba8da9c2798b370",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "3m",
+                "description": "Number of requests in the surge queue",
+                "key": "vsvrSurgeCount[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV}  number Surge queue",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "05cfe72f636345a8b78503087f720f4a",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "3m",
+                "description": "Total number of established client connections",
+                "key": "vsvrTotalClients[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Total Clients",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.56.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "2962c68e618941f78a4622be814474fe",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "3m",
+                "description": "Total number of request bytes received on this service or virtual server",
+                "key": "vsvrTotalRequestBytes[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Total Requests Bytes",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.31.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "bad395501d4548dd8820a2cf6149e847",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "3m",
+                "description": "Total number of requests received on this service or virtual server",
+                "key": "vsvrTotalRequests[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Total Requests",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.30.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "dfca9cca51ab470f9611fbbb6b54c750",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "3m",
+                "description": "Total number of responses bytes received on this service or virtual server",
+                "key": "vsvrTotalResponseBytes[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Total Responses Bytes",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.33.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "4e06636ae5f64017877cbb1ca8c1ffc7",
+                "value_type": "FLOAT"
+              },
+              {
+                "delay": "3m",
+                "description": "Total number of responses received on this service or virtual server",
+                "key": "vsvrTotalResponses[{#SNMPINDEX}]",
+                "name": "Vsrv  {#VSRV} Total Responses",
+                "snmp_oid": ".1.3.6.1.4.1.5951.4.1.3.1.1.32.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "vserver"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "citrix"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "b8f476ec4bdc4fc395f5a7d1a6136fd0",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "vsvrFullName-[{#SNMPVALUE}]",
+            "name": "Netscaler vserverstatus",
+            "snmp_oid": "discovery[{#VSRV},1.3.6.1.4.1.5951.4.1.3.1.1.59]",
+            "type": "SNMP_AGENT",
+            "uuid": "eb55e55bd324478fac898698c413e0e5"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "delay": "3m",
+            "key": "numCPUs",
+            "name": "Number of CPUs",
+            "snmp_oid": ".1.3.6.1.4.1.5951.4.1.1.41.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "citrix"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2a2cb230e63148afaade2bcde25cd6e4"
+          }
+        ],
+        "name": "SNMP Citrix netscaler vserverstatus",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "vserver"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "citrix"
+          }
+        ],
+        "template": "SNMP Citrix netscaler vserverstatus",
+        "uuid": "66251f6c92a747ea9ed790ccf6a9a78e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

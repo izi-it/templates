@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:56Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Cyberoam by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to Check Cyberoam equipments",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Cyberoam V17",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Cyberoam"
+          }
+        ],
+        "template": "SNMP Cyberoam V17",
+        "templates": [
+          {
+            "name": "SNMP Cyberoam cpu"
+          },
+          {
+            "name": "SNMP Cyberoam disk V17"
+          },
+          {
+            "name": "SNMP Cyberoam memory V17"
+          },
+          {
+            "name": "SNMP Cyberoam requests V17"
+          }
+        ],
+        "uuid": "b63291beb9d24071bfe3b6565913bc73"
+      }
+    ],
+    "version": "6.0"
+  }
+}

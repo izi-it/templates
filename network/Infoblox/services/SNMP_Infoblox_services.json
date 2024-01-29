@@ -1,0 +1,540 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:56Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Infoblox services made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Service state ==> [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.10.1.2]",
+                "key": "ibNodeServiceStatus[{#SNMPINDEX}]",
+                "name": "Service {#SERVICE_NAME}: State",
+                "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.10.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "service state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Infoblox"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "90d69c30cb51405b99430b3622559f9e",
+                "valuemap": {
+                  "name": "Infoblox_Service_Status"
+                }
+              }
+            ],
+            "key": "ibNodeServiceName-[{#SNMPVALUE}]",
+            "name": "Infoblox services",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "1",
+                  "dhcp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "2",
+                  "dns"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "3",
+                  "ntp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "4",
+                  "tftp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "5",
+                  "http-file-dist"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "6",
+                  "ftp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "7",
+                  "bloxtools-move"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "8",
+                  "bloxtools"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "9",
+                  "node-status"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "10",
+                  "disk-usage"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "11",
+                  "enet-lan"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "12",
+                  "enet-lan2"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "13",
+                  "enet-ha"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "14",
+                  "enet-mgmt"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "15",
+                  "lcd"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "16",
+                  "memory"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "17",
+                  "replication"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "18",
+                  "db-object"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "19",
+                  "raid-summary"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "20",
+                  "raid-disk1"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "21",
+                  "raid-disk2"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "22",
+                  "raid-disk3"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "23",
+                  "raid-disk4"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "24",
+                  "raid-disk5"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "25",
+                  "raid-disk6"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "26",
+                  "raid-disk7"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "27",
+                  "raid-disk8"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "28",
+                  "fan1"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "29",
+                  "fan2"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "30",
+                  "fan3"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "31",
+                  "fan4"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "32",
+                  "fan5"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "33",
+                  "fan6"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "34",
+                  "fan7"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "35",
+                  "fan8"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "36",
+                  "power-supply1"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "37",
+                  "power-supply2"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "38",
+                  "ntp-sync"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "39",
+                  "cpu1-temp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "40",
+                  "cpu2-temp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "41",
+                  "sys-temp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "42",
+                  "raid-battery"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "43",
+                  "cpu-usage"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "44",
+                  "ospf"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "45",
+                  "bgp"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "46",
+                  "mgm-service"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "47",
+                  "subgrid-conn"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "48",
+                  "network-capacity"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "49",
+                  "reporting"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "50",
+                  "dns-cache-acceleration"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "51",
+                  "ospf6"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "52",
+                  "swap-usage"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "53",
+                  "discovery-consolidator"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "54",
+                  "discovery-collector"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "55",
+                  "discovery-capacity"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "56",
+                  "threat-protection"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "57",
+                  "cloud-api"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "58",
+                  "threat-analytics"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "59",
+                  "taxii"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "60",
+                  "bfd"
+                ],
+                "type": "REGEX"
+              },
+              {
+                "parameters": [
+                  "61",
+                  "outbound"
+                ],
+                "type": "REGEX"
+              }
+            ],
+            "snmp_oid": "discovery[{#SERVICE_NAME},1.3.6.1.4.1.7779.3.1.1.2.1.10.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "473e79b7ef3347fd81b4b898155b0e9e"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Infoblox services",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "services"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Infoblox"
+          }
+        ],
+        "template": "SNMP Infoblox services",
+        "uuid": "8deccdd16e3d4eaabc1702f15cffebcb",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "working",
+                "value": "1"
+              },
+              {
+                "newvalue": "warning",
+                "value": "2"
+              },
+              {
+                "newvalue": "failed",
+                "value": "3"
+              },
+              {
+                "newvalue": "inactive",
+                "value": "4"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "5"
+              }
+            ],
+            "name": "Infoblox_Service_Status",
+            "uuid": "9bcd841ee40d419aade50a738281b046"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

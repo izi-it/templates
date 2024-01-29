@@ -1,0 +1,119 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:44Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Acmepacket codec by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Acmepacket equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Number of active sessions  ==> [OID:.1.3.6.1.4.1.9148.3.7.2.5.1']",
+            "key": "apCodecTranscodingLicensedTotalSessions",
+            "name": "Number of active sessions",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.7.2.5.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "codec"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8c608210a26d4e1a97577ccc795da9af"
+          },
+          {
+            "description": "Number of transcoding sessions currently in-use ==> [OID:.1.3.6.1.4.1.9148.3.7.2.2.2]",
+            "key": "apCodecTranscodingResourcesCurrent",
+            "name": "Number of transcoding sessions currently in-use",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.7.2.2.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "codec"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4cd1851471484bde91c5071227242042"
+          },
+          {
+            "description": "Total number of transcoding sessions available on the system ==> [OID:.1.3.6.1.4.1.9148.3.7.2.2.1]",
+            "key": "apCodecTranscodingResourcesTotal",
+            "name": "Total number of transcoding sessions available on the system",
+            "snmp_oid": ".1.3.6.1.4.1.9148.3.7.2.2.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "codec"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "acmepacket"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "b7ce326443ee4b38bcc5d7fe08a898bc"
+          }
+        ],
+        "name": "SNMP Acmepacket codec",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "acmepacket"
+          }
+        ],
+        "template": "SNMP Acmepacket codec",
+        "uuid": "58eb4ddae89a4e57b4408ae44c54f9c5"
+      }
+    ],
+    "version": "6.0"
+  }
+}

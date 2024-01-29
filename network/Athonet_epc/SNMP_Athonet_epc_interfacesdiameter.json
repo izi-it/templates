@@ -1,0 +1,346 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:45Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Athonet epc interfacesdiameter by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Athonet epc equipments using SNMP protocol\n\nCheck diameter interfaces.",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Owner => [ OID:.1.3.6.1.4.1.35805.10.2.12.2.1.11]",
+                "key": "iDiameterOwner[{#SNMPINDEX}]",
+                "name": "Interface Diameter Local Hostname {#LOCAL_HOSTNAME}: Owner",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.2.1.11.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "owner"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "2002ef93fa9c468eb8713d1df168cb27",
+                "valuemap": {
+                  "name": "Athonet_Owner"
+                }
+              },
+              {
+                "description": "Peer Hostname => [ OID:.1.3.6.1.4.1.35805.10.2.12.2.1.4]",
+                "key": "iDiameterPeerHostName[{#SNMPINDEX}]",
+                "name": "Interface Diameter Local Hostname {#LOCAL_HOSTNAME}: Peer Hostname",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.2.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "peer hostname"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "5a3563a0d4b943f08c1592d142ec3ff9",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Secondary local addr => [ OID:.1.3.6.1.4.1.35805.10.2.12.2.1.12]",
+                "key": "iDiameterSecondaryLocalAddress[{#SNMPINDEX}]",
+                "name": "Interface Diameter Local Hostname {#LOCAL_HOSTNAME}: Secondary local addr",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.2.1.12.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "secondary local addr"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "a6814c632e194587a24b1447b1dea5bb",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Secondary peer addr  => [ OID:.1.3.6.1.4.1.35805.10.2.12.2.1.13]",
+                "key": "iDiameterSecondaryPeerAddress[{#SNMPINDEX}]",
+                "name": "Interface Diameter Local Hostname {#LOCAL_HOSTNAME}: Secondary peer addr",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.2.1.13.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "secondary addr"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "254f3eb0ae384957a5ca2ea76ce13c87",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Status of the interface => [ OID:.1.3.6.1.4.1.35805.10.2.12.2.1.10]",
+                "key": "iDiameterState[{#SNMPINDEX}]",
+                "name": "Interface Diameter Local Hostname {#LOCAL_HOSTNAME}: Interface status",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.2.1.10.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "interface status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "b057c90a94724870a878e398273fda50",
+                "valuemap": {
+                  "name": "Athonet_Epc_Status"
+                }
+              },
+              {
+                "description": "Status of the transport => [ OID:.1.3.6.1.4.1.35805.10.2.12.2.1.9]",
+                "key": "iDiameterTransportState[{#SNMPINDEX}]",
+                "name": "Interface Diameter Local Hostname {#LOCAL_HOSTNAME}: Transport status",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.2.1.9.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "transport status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "7dd6490a0bf74cbab3a7162167574a84",
+                "valuemap": {
+                  "name": "Athonet_Transport_Type"
+                }
+              },
+              {
+                "description": "Transport type  => [ OID:.1.3.6.1.4.1.35805.10.2.12.2.1.8]",
+                "key": "iDiameterTransportType[{#SNMPINDEX}]",
+                "name": "Interface Diameter Local Hostname {#LOCAL_HOSTNAME}: Transport type",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.2.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "transport type"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "65cbd892daf245daac90c7dd9a5e7463",
+                "valuemap": {
+                  "name": "Athonet_Transport_Type"
+                }
+              }
+            ],
+            "key": "iDiameterLocalHostName-[{#SNMPVALUE}]",
+            "name": "Athonet epc interfacesdiameter",
+            "snmp_oid": "discovery[{#LOCAL_HOSTNAME},1.3.6.1.4.1.35805.10.2.12.2.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "5f4c7d807f1244cdad8e161709192c78"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Athonet epc interfacesdiameter",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Athonet epc"
+          }
+        ],
+        "template": "SNMP Athonet epc interfacesdiameter",
+        "uuid": "8acdac432a2d400d835959e267ed3511",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "down",
+                "value": "0"
+              },
+              {
+                "newvalue": "up",
+                "value": "1"
+              }
+            ],
+            "name": "Athonet_Epc_Status",
+            "uuid": "eb3ffb27bd694b4a8f341a7f362ad1fa"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "unknown",
+                "value": "0"
+              },
+              {
+                "newvalue": "mme",
+                "value": "1"
+              },
+              {
+                "newvalue": "msc",
+                "value": "2"
+              },
+              {
+                "newvalue": "sgsn",
+                "value": "3"
+              },
+              {
+                "newvalue": "fgw",
+                "value": "4"
+              },
+              {
+                "newvalue": "wifi",
+                "value": "5"
+              },
+              {
+                "newvalue": "spgw",
+                "value": "6"
+              },
+              {
+                "newvalue": "hlr-hss",
+                "value": "7"
+              },
+              {
+                "newvalue": "sgw",
+                "value": "8"
+              },
+              {
+                "newvalue": "pgw",
+                "value": "9"
+              },
+              {
+                "newvalue": "pcrf",
+                "value": "10"
+              },
+              {
+                "newvalue": "dpiaf",
+                "value": "11"
+              },
+              {
+                "newvalue": "aaa",
+                "value": "12"
+              },
+              {
+                "newvalue": "ocs",
+                "value": "13"
+              }
+            ],
+            "name": "Athonet_Owner",
+            "uuid": "c430f52943a94db5bce85dbb47f4e861"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "sctp",
+                "value": "0"
+              },
+              {
+                "newvalue": "tcp",
+                "value": "1"
+              },
+              {
+                "newvalue": "udp",
+                "value": "2"
+              }
+            ],
+            "name": "Athonet_Transport_Type",
+            "uuid": "324de266fa2f4575a3e72eab28d0b057"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

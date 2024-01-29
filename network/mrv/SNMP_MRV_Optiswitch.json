@@ -1,0 +1,52 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:42Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP MRV Optiswitch",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "mrv"
+          }
+        ],
+        "template": "SNMP MRV Optiswitch",
+        "templates": [
+          {
+            "name": "HOST-RESOURCES-MIB memory SNMP"
+          },
+          {
+            "name": "SNMP MRV Optiswitch cpu"
+          },
+          {
+            "name": "SNMP MRV Optiswitch Fan"
+          },
+          {
+            "name": "SNMP MRV Optiswitch Generic"
+          }
+        ],
+        "uuid": "71a1513c339c44e98e4d1041ef982b02"
+      }
+    ],
+    "version": "6.0"
+  }
+}

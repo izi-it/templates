@@ -1,0 +1,153 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:40Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template to check SNMP Mcafee webgateway cpu equipments using SNMP protocol by izi-it",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "filter": {
+              "conditions": [
+                {
+                  "formulaid": "A",
+                  "macro": "{#PROCESSCPU}",
+                  "value": "{$_PROCESS}"
+                }
+              ]
+            },
+            "item_prototypes": [
+              {
+                "key": "mcafeecpuload[{#SNMPINDEX}]",
+                "name": "CPU Process {#PROCESSCPU}: Utilization",
+                "snmp_oid": "HOST-RESOURCES-MIB::hrSWRunPerfCPU.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "componenent",
+                    "value": "cpu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "mcafee"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "description": "CPU is above critical threshold",
+                    "expression": "last(/SNMP Mcafee webgateway cpu/mcafeecpuload[{#SNMPINDEX}])> {$_CPU_CRIT}",
+                    "name": "CPU Process {$_PROCESS} is above critical threshold",
+                    "priority": "HIGH",
+                    "recovery_expression": "last(/SNMP Mcafee webgateway cpu/mcafeecpuload[{#SNMPINDEX}])< {$_CPU_WARN}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "cpu"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "mcafee"
+                      }
+                    ],
+                    "uuid": "0598cdf61be146b194824c3885d0ff58"
+                  },
+                  {
+                    "description": "CPU Process  is above warning threshold",
+                    "expression": "last(/SNMP Mcafee webgateway cpu/mcafeecpuload[{#SNMPINDEX}])> {$_CPU_WARN}\nand \nlast(/SNMP Mcafee webgateway cpu/mcafeecpuload[{#SNMPINDEX}])< {$_CPU_CRIT}",
+                    "name": "CPU Process {$_PROCESS} is above warning  threshold",
+                    "priority": "WARNING",
+                    "recovery_expression": "last(/SNMP Mcafee webgateway cpu/mcafeecpuload[{#SNMPINDEX}])< {$_CPU_CRIT}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "cpu"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "mcafee"
+                      }
+                    ],
+                    "uuid": "4ed12f4662984299a5d2a0918b671bcc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "9e2aa4acea1b45928ddd8f179ea24681",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "stCPULoad-[{#SNMPVALUE}]",
+            "name": "Mcafee cpu",
+            "snmp_oid": "discovery[{#PROCESSCPU},HOST-RESOURCES-MIB::hrSWRunName]",
+            "type": "SNMP_AGENT",
+            "uuid": "2b9c05897eeb461aa0320e5d5d619ae2"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "macros": [
+          {
+            "description": "Processus",
+            "macro": "{$LISTPROCESSUS}",
+            "value": "mwg-core"
+          }
+        ],
+        "name": "SNMP Mcafee webgateway cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Mcafee webgateway"
+          }
+        ],
+        "template": "SNMP Mcafee webgateway cpu",
+        "uuid": "3e4034666d4f405bb72a73f4b585319e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

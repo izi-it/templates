@@ -1,0 +1,175 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:25Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP A10 AX hardware  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck hardware environment.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Checking fans",
+            "key": "axFanName",
+            "name": "System fan name",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.5.9.1.2",
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "b9576e57935c4c5abb823b7810c99d56",
+            "value_type": "CHAR"
+          },
+          {
+            "description": "Checking fans",
+            "key": "axFanSpeed",
+            "name": "Fan Speed",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.5.9.1.4",
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "aa70e2df6eb844aaa416bc00a13bbdb9",
+            "value_type": "CHAR"
+          },
+          {
+            "description": "Checking fans",
+            "key": "axFanStatus",
+            "name": "Fan status",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.5.9.1.3",
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "58accd0eb298409e88b89c32e3593f2c",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Fan Status"
+            }
+          },
+          {
+            "description": "Checking temperature",
+            "key": "axSysHwPhySystemTemp",
+            "name": "Physical system temperature in Celsius",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.5.1",
+            "type": "SNMP_AGENT",
+            "uuid": "dee7644ef75b4b9b86349897677f9b84",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Checking power supplies",
+            "key": "axSysLowerPowerSupplyStatus",
+            "name": "Lower power supply status",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.5.7",
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "07b55a0d574d4adfaa2bcbce274ba428",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Psu Status"
+            }
+          },
+          {
+            "description": "Checking power supplies",
+            "key": "axSysUpperPowerSupplyStatus",
+            "name": "Upper power supply status",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.5.8",
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "75ab8de215b24e76afac962cc60a5594",
+            "value_type": "CHAR",
+            "valuemap": {
+              "name": "Psu Status"
+            }
+          }
+        ],
+        "name": "SNMP A10 AX hardware",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "fan"
+          },
+          {
+            "tag": "component",
+            "value": "psu"
+          },
+          {
+            "tag": "component",
+            "value": "temperature"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "a10 ax"
+          }
+        ],
+        "template": "SNMP A10 AX hardware",
+        "uuid": "7e5fb7c4805d43fb9f3917ea93a86a07",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "notReady",
+                "value": "-2"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "-1"
+              },
+              {
+                "newvalue": "failed",
+                "value": "0"
+              },
+              {
+                "newvalue": "okFixedHigh",
+                "value": "4"
+              },
+              {
+                "newvalue": "okLowMed",
+                "value": "5"
+              },
+              {
+                "newvalue": "okMedMed",
+                "value": "6"
+              },
+              {
+                "newvalue": "okMedHigh",
+                "value": "7"
+              }
+            ],
+            "name": "Fan Status",
+            "uuid": "cd2a12d2c2294c0fb4d62b13eb7e8548"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "off",
+                "value": "0"
+              },
+              {
+                "newvalue": "on",
+                "value": "1"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "-1"
+              }
+            ],
+            "name": "Psu Status",
+            "uuid": "bc51f44bdae4430ab934ceda7725f042"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

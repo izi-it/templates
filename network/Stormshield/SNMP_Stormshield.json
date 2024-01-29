@@ -1,0 +1,65 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:34Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Stormshield by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Stormshield equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Stormshield",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Stormshield"
+          }
+        ],
+        "template": "SNMP Stormshield",
+        "templates": [
+          {
+            "name": "SNMP Stormshield connections"
+          },
+          {
+            "name": "SNMP Stormshield disk"
+          },
+          {
+            "name": "SNMP Stormshield fan"
+          },
+          {
+            "name": "SNMP Stormshield hanodes"
+          },
+          {
+            "name": "SNMP Stormshield health"
+          },
+          {
+            "name": "SNMP Stormshield psu"
+          },
+          {
+            "name": "SNMP Stormshield qos"
+          },
+          {
+            "name": "SNMP Stormshield temperature"
+          }
+        ],
+        "uuid": "0691e57026e24e86882f9159c897a2d1"
+      }
+    ],
+    "version": "6.0"
+  }
+}

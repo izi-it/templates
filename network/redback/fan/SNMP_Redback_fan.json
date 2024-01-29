@@ -1,0 +1,134 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:38Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Redback fan by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Redback fan equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check fan status.",
+            "item_prototypes": [
+              {
+                "key": "rbnFanDescr[{#SNMPINDEX}]",
+                "name": "Fan {#FAN}: Description",
+                "snmp_oid": ".1.3.6.1.4.1.2352.2.4.1.1.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "redback"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "3715ad632fcf4bc8b0dfa0fa2e67ea6c"
+              },
+              {
+                "description": "Check disk usages.",
+                "key": "rbnFanStatus[{#SNMPINDEX}]",
+                "name": "Fan {#FAN}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.2352.2.4.1.1.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "fan"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "redback"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "ba9dd9f1bfea4ae099f93e9b6e555f0e",
+                "valuemap": {
+                  "name": "Fan_Status"
+                }
+              }
+            ],
+            "key": "rbnFanStatusEntry-[{#SNMPVALUE}]",
+            "name": "Redback Fan",
+            "snmp_oid": "discovery[{#FAN},1.3.6.1.4.1.2352.2.4.1.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "b47b6176e1db442f9289414522a19159"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Redback fan",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "fan"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "redback"
+          }
+        ],
+        "template": "SNMP Redback fan",
+        "uuid": "a62f0efbe93243ce8e08d2abf34fa6f7",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "normal",
+                "value": "1"
+              },
+              {
+                "newvalue": "failed",
+                "value": "2"
+              },
+              {
+                "newvalue": "absent",
+                "value": "3"
+              },
+              {
+                "newvalue": "unknown",
+                "value": "4"
+              }
+            ],
+            "name": "Fan_Status",
+            "uuid": "93529b1c716a49ab93f7f1a13be789e5"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

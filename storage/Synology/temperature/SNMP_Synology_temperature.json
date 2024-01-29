@@ -1,0 +1,73 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:41Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Synology temperature made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n\nCheck temperature (SYNOLOGY-SYSTEM-MIB).",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Temperature  in Celsius  ==> [OID:.1.3.6.1.4.1.6574.1.2.0]",
+            "key": "synoSystemtemperature",
+            "name": "Temperature value",
+            "snmp_oid": ".1.3.6.1.4.1.6574.1.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "temperature"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "synology"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "\u00b0C",
+            "uuid": "d88e4a607a744a84ba8292d2cfb17518",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Synology temperature",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "temperature"
+          },
+          {
+            "tag": "layer",
+            "value": "storage"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Synology"
+          }
+        ],
+        "template": "SNMP Synology temperature",
+        "uuid": "32cc7933a8c14abc97c10f22e542459e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

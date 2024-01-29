@@ -1,0 +1,132 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:44Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Athonet epc apns by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Athonet epc equipments using SNMP protocol\n\nCheck access point names.",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Incoming traffic going through the APN=> [ OID:1.3.6.1.4.1.35805.10.2.99.14.1.2]",
+                "key": "aPNRowDownlinkBytes[{#SNMPINDEX}]",
+                "name": "Access Point {#AP_NAME}: Incoming traffic",
+                "snmp_oid": "1.3.6.1.4.1.35805.10.2.99.14.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic in"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B/s",
+                "uuid": "1763fe2978874b6180093ab85da8731c",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Number of pdp contexts\t => [ OID:.1.3.6.1.4.1.35805.10.2.99.14.1.4]",
+                "key": "aPNRowPdpContexts[{#SNMPINDEX}]",
+                "name": "Access Point {#AP_NAME}: Number of pdp contexts",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.99.14.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "pdp contexts"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "ac5677d4d7744faf903cbecfbf4beec1"
+              },
+              {
+                "description": "Outgoing traffic going through the APN => [ OID:.1.3.6.1.4.1.35805.10.2.99.14.1.3]",
+                "key": "aPNRowUplinkBytes[{#SNMPINDEX}]",
+                "name": "Access Point {#AP_NAME}: Outgoing traffic",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.99.14.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "traffic out"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B/s",
+                "uuid": "96a320028615455e8dc828830e516ae1",
+                "value_type": "FLOAT"
+              }
+            ],
+            "key": "aPNRowApnKey-[{#SNMPVALUE}]",
+            "name": "Athonet epc apns",
+            "snmp_oid": "discovery[{#AP_NAME},1.3.6.1.4.1.35805.10.2.99.14.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "541a1456b0714cad95e61d23d1c1b1c5"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Athonet epc apns",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Athonet epc"
+          }
+        ],
+        "template": "SNMP Athonet epc apns",
+        "uuid": "d053d56f548e4efbbd3d9c33f61e3d46"
+      }
+    ],
+    "version": "6.0"
+  }
+}

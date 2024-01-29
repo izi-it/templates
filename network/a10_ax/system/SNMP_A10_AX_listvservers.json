@@ -1,0 +1,86 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:25Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP A10 AX listvservers  made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "key": "axVirtualServerStatStatus[{#SNMPINDEX}]",
+                "name": "Virtual Server {#VIRTUALSERVER_NAME} Status",
+                "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.4.2.1.1.10.{#SNMPINDEX}",
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "65a4b6b3860341f8ad99fdb5bb1e60d6",
+                "value_type": "CHAR",
+                "valuemap": {
+                  "name": "Server Status"
+                }
+              }
+            ],
+            "key": "axVirtualServerStatName-[{#SNMPVALUE}]",
+            "name": "A10 AX listservers",
+            "snmp_oid": "discovery[{#VIRTUALSERVER_NAME},1.3.6.1.4.1.22610.2.4.3.4.2.1.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "17fa083f7e554ac6980db81c3edd5270"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP A10 AX listvservers",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "system"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "a10 ax"
+          }
+        ],
+        "template": "SNMP A10 AX listvservers",
+        "uuid": "e9e7e553d8b446369ce328614a599041",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "up",
+                "value": "1"
+              },
+              {
+                "newvalue": "down",
+                "value": "2"
+              },
+              {
+                "newvalue": "disabled",
+                "value": "3"
+              }
+            ],
+            "name": "Server Status",
+            "uuid": "f2a4695894564ecc96106d7dd261bec7"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

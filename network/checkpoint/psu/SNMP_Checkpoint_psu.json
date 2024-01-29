@@ -1,0 +1,112 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:36Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template to check Checkpoint psu equipments using SNMP protocol by izi-it",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check psu.",
+            "item_prototypes": [
+              {
+                "description": "PSU Status",
+                "key": "powerSupplyStatus[{#SNMPINDEX}]",
+                "name": "PSU {#PSU}: Status",
+                "snmp_oid": ".1.3.6.1.4.1.2620.1.6.7.9.1.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "psu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "checkpoint"
+                  }
+                ],
+                "trends": "0",
+                "trigger_prototypes": [
+                  {
+                    "expression": "last(/SNMP Checkpoint psu/powerSupplyStatus[{#SNMPINDEX}])<>\"Up\"",
+                    "name": "{#PSU}:: Power supply is in critical state",
+                    "priority": "HIGH",
+                    "recovery_expression": "last(/SNMP Checkpoint psu/powerSupplyStatus[{#SNMPINDEX}])=\"Up\"",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "psu"
+                      },
+                      {
+                        "tag": "layer",
+                        "value": "network"
+                      },
+                      {
+                        "tag": "provider",
+                        "value": "izi-it"
+                      },
+                      {
+                        "tag": "vendor",
+                        "value": "checkpoint"
+                      }
+                    ],
+                    "uuid": "9fa94cc4100f41d8977d712e1610b0d3"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "342beeb729924d6891e90ce4936dd195",
+                "value_type": "CHAR"
+              }
+            ],
+            "key": "powerSupplyStatus-[{#SNMPVALUE}]",
+            "name": "Checkpoint psu",
+            "snmp_oid": "discovery[{#PSU}, 1.3.6.1.4.1.2620.1.6.7.9.1.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "569ccdc3b1b545caafa0a3395fb5b3dc"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Checkpoint psu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "psu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "checkpoint"
+          }
+        ],
+        "template": "SNMP Checkpoint psu",
+        "uuid": "05a98ccf5a2d4feb8b9e858613e1ef4a"
+      }
+    ],
+    "version": "6.0"
+  }
+}

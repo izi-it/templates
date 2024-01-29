@@ -1,0 +1,316 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:39Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Teltonika system by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Teltonika equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "key": "ConnectionState",
+            "name": "Connection State",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.7.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ConnectionState"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "e46162f6d5ee4a8ebc76594e157b734f",
+            "value_type": "CHAR"
+          },
+          {
+            "description": "Mobile network registration status [OID:.1.3.6.1.4.1.48690.2.3.0]",
+            "key": "NetState",
+            "name": "Net State",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Net State"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "25233257a6944fc68eba02240b9d826c",
+            "value_type": "CHAR"
+          },
+          {
+            "key": "PinState",
+            "name": "Pin State",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "pin state"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "teltonika"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "fae0e524c58346a397dc3d660bae1791",
+            "value_type": "CHAR"
+          },
+          {
+            "key": "Received",
+            "name": "Traffic out",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.20.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Traffic out"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "e69edca6d3f34a6384d2ece0d20aa003",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "RSRP (Signal receive power) value in dBm ==> [OID:.1.3.6.1.4.1.48690.2.23.0]",
+            "key": "RSRP",
+            "name": "Signal receive power",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.23.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "RSRP"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "dBm",
+            "uuid": "6ea9169b3dbe47888e4d1cea8d658152",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "RSRQ (Signal receive quality) value in dB ==> [OID:.1.3.6.1.4.1.48690.2.24.0]",
+            "key": "RSRQ",
+            "name": "Signal receive quality",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.24.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "RSRQ"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "dBm",
+            "uuid": "88b2eaf5de104948b78d879d05b00613",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "Sent",
+            "name": "Traffic in",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.19.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Traffic in"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "5a31fe44591d47949df96fb4a9909001",
+            "value_type": "FLOAT"
+          },
+          {
+            "key": "Signal",
+            "name": "Signal strength level",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "signal"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "4a2991f7918c48eca6dedbeb7c7566c9",
+            "value_type": "CHAR"
+          },
+          {
+            "key": "SimState",
+            "name": "Sim State",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "simstate"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "733dfaac86da40cab5abae2119440179",
+            "value_type": "CHAR"
+          },
+          {
+            "key": "Temperature",
+            "name": "Temperature",
+            "snmp_oid": ".1.3.6.1.4.1.48690.2.9.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Temperature"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Teltonika"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "0b28d314ef3b45c4941268d34d0a3a76",
+            "value_type": "CHAR"
+          }
+        ],
+        "name": "SNMP Teltonika system",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "system"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Teltonika"
+          }
+        ],
+        "template": "SNMP Teltonika system",
+        "uuid": "1f0f6f8687ef4f609f070d0f5ea1fc3e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

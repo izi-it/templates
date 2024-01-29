@@ -1,0 +1,208 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:33Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Stormshield by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Stormshield hanodes equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "5m",
+            "item_prototypes": [
+              {
+                "description": "HA Licence  ==> [ OID:.1.3.6.1.4.1.11256.1.11.7.1.6]",
+                "key": "ntqHALicence[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: HA Licence",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.11.7.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "ha licence"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "a31206b971454a6e8b2946ea748a3b4a"
+              },
+              {
+                "description": "HA Quality ==> [ OID:.1.3.6.1.4.1.11256.1.11.7.1.7]",
+                "key": "ntqHAQuality[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: HA Quality",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.11.7.1.7.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "ha quality"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "db9dc3f25ac64f09b8999df76a8037b9",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Online ==> [ OID:.1.3.6.1.4.1.11256.1.11.7.1.3]",
+                "key": "ntqOnline[{#SNMPINDEX}]",
+                "name": "{#FW_SERIAL}: Online",
+                "snmp_oid": ".1.3.6.1.4.1.11256.1.11.7.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "online"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "stormshield"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "cb4afe8998614786b8adf9bd781d9bf6",
+                "valuemap": {
+                  "name": "Stormshield_HA_Status"
+                }
+              }
+            ],
+            "key": "ntqFwSerial-[{#SNMPVALUE}]",
+            "name": "Stormshield hanodes",
+            "snmp_oid": "discovery[{#FW_SERIAL},1.3.6.1.4.1.11256.1.11.7.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "9fbb9b0e181f4cb2b6a6af3e0ecd49c9"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Number of firewalls registered in the HA cluster but not replying ==> [OID:.1.3.6.1.4.1.11256.1.11.2.0]",
+            "key": "ntqNbDeadNode",
+            "name": "Number of firewalls registered in the HA cluster but not replying",
+            "snmp_oid": ".1.3.6.1.4.1.11256.1.11.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "nbdeadnode"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stormshield"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "27afb24618224761be645e397d3a6cd9"
+          },
+          {
+            "description": "Number of firewalls in the HA cluster\n ==> [OID:.1.3.6.1.4.1.11256.1.11.1.0]",
+            "key": "ntqNbNode",
+            "name": "Number of firewalls in the HA cluster",
+            "snmp_oid": ".1.3.6.1.4.1.11256.1.11.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "nbnode"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "stormshield"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "88982f5cfa9d4e06908afc60d9df95ba"
+          }
+        ],
+        "name": "SNMP Stormshield hanodes",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "hanodes"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "stormshield"
+          }
+        ],
+        "template": "SNMP Stormshield hanodes",
+        "uuid": "d18eb3e690384317af2b5530635e7151",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "online",
+                "value": "1"
+              },
+              {
+                "newvalue": "offline",
+                "value": "2"
+              }
+            ],
+            "name": "Stormshield_HA_Status",
+            "uuid": "c0165af5d79e4d0db28633adb61b62b3"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

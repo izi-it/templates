@@ -1,0 +1,157 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:41:00Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Colubris  cpu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck CPU usage.",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Average CPU usage during the last 5 seconds ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.6.0]",
+            "key": "coUsInfoCpuUse5Sec",
+            "name": "Average CPU usage during the last 5 seconds",
+            "snmp_oid": ".1.3.6.1.4.1.8744.5.21.1.1.6.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "average CPU usage during the last 5 seconds"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "e5afcac6200c49f8809950a992dc1e54",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Average CPU usage during the last 10 seconds ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.7.0]",
+            "key": "coUsInfoCpuUse10Sec",
+            "name": "Average CPU usage during the last 10 seconds",
+            "snmp_oid": ".1.3.6.1.4.1.8744.5.21.1.1.7.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "average cpu usage during the last 10 seconds"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "67054f4adf374b05a25af48a5a804af8",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Average CPU usage during the last 10 seconds ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.8.0]",
+            "key": "coUsInfoCpuUse20Sec",
+            "name": "Average CPU usage during the last 20 seconds",
+            "snmp_oid": ".1.3.6.1.4.1.8744.5.21.1.1.8.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "average cpu usage during the last 20 seconds"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "8b6cdc70de024e7ba313a31b08c33ecd",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Current CPU usage  ==> [OID:.1.3.6.1.4.1.8744.5.21.1.1.5.0]",
+            "key": "coUsInfoCpuUseNow",
+            "name": "CPU usage",
+            "snmp_oid": ".1.3.6.1.4.1.8744.5.21.1.1.5.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "colubris"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "916fe73457e54cc486eaa8f69cc7af1c",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Colubris  cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Colubris"
+          }
+        ],
+        "template": "SNMP Colubris  cpu",
+        "uuid": "4abfb3e5c539443198c5f77d0cf35e40"
+      }
+    ],
+    "version": "6.0"
+  }
+}

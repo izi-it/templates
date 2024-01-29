@@ -1,0 +1,146 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:35Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Hirschmann classic cpu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck cpu.",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "The average cpu utilization of the switch in percent, max. measured over the last 30 minutes.\n ==> [OID:.1.3.6.1.4.1.248.14.2.15.2.2]",
+            "key": "hmCpuAverageUtilization",
+            "name": "Average CPU Utilization last 30 minutes in %",
+            "snmp_oid": ".1.3.6.1.4.1.248.14.2.15.2.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu utilization last 30minutes"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Hirschmann classic"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "342d1232eb834a6f84d7b7e3a0f9a7a5",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "The current cpu utilization of the device in percent ==> [OID:.1.3.6.1.4.1.248.14.2.15.2.1]",
+            "key": "hmCpuUtilization",
+            "name": "CPU Utilization in %",
+            "snmp_oid": ".1.3.6.1.4.1.248.14.2.15.2.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu utilization"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Hirschmann classic"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "72d9638050df4bc99a865ac7f4509c89",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Enable or disable the resources measurement If disabled, the task - needed for measurement - is also deleted.\n  ==> [OID:.1.3.6.1.4.1.248.14.2.15.1]",
+            "key": "hmEnableMeasurement",
+            "name": "Resources measurement status",
+            "snmp_oid": ".1.3.6.1.4.1.248.14.2.15.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "resources measurement status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Hirschmann classic"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "452c4b306a714f6fa4058f69199723d7",
+            "valuemap": {
+              "name": "Hirschmann_Enable_Status"
+            }
+          }
+        ],
+        "name": "SNMP Hirschmann classic cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Hirschmann classic"
+          }
+        ],
+        "template": "SNMP Hirschmann classic cpu",
+        "uuid": "f08ac737ff8a44ccb8c4445c541432ec",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "enable",
+                "value": "1"
+              },
+              {
+                "newvalue": "disable",
+                "value": "2"
+              }
+            ],
+            "name": "Hirschmann_Enable_Status",
+            "uuid": "c99e3f9e95464eed9c5630d793630131"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:29Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Ruckus ap",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "ruckus ap"
+          }
+        ],
+        "template": "SNMP Ruckus ap",
+        "uuid": "a503cd2c2f2c480689148a6fd8c3a7e7"
+      }
+    ],
+    "version": "6.0"
+  }
+}

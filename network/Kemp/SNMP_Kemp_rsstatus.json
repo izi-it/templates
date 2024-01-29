@@ -1,0 +1,236 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:34Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Kemp rsstatus by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Kemp equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "description": "ID of associated Virtual Service",
+            "item_prototypes": [
+              {
+                "description": "Total number of current active connections of every unique Real server\n ==> [OID:1.3.6.1.4.1.12196.13.2.1.17]",
+                "key": "rSActiveConns[{#SNMPINDEX}]",
+                "name": "Real server {#RSVSIDX}: Current active connections",
+                "snmp_oid": ".1.3.6.1.4.1.12196.13.2.1.17.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "rs current connection"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "kemp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "e991bc668b8447f7a5fa62804841f914"
+              },
+              {
+                "description": "Total number of incoming bytes in the lifetime of every unique Real Server\n ==> [OID:.1.3.6.1.4.1.12196.13.2.1.15]",
+                "key": "rSInBytes[{#SNMPINDEX}]",
+                "name": "Real server {#RSVSIDX}: Traffic in",
+                "snmp_oid": ".1.3.6.1.4.1.12196.13.2.1.15.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "rs traffic in"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "kemp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "235d4fa634c9493180a9a8ec0ff3c983",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "IP address of Real Server ==> [OID:1.3.6.1.4.1.12196.13.2.1.2]",
+                "key": "rSip[{#SNMPINDEX}]",
+                "name": "Real server {#RSVSIDX}: IP address",
+                "snmp_oid": ".1.3.6.1.4.1.12196.13.2.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "ip of rs"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "kemp"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "ca153499246f4d359dfd3bf5da76d75c",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Total number of outgoing bytes in the lifetime of every unique Real Server\n ==> [OID:.1.3.6.1.4.1.12196.13.2.1.16]",
+                "key": "rSOutBytes[{#SNMPINDEX}]",
+                "name": "Real server {#RSVSIDX}: Traffic out",
+                "snmp_oid": ".1.3.6.1.4.1.12196.13.2.1.16.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "rs traffic out"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "kemp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "B",
+                "uuid": "4be74ac4d8f448179e448c7ee12e10c7",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "Real Server port number  ==> [OID:.1.3.6.1.4.1.12196.13.2.1.3]",
+                "key": "rSport[{#SNMPINDEX}]",
+                "name": "Real server {#RSVSIDX}: Port number",
+                "snmp_oid": ".1.3.6.1.4.1.12196.13.2.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "real server port number"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "kemp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "d9bb25f7168540b99897c8779e3be3ed"
+              },
+              {
+                "description": "Notification sent when a Real Server changes state\n ==> [OID:.1.3.6.1.4.1.12196.13.2.1.8]",
+                "key": "rSstate[{#SNMPINDEX}]",
+                "name": "Real server {#RSVSIDX}: State change",
+                "snmp_oid": ".1.3.6.1.4.1.12196.13.2.1.8.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "rs change state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "kemp"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "e799e4db52a1436ab1ae995798f5338d",
+                "valuemap": {
+                  "name": "Kemp_RS-Status"
+                }
+              }
+            ],
+            "key": "rSvsidx-[{#SNMPVALUE}]",
+            "name": "Kemp rsstatus",
+            "snmp_oid": "discovery[{#RSVSIDX},1.3.6.1.4.1.12196.13.2.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "1643db4862344f4b9b61adf55011f1f8"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Kemp rsstatus",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Kemp"
+          }
+        ],
+        "template": "SNMP Kemp rsstatus",
+        "uuid": "8fafa82676914f778ac68797a449b329",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "inService",
+                "value": "1"
+              },
+              {
+                "newvalue": "outOfService",
+                "value": "2"
+              },
+              {
+                "newvalue": "disabled",
+                "value": "4"
+              }
+            ],
+            "name": "Kemp_RS-Status",
+            "uuid": "96fdabcb45954574aaf9e3312572d584"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

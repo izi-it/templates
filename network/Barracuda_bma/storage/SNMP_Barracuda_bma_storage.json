@@ -1,0 +1,99 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:41:00Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Barracuda bma storage made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "The total storage space occupied by the firmware ==> [OID:.1.3.6.1.4.1.20632.6.6.5]",
+            "key": "firmwareStorage",
+            "name": "Total storage space occupied by the firmware",
+            "snmp_oid": ".1.3.6.1.4.1.20632.6.6.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "firmware storage"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "barracuda"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9bfdfe5da9a241cea9f80689201bced8",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "The total storage space occupied by mail and logs ==> [OID:.1.3.6.1.4.1.20632.6.6.6]",
+            "key": "mailLogStorage",
+            "name": "Total storage space occupied by mail and logs",
+            "snmp_oid": ".1.3.6.1.4.1.20632.6.6.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "mailLogStorage"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "barracuda"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "6acbf909ee2d4e0d9d779dcccacdd55e",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Barracuda bma storage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "storage"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Barracuda bma"
+          }
+        ],
+        "template": "SNMP Barracuda bma storage",
+        "uuid": "e737802b96be47188123e39346819bfd"
+      }
+    ],
+    "version": "6.0"
+  }
+}

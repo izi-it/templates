@@ -1,0 +1,200 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:46Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Athonet epc interfacesga by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Athonet epc equipments using SNMP protocol\n\nCheck GA interfaces.",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Local address => [ OID:.1.3.6.1.4.1.35805.10.2.12.10.1.2]",
+                "key": "iGaLinkLocalAddress[{#SNMPINDEX}]",
+                "name": "Interface GA {#GALINK_NAME}: Local address",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.10.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Local address"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "cf1b69b5d3e640e189e50ef8ff82954f",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Peer address => [ OID:.1.3.6.1.4.1.35805.10.2.12.10.1.3]",
+                "key": "iGaLinkPeerAddress[{#SNMPINDEX}]",
+                "name": "Interface GA {#GALINK_NAME}: Peer address",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.10.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "peer address"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "9cef0c38fed441c7848e02933a5f82ab",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Status of the interface => [ OID:.1.3.6.1.4.1.35805.10.2.12.10.1.5]",
+                "key": "iGaLinkState[{#SNMPINDEX}]",
+                "name": "Interface GA {#GALINK_NAME}: Interface Status",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.10.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "interface status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "1bf4abe6a1934c299b9f9ff09379e22f",
+                "valuemap": {
+                  "name": "Athonet_Epc_Status"
+                }
+              },
+              {
+                "description": "Interface Type => [ OID:.1.3.6.1.4.1.35805.10.2.12.10.1.4]",
+                "key": "iGaLinkTransportType[{#SNMPINDEX}]",
+                "name": "Interface GA {#GALINK_NAME}: Type",
+                "snmp_oid": ".1.3.6.1.4.1.35805.10.2.12.10.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "interface type"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Athonet epc"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "bdf76a1f921d4924807c753a8d7be796",
+                "value_type": "CHAR",
+                "valuemap": {
+                  "name": "Athonet_Transport_Type"
+                }
+              }
+            ],
+            "key": "iGaLinkName-[{#SNMPVALUE}]",
+            "name": "Athonet epc interfacesga",
+            "snmp_oid": "discovery[{#GALINK_NAME},1.3.6.1.4.1.35805.10.2.12.10.1.7]",
+            "type": "SNMP_AGENT",
+            "uuid": "82b4d72c3bf94dcaa6a3b6937158ac26"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Athonet epc interfacesga",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Athonet epc"
+          }
+        ],
+        "template": "SNMP Athonet epc interfacesga",
+        "uuid": "97a16350f0a04ebaa4e871f807303caa",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "down",
+                "value": "0"
+              },
+              {
+                "newvalue": "up",
+                "value": "1"
+              }
+            ],
+            "name": "Athonet_Epc_Status",
+            "uuid": "65700e599690436488fa5629e3cadda6"
+          },
+          {
+            "mappings": [
+              {
+                "newvalue": "sctp",
+                "value": "0"
+              },
+              {
+                "newvalue": "tcp",
+                "value": "1"
+              },
+              {
+                "newvalue": "udp",
+                "value": "2"
+              }
+            ],
+            "name": "Athonet_Transport_Type",
+            "uuid": "57501cba5a2d4f5e9e9ba7db5314f5ff"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

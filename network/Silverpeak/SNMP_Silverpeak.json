@@ -1,0 +1,50 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:54Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Silverpeak made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Silverpeak",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Silverpeak"
+          }
+        ],
+        "template": "SNMP Silverpeak",
+        "templates": [
+          {
+            "name": "SNMP Silverpeak alarms"
+          },
+          {
+            "name": "SNMP Silverpeak status"
+          },
+          {
+            "name": "SNMP Silverpeak uptime"
+          }
+        ],
+        "uuid": "0b381f05138a4bda83a6ee11efd47f67"
+      }
+    ],
+    "version": "6.0"
+  }
+}

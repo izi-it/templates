@@ -1,0 +1,232 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:55Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Infoblox system by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck system usage.",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Infoblox CPU One temperature  ==>  [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.17]",
+            "key": "ibCPU1Temperature",
+            "name": "CPU1 Temperature",
+            "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.17",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu1 temperature"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Infoblox"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "ef17a348b7ca49079efe12828c055fb7",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Infoblox CPU two temperature  ==>  [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.18]",
+            "key": "ibCPU2Temperature",
+            "name": "CPU2 Temperature",
+            "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.18",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu2 temperature"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Infoblox"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "c9c8a90bcabd4452b573a2c80e6ad575",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Infoblox One hardware type   ==> [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.4]",
+            "key": "ibHardwareType",
+            "name": "Hardware type",
+            "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "hardware type"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Infoblox"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "fca01d94aa584e9c9019953ce937b7ea",
+            "value_type": "CHAR"
+          },
+          {
+            "description": "High Availability Status ==>  [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.13]",
+            "key": "ibHaStatus",
+            "name": "HA Status",
+            "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.13",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ha status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Infoblox"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "cfb0a049b1c045e4b823ea1159017df8",
+            "value_type": "CHAR"
+          },
+          {
+            "description": "Average CPU Usage ==>  [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.8.1.1]",
+            "key": "ibSystemMonitorCpuUsage",
+            "name": "Average CPU Usage",
+            "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.8.1.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu usage"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Infoblox"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9eec171c4e5a42c09caffb94956c813e",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Current memory usage ==>  [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.8.2.1]",
+            "key": "ibSystemMonitorMemUsage",
+            "name": "Memory used",
+            "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.8.2.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "memory used"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Infoblox"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "7c5a548ca8b54640b982324588fa8ab2",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Current Swap usage  ==>  [OID:.1.3.6.1.4.1.7779.3.1.1.2.1.8.3.1]",
+            "key": "ibSystemMonitorSwapUsage",
+            "name": "Swap used",
+            "snmp_oid": ".1.3.6.1.4.1.7779.3.1.1.2.1.8.3.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "swap used"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Infoblox"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "7aa0a5716bf9470e891eb117e4c88e4c",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Infoblox system",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Infoblox"
+          }
+        ],
+        "template": "SNMP Infoblox system",
+        "uuid": "984c564495954cbfbdf8bcd12485387e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

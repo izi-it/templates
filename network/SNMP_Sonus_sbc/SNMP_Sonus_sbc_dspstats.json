@@ -1,0 +1,177 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:37Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Sonus sbc dspstats by automate@izi-it\n\nCheck Digital Signal Processing statistics\n\nHash: xxxxxxxxxxxxxxx",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "Number of channels in use by this dsp ==> [ OID:.1.3.6.1.4.1.177.15.1.6.1.5]",
+                "key": "uxDSPChannelsInUse[{#SNMPINDEX}]",
+                "name": "DSP Resource {#DSP_INDEX}: Number of channels in use",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.6.1.5.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "used channels"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "f2548628c6184825907e619e51a21ba1"
+              },
+              {
+                "description": "DSP Resource cpu usage in % ==> [ OID:]",
+                "key": "uxDSPCPUUsage[{#SNMPINDEX}]",
+                "name": "DSP Resource {#DSP_INDEX}: CPU Usage",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.6.1.4.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu usage"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "units": "%",
+                "uuid": "e4dffa75d8a54a9ea654ea2580af124a",
+                "value_type": "FLOAT"
+              },
+              {
+                "description": "If the DSP Resource is present ==> [ OID:.1.3.6.1.4.1.177.15.1.6.1.3]",
+                "key": "uxDSPIsPresent[{#SNMPINDEX}]",
+                "name": "DSP Resource {#DSP_INDEX}: Presence",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.6.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "dip ressource presence"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "trends": "0",
+                "type": "SNMP_AGENT",
+                "uuid": "2a96e5c7ba6244ada1e2929fc7ad3312",
+                "value_type": "CHAR"
+              },
+              {
+                "description": "Service state oh the DSP ==> [ OID:.1.3.6.1.4.1.177.15.1.6.1.6]",
+                "key": "uxDSPServiceStatus[{#SNMPINDEX}]",
+                "name": "DSP Resource {#DSP_INDEX}: Service State",
+                "snmp_oid": ".1.3.6.1.4.1.177.15.1.6.1.6.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "service state"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Sonus sbc"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "557fd2a4b2bb45f1b72d840b7b12e21f",
+                "valuemap": {
+                  "name": "Sonus-sbc_Service_Status"
+                }
+              }
+            ],
+            "key": "uxDSPIndex-[{#SNMPVALUE}]",
+            "name": "Sonus sbc dspstats",
+            "snmp_oid": "discovery[{#DSP_INDEX},1.3.6.1.4.1.177.15.1.6.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "09c878fb15a445c2b90461f9224ce784"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Sonus sbc dspstats",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "SNMP Sonus sbc"
+          }
+        ],
+        "template": "SNMP Sonus sbc dspstats",
+        "uuid": "9a22b6dcfd7a43ab94bdb35d94589af3",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "down",
+                "value": "0"
+              },
+              {
+                "newvalue": "up",
+                "value": "1"
+              }
+            ],
+            "name": "Sonus-sbc_Service_Status",
+            "uuid": "822bb71c032e4708b58746b92dfc6423"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

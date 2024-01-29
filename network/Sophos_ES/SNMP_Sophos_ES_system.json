@@ -1,0 +1,1200 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:43Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Sophos ES system by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Sophos ES equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "Cluster status   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.1]",
+            "key": "seaClusterStatus",
+            "name": "Cluster Status",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.1",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cluster status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8591641ac0e84c288485d6d2a25c45f0",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Node status   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.2]",
+            "key": "seaNodeStatus",
+            "name": "Node Status",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.2",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "node status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "59a29096c19a4243bef53f21484a9b15",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Rebot status   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.3]",
+            "key": "seaRebootStatus",
+            "name": "Reboot status",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "reboot status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f5eee3e1c2974de68ce8b0b6886e3415",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Delivery Queue ==> [OID:.1.3.6.1.4.1.2604.2.1.1.8]",
+            "key": "seaStatusDeliveryQueue",
+            "name": "Delivery Queue",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.8",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Delivery Queue"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "6aa672f66bbe4171a16636aaf459bd44",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Incoming Queue ==> [OID:.1.3.6.1.4.1.2604.2.1.1.9]",
+            "key": "seaStatusIncomingQueue",
+            "name": "Incoming Queue",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.9",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Incoming Queue"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "b7709812e0b848aeb7b5fca3d4fb688d",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Mail Connections status  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.4]",
+            "key": "seaStatusMailConnections",
+            "name": "Mail Connections status",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.4",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Mail Connections status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f5f24d456ab2490ba25471670e814d28",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Status MailDisk Usage ==> [OID:.1.3.6.1.4.1.2604.2.1.1.5]",
+            "key": "seaStatusMailDiskUsage",
+            "name": "Status MailDisk Usage",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Status MailDisk Usage"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9e6e8f50c7fa454b8d522f9c6cf01f13",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Mail Disk Usage Quarantine ==> [OID:.1.3.6.1.4.1.2604.2.1.1.6]",
+            "key": "seaStatusMailDiskUsageQuarantine",
+            "name": "Mail Disk Usage Quarantine",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Mail Disk Usage Quarantine"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "22c9ca68c5a943529519aa166ea4359b",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Mail Exception  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.37]",
+            "key": "seaStatusMailException",
+            "name": "Mail Exception",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.37",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "MailException"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f09bbe98c93d4d0e9165d9f7f18cd109",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Mail Ldap Sync ==> [OID:.1.3.6.1.4.1.2604.2.1.1.7]",
+            "key": "seaStatusMailLdapSync",
+            "name": "Mail Ldap Sync",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.7",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Mail Ldap Sync"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "6d889f85e1584895991378e873e55fa6",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "MailShostError ==> [OID:.1.3.6.1.4.1.2604.2.1.1.38]",
+            "key": "seaStatusMailShostError",
+            "name": "MailS host Error",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.38",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "MailShostError"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "cf24e41454b9481289dc2742e4de5974",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Mail TLS Error   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.10]",
+            "key": "seaStatusMailTLSError",
+            "name": "Mail TLS Error",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.10",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "MailTLSError"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "0349ddba3c2f4b63b6ecc1a2def7de84",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Cloned  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.36]",
+            "key": "seaStatusSoftwareCloned",
+            "name": "Cloned",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.36",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Cloned"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f9f88094fb9e4c7da1e375b996fc9d0c",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Cluster Sync ==> [OID:.1.3.6.1.4.1.2604.2.1.1.15]",
+            "key": "seaStatusSoftwareClusterSync",
+            "name": "Cluster Sync",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.15",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ClusterSync"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8ed834dc725c47ba844d7bdbb3f493a7",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Config Backup   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.11]",
+            "key": "seaStatusSoftwareConfigBackup",
+            "name": "Config Backup",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.11",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ConfigBackup"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "93c92d7fa5a64d0190f3c9f60d87cca9",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Logfile Backup  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.12]",
+            "key": "seaStatusSoftwareLogfileBackup",
+            "name": "Logfile Backup",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.12",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "LogfileBackup"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "03f7c73fe6b34b8f9c6fc433c5a77fb0",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Process Health   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.16]",
+            "key": "seaStatusSoftwareProcessHealth",
+            "name": "Process Health",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.16",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "ProcessHealth"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "42c70ed288f64563a0e8444dfdb2183e",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Quarantine Backup ==> [OID:.1.3.6.1.4.1.2604.2.1.1.13]",
+            "key": "seaStatusSoftwareQuarantineBackup",
+            "name": "Quarantine Backup",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.13",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "QuarantineBackup"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "8474963a0e7f46d9a0d52a0e79bfbd76",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Quarantine Summary   ==> [OID:1.3.6.1.4.1.2604.2.1.1.17]",
+            "key": "seaStatusSoftwareQuarantineSummary",
+            "name": "Quarantine Summary",
+            "snmp_oid": "1.3.6.1.4.1.2604.2.1.1.17",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "QuarantineSummary"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "890e08c2347c49f6bbd475987f52a8e5",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Syslog Connection ==> [OID:.1.3.6.1.4.1.2604.2.1.1.35]",
+            "key": "seaStatusSoftwareSyslogConnection",
+            "name": "Syslog Connection",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.35",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "SyslogConnection"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "1ae94fcc59e34da699d5ac1bfab2efa4",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Syslog Process ==> [OID:.1.3.6.1.4.1.2604.2.1.1.34]",
+            "key": "seaStatusSoftwareSyslogProcess",
+            "name": "Syslog Process",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.34",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "SyslogProcess"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a2f85c67f14346f7969c3b7c58c69a29",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "System Load  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.12]",
+            "key": "seaStatusSoftwareSystemLoad",
+            "name": "System Load",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.18",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "SystemLoad"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "f6d0563def074f44bf6b2e8cdab16edb",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Update Connection  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.19]",
+            "key": "seaStatusSoftwareUpdateConnection",
+            "name": "Update Connection",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.19",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Update Connection"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "a599bf6fd6764db38fe0d702ee99112a",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Update Data Install   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.20]",
+            "key": "seaStatusSoftwareUpdateDataInstall",
+            "name": "Update Data Install",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.20",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Update Data Install"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "142cb936cc47467586dab5015a8a582d",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Update Pending reboot  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.21]",
+            "key": "seaStatusSoftwareUpdatePendingreboot",
+            "name": "Update Pending reboot",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.21",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "UpdatePendingreboot"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "54e8cbf3e29642b7bc01cf2372118eb1",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Upgrade Available   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.22]",
+            "key": "seaStatusSoftwareUpgradeAvailable",
+            "name": "Upgrade Available",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.22",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "UpgradeAvailable"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2e09a7ae53ca43949c550effe29bdabb",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Upgrade Connection ==> [OID:.1.3.6.1.4.1.2604.2.1.1.23]",
+            "key": "seaStatusSoftwareUpgradeConnection",
+            "name": "Upgrade Connection",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.23",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "UpgradeConnection"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "fdade5afa28f4a65995da4c4d6da8fe8",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Upgrade Download ==> [OID:.1.3.6.1.4.1.2604.2.1.1.24]",
+            "key": "seaStatusSoftwareUpgradeDownload",
+            "name": "Upgrade Download",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.24",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Upgrade Download"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "24471d39a26a4f808a296cd11b893ab1",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Upgrade Install  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.25]",
+            "key": "seaStatusSoftwareUpgradeInstall",
+            "name": "Upgrade Install",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.25",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "UpgradeInstall"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "5a2d211a502f4891b8b3985d4fce392f",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Status Spx Encryption  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.32]",
+            "key": "seaStatusSpxEncryption",
+            "name": "Spx Encryption",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.32",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "SpxEncryption"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "33d0e82480884d0e962d7934788e30e5",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Spx Failure Queue ==> [OID:.1.3.6.1.4.1.2604.2.1.1.31]",
+            "key": "seaStatusSpxFailureQueue",
+            "name": "Spx Failure Queue",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.31",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "FailureQueue"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2bc47b9093ef4ed2a608657c10068831",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Spx Queue  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.30]",
+            "key": "seaStatusSpxQueue",
+            "name": "Spx Queue",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.30",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Status Spx Queue"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "e687299366ed4ebc9325be8b9f0c0c8d",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Certificate  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.26]",
+            "key": "seaStatusSystemCertificate",
+            "name": "Certificate",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.26",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Certificate"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "e431c1b44edf4bb39578b55fae403400",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Cross Wired  ==> [OID:.1.3.6.1.4.1.2604.2.1.1.28]",
+            "key": "seaStatusSystemCrossWired",
+            "name": "Cross Wired",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.28",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "CrossWired"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "eb5d0580c6cf4acaa761b2e467a8a254",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "License   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.27]",
+            "key": "seaStatusSystemLicense",
+            "name": "License",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.27",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "License"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "01e252545c394b8d8bf13f9e189b1fd9",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Sandbox License   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.33]",
+            "key": "seaStatusSystemSandboxLicense",
+            "name": "Sandbox License",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.33",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Sandbox License"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "9f7ba38a557f4362bda08531dc2fcc76",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "TrialLicense   ==> [OID:.1.3.6.1.4.1.2604.2.1.1.39]",
+            "key": "seaStatusSystemTrialLicense",
+            "name": "Trial License",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.39",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "TrialLicense"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "76c953f8aa4143c8adeb4cbe99e091e2",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Spx Trial License ==> [OID:.1.3.6.1.4.1.2604.2.1.1.29]",
+            "key": "SpxTrialLicense",
+            "name": "SpxTrialLicense",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.29",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "SpxTrialLicense"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "7a5ddd885f814f60b3e20613275c341f",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          },
+          {
+            "description": "Upgrade Download ==> [OID:.1.3.6.1.4.1.2604.2.1.1.24]",
+            "key": "UpgradeDownload",
+            "name": "Upgrade Download",
+            "snmp_oid": ".1.3.6.1.4.1.2604.2.1.1.24",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "UpgradeDownload"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "sophos es"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "eea92b5639ab49fa809956b02e7db503",
+            "valuemap": {
+              "name": "Sophos_System_Status"
+            }
+          }
+        ],
+        "name": "SNMP Sophos ES system",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Sophos ES"
+          }
+        ],
+        "template": "SNMP Sophos ES system",
+        "uuid": "00721ed97208434fa50f736eb73b9b6f",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "unknown",
+                "value": "0"
+              },
+              {
+                "newvalue": "disabled",
+                "value": "1"
+              },
+              {
+                "newvalue": "ok",
+                "value": "2"
+              },
+              {
+                "newvalue": "warn",
+                "value": "3"
+              },
+              {
+                "newvalue": "error",
+                "value": "4"
+              }
+            ],
+            "name": "Sophos_System_Status",
+            "uuid": "24438a627e404f76938bd93cff12502e"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:25Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP A10 AX vserverusage made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck virtual server usage.",
+        "discovery_rules": [
+          {
+            "item_prototypes": [
+              {
+                "description": "The Number of bytes received from client to server",
+                "key": "axVirtualServerStatBytesIn[{#SNMPINDEX}]",
+                "name": "Virtual Server {#VIRTUALSERVER_NAME} : Number of bytes received from client to server",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      ""
+                    ],
+                    "type": "CHANGE_PER_SECOND"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.4.2.1.1.4.{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "uuid": "b1234cb2bf624c278d10cd9aaaecb04f"
+              },
+              {
+                "description": "The Number of bytes sent from server to client",
+                "key": "axVirtualServerStatBytesOut[{#SNMPINDEX}]",
+                "name": "Virtual Server {#VIRTUALSERVER_NAME} : Number of bytes sent from server to client",
+                "preprocessing": [
+                  {
+                    "parameters": [
+                      ""
+                    ],
+                    "type": "CHANGE_PER_SECOND"
+                  }
+                ],
+                "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.4.2.1.1.6.{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "uuid": "8c4cb6f8043f4f66855232b4b10b4210"
+              },
+              {
+                "description": "The Current connections from client side",
+                "key": "axVirtualServerStatCurConns[{#SNMPINDEX}]",
+                "name": "Virtual Server {#VIRTUALSERVER_NAME} : Current connections from client side",
+                "snmp_oid": "1.3.6.1.4.1.22610.2.4.3.4.2.1.1.9.{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "uuid": "1683920ce57448b09d30346e2ac09fe2"
+              },
+              {
+                "description": "Current virtual server status",
+                "key": "axVirtualServerStatStatus1[{#SNMPINDEX}]",
+                "name": "Virtual Server {#VIRTUALSERVER_NAME} : Current virtual server status",
+                "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.4.2.1.1.10.{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "uuid": "b0a41e3d483b4974bcc15bf316f08434"
+              },
+              {
+                "description": "Total connections from client side",
+                "key": "axVirtualServerStatTotConns[{#SNMPINDEX}]",
+                "name": "Virtual Server {#VIRTUALSERVER_NAME} : Total connections from client side",
+                "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.4.2.1.1.8.{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "uuid": "1ceba7c1d4da4fd8bea54c20b515f196"
+              }
+            ],
+            "key": "axVirtualServerName-[{#SNMPVALUE}]",
+            "name": "A10 AX vserverusage",
+            "snmp_oid": "discovery[{#VIRTUALSERVER_NAME},1.3.6.1.4.1.22610.2.4.3.4.2.1.1.2]",
+            "type": "SNMP_AGENT",
+            "uuid": "9bdccd0a49164932b00bc676ff38a564"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP A10 AX vserverusage",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "system"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "a10 ax"
+          }
+        ],
+        "template": "SNMP A10 AX vserverusage",
+        "uuid": "c1d542b25e974eceb7cc54d00e4253b1",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "up",
+                "value": "1"
+              },
+              {
+                "newvalue": "down",
+                "value": "2"
+              },
+              {
+                "newvalue": "disabled",
+                "value": "3"
+              }
+            ],
+            "name": "Server Status",
+            "uuid": "f9a66e941db045cf8628703abbd34727"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

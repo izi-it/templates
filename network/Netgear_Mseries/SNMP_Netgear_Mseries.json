@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:50Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Netgear Mseries by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check SNMP Netgear Mseries equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "name": "SNMP Netgear Mseries",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Netgear Mseries"
+          }
+        ],
+        "template": "SNMP Netgear Mseries",
+        "templates": [
+          {
+            "name": "SNMP Netgear Mseries fan"
+          },
+          {
+            "name": "SNMP Netgear Mseries memory"
+          },
+          {
+            "name": "SNMP Netgear Mseries psu"
+          },
+          {
+            "name": "SNMP Netgear Mseries temperature"
+          }
+        ],
+        "uuid": "07fa93d8b6f348e382f0d4e4803b3d49"
+      }
+    ],
+    "version": "6.0"
+  }
+}

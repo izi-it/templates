@@ -1,0 +1,126 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:56Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Moxa iks6726a memory made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "Total size of System RAM ==> [OID:.1.3.6.1.4.1.8691.7.116.1.56]",
+            "key": "iks6726atotalMemory",
+            "name": "Total Memory",
+            "snmp_oid": ".1.3.6.1.4.1.8691.7.116.1.56",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "total memoy"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Moxa iks6726a"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "3edd1a47835a452caabbfd558eade761",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Total size of free dynamic memory ==> [OID:.1.3.6.1.4.1.8691.7.116.1.57]",
+            "key": "iks6726freeMemory",
+            "name": "Free Memory",
+            "snmp_oid": ".1.3.6.1.4.1.8691.7.116.1.57",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "free memoy"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Moxa iks6726a"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "2205f9e4ca8a42f6b38f3946ac43c24a",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Total size of used dynamic memory\n==> [OID:.1.3.6.1.4.1.8691.7.116.1.58]",
+            "key": "iks6726usedMemory",
+            "name": "Used Memory",
+            "snmp_oid": ".1.3.6.1.4.1.8691.7.116.1.58",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "free memoy"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Moxa iks6726a"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "18d9f19aab19421483f084cce1db1d03",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Moxa iks6726a memory",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "memory"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Moxa iks6726a"
+          }
+        ],
+        "template": "SNMP Moxa iks6726a memory",
+        "uuid": "e7783616a66944ca8273ad83ec623750"
+      }
+    ],
+    "version": "6.0"
+  }
+}

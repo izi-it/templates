@@ -1,0 +1,140 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:31Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Raisecom cpu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Raisecom cpu equipments using SNMP protocol",
+        "discovery_rules": [
+          {
+            "delay": "1h",
+            "description": "Check cpu utilization",
+            "item_prototypes": [
+              {
+                "delay": "1h",
+                "description": "Periods for computing CPU utilization.",
+                "key": "raisecomCPUUtilizationPeriod[{#SNMPINDEX}]",
+                "name": "{#CPU_UTILIZATION}: Periods for computing CPU utilization.",
+                "snmp_oid": ".1.3.6.1.4.1.8886.1.1.1.5.1.1.1.2.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "raisecom"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "0a0d953de7194971afddc9b015c39090",
+                "valuemap": {
+                  "name": "Mapping_Period"
+                }
+              },
+              {
+                "description": "Check cpu utilization.",
+                "key": "raisecomCPUUtilization[{#SNMPINDEX}]",
+                "name": "{#CPU_UTILIZATION}: CPU utilization",
+                "snmp_oid": ".1.3.6.1.4.1.8886.1.1.1.5.1.1.1.3.{#SNMPINDEX}",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cpu"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "raisecom"
+                  }
+                ],
+                "type": "SNMP_AGENT",
+                "uuid": "273526b9d1104916bb67735e2241406d"
+              }
+            ],
+            "key": "raisecomCPUUtilizationEntry-[{#SNMPVALUE}]",
+            "name": "Raisecom CPU",
+            "snmp_oid": "discovery[{#CPU_UTILIZATION},1.3.6.1.4.1.8886.1.1.1.5.1.1.1]",
+            "type": "SNMP_AGENT",
+            "uuid": "dbfb59c8ec25490b9f66aedf4bfcfb1d"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Raisecom cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "raisecom"
+          }
+        ],
+        "template": "SNMP Raisecom cpu",
+        "uuid": "e856931987a24ccea94ecc842d8c99e0",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "oneSec",
+                "value": "1"
+              },
+              {
+                "newvalue": "fiveSec",
+                "value": "2"
+              },
+              {
+                "newvalue": "oneMin",
+                "value": "3"
+              },
+              {
+                "newvalue": "tenMin",
+                "value": "4"
+              },
+              {
+                "newvalue": "twoHour",
+                "value": "5"
+              }
+            ],
+            "name": "Mapping_Period",
+            "uuid": "70136dcb5dba4bc3bec109fa81bf671b"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}

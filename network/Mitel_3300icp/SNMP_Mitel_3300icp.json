@@ -1,0 +1,50 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:55Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Mitel 3300icp made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Mitel 3300icp",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Mitel 3300icp"
+          }
+        ],
+        "template": "SNMP Mitel 3300icp",
+        "templates": [
+          {
+            "name": "SNMP Mitel 3300icp licenses"
+          },
+          {
+            "name": "SNMP Mitel 3300icp zapbandwidth"
+          },
+          {
+            "name": "SNMP Mitel 3300icp zapcalls"
+          }
+        ],
+        "uuid": "85be4fc45c6c4362a2539381d9f9fb48"
+      }
+    ],
+    "version": "6.0"
+  }
+}

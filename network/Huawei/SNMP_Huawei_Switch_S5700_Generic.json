@@ -1,0 +1,120 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:57Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "The number of network interfaces (regardless of their current state) present on this system.",
+            "key": "HwifNumber",
+            "name": "Number of network interfaces",
+            "snmp_oid": "IF-MIB::ifNumber.0",
+            "tags": [
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Huawei"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4c08ea3dc67d4db391eab789506356ea"
+          },
+          {
+            "key": "hwStackIsStackDevice",
+            "name": "Switch configuration (stacked or standalone)",
+            "snmp_oid": "1.3.6.1.4.1.2011.5.25.183.1.5.0",
+            "tags": [
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Huawei"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "89b55bccbe15428f9a334751ccddf9d0",
+            "value_type": "TEXT"
+          },
+          {
+            "delay": "30s",
+            "key": "icmpping",
+            "name": "Ping Switch",
+            "tags": [
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Huawei"
+              }
+            ],
+            "triggers": [
+              {
+                "expression": "max(/SNMP Huawei Switch S5700 Generic/icmpping,{$PING_TIMEOUT_SWITCH})=0",
+                "manual_close": "YES",
+                "name": "No contact with the switch for 3 minutes",
+                "priority": "DISASTER",
+                "uuid": "defa29adf2e1485d8b4f195a18d0e2eb"
+              }
+            ],
+            "type": "SIMPLE",
+            "uuid": "1591d0f864e2455494713871e9081c55"
+          }
+        ],
+        "macros": [
+          {
+            "macro": "{$PING_TIMEOUT_SWITCH}"
+          }
+        ],
+        "name": "SNMP Huawei Switch S5700 Generic",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Huawei"
+          }
+        ],
+        "template": "SNMP Huawei Switch S5700 Generic",
+        "uuid": "3236b6e7c24d409aa01b8fc87953399e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:25Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Ucopia Wlc systemmade by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nTemplate to check Ucopia Wlc system equipments using SNMP protocol",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Ucopia Wlc system",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "ucopia wlc"
+          }
+        ],
+        "template": "SNMP Ucopia Wlc system",
+        "uuid": "681dfa8685ee40bc8febee62cf7a5aff"
+      }
+    ],
+    "version": "6.0"
+  }
+}

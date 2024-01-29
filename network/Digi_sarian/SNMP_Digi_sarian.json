@@ -1,0 +1,53 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:37Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Digi sarian made by automate@izi-it\nHash: xxxxxxxxxxxxxxx",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "name": "SNMP Digi sarian",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Digi sarian"
+          }
+        ],
+        "template": "SNMP Digi sarian",
+        "templates": [
+          {
+            "name": "SNMP Digi sarian cpu"
+          },
+          {
+            "name": "SNMP Digi sarian gprs"
+          },
+          {
+            "name": "SNMP Digi sarian memory"
+          },
+          {
+            "name": "SNMP Digi sarian temperature"
+          }
+        ],
+        "uuid": "245c15b3ccad48c08d9890164a68014e"
+      }
+    ],
+    "version": "6.0"
+  }
+}

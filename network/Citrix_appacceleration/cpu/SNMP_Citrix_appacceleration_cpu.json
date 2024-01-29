@@ -1,0 +1,101 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:57Z",
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Citrix appacceleration cpu by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\nCheck cpu",
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "description": "CPU Usage  [OID:.1.3.6.1.4.1.3845.30.4.1.1.1.24.0]",
+            "key": "wsCpuUsage",
+            "name": "CPU Usage",
+            "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.1.24.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cpu"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Citrix appacceleration"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "5a15baf75a7d4635bc8c6710bd25ed3f",
+            "value_type": "FLOAT"
+          },
+          {
+            "description": "Load [OID:.1.3.6.1.4.1.3845.30.4.1.1.1.34.0]",
+            "key": "wsSystemLoad",
+            "name": "Load",
+            "snmp_oid": ".1.3.6.1.4.1.3845.30.4.1.1.1.34.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "load"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Citrix appacceleration"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "%",
+            "uuid": "0a88c41e78a54801a11372dffcf2f8dc",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Citrix appacceleration cpu",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "cpu"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Citrix appacceleration"
+          }
+        ],
+        "template": "SNMP Citrix appacceleration cpu",
+        "uuid": "a105b22851334ac7871fb1a777d986d9"
+      }
+    ],
+    "version": "6.0"
+  }
+}

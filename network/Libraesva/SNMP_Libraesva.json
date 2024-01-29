@@ -1,0 +1,1112 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:41Z",
+    "graphs": [
+      {
+        "graph_items": [
+          {
+            "color": "1A7C11",
+            "drawtype": "FILLED_REGION",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "net.tcp.service.perf[smtp]"
+            }
+          }
+        ],
+        "name": "Latency",
+        "uuid": "2b3e9ef533694a9c8bce6fac2c093773"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "AAAAAA",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "mailBounced"
+            }
+          },
+          {
+            "color": "880000",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "virusMessages"
+            },
+            "sortorder": "1"
+          },
+          {
+            "color": "CC00CC",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "mailRejected"
+            },
+            "sortorder": "2"
+          },
+          {
+            "color": "FF3333",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "spamMessages"
+            },
+            "sortorder": "3"
+          }
+        ],
+        "name": "Mail classification",
+        "uuid": "05696dfac1de4d2cad430f559164fdd8"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "00AA00",
+            "drawtype": "GRADIENT_LINE",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "incomingMailQueue"
+            }
+          },
+          {
+            "color": "BB0000",
+            "drawtype": "GRADIENT_LINE",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "outgoingMailQueue"
+            },
+            "sortorder": "1",
+            "yaxisside": "RIGHT"
+          }
+        ],
+        "name": "Queues Hist",
+        "uuid": "4db03984bc32452aa5eebeb5d2d05884",
+        "ymin_type_1": "FIXED"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "008800",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "mailReceived"
+            }
+          }
+        ],
+        "name": "Received mail",
+        "uuid": "652e41ac3072472eb05980fb054f5f46",
+        "ymin_type_1": "FIXED"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "008800",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "mailReceived"
+            }
+          },
+          {
+            "color": "F63100",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "mailSent"
+            },
+            "sortorder": "1",
+            "yaxisside": "RIGHT"
+          }
+        ],
+        "name": "Sent And Received mail",
+        "uuid": "daeee7a5006a4f6783d1c01dc41de82f",
+        "ymin_type_1": "FIXED"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "1A7C11",
+            "drawtype": "FILLED_REGION",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "mailSent"
+            }
+          }
+        ],
+        "name": "Sent mail",
+        "uuid": "8cff0a3d207a4e74bb197bbb68a5b3eb",
+        "ymin_type_1": "FIXED"
+      },
+      {
+        "graph_items": [
+          {
+            "color": "1A7C11",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "net.tcp.service.perf[smtp]"
+            }
+          },
+          {
+            "color": "F63100",
+            "item": {
+              "host": "SNMP Libraesva",
+              "key": "net.tcp.service[ssh]"
+            },
+            "sortorder": "1",
+            "yaxisside": "RIGHT"
+          }
+        ],
+        "name": "SMTP/SSH Hist",
+        "uuid": "fb7abee5744843aa92d478ee2b8f99f5",
+        "ymin_type_1": "FIXED"
+      }
+    ],
+    "groups": [
+      {
+        "name": "Templates",
+        "uuid": "7df96b18c230490a9a0a9e2307226338"
+      }
+    ],
+    "templates": [
+      {
+        "dashboards": [
+          {
+            "name": "Summary",
+            "pages": [
+              {
+                "widgets": [
+                  {
+                    "fields": [
+                      {
+                        "name": "source_type",
+                        "type": "INTEGER",
+                        "value": "0"
+                      }
+                    ],
+                    "height": "5",
+                    "type": "GRAPH_CLASSIC",
+                    "width": "12"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "name": "source_type",
+                        "type": "INTEGER",
+                        "value": "0"
+                      },
+                      {
+                        "name": "graphid",
+                        "type": "GRAPH",
+                        "value": {
+                          "host": "SNMP Libraesva",
+                          "name": "Sent And Received mail"
+                        }
+                      }
+                    ],
+                    "height": "5",
+                    "type": "GRAPH_CLASSIC",
+                    "width": "12",
+                    "x": "12"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "name": "source_type",
+                        "type": "INTEGER",
+                        "value": "0"
+                      }
+                    ],
+                    "height": "5",
+                    "type": "GRAPH_CLASSIC",
+                    "width": "12",
+                    "y": "5"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "name": "source_type",
+                        "type": "INTEGER",
+                        "value": "0"
+                      },
+                      {
+                        "name": "graphid",
+                        "type": "GRAPH",
+                        "value": {
+                          "host": "SNMP Libraesva",
+                          "name": "Queues Hist"
+                        }
+                      }
+                    ],
+                    "height": "5",
+                    "type": "GRAPH_CLASSIC",
+                    "width": "12",
+                    "x": "12",
+                    "y": "5"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "name": "source_type",
+                        "type": "INTEGER",
+                        "value": "0"
+                      }
+                    ],
+                    "height": "5",
+                    "type": "GRAPH_CLASSIC",
+                    "width": "12",
+                    "y": "10"
+                  },
+                  {
+                    "fields": [
+                      {
+                        "name": "source_type",
+                        "type": "INTEGER",
+                        "value": "0"
+                      },
+                      {
+                        "name": "graphid",
+                        "type": "GRAPH",
+                        "value": {
+                          "host": "SNMP Libraesva",
+                          "name": "Latency"
+                        }
+                      }
+                    ],
+                    "height": "5",
+                    "type": "GRAPH_CLASSIC",
+                    "width": "12",
+                    "x": "12",
+                    "y": "10"
+                  }
+                ]
+              }
+            ],
+            "uuid": "ba075f9aeb37417cb3a764d43b520b19"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates"
+          }
+        ],
+        "items": [
+          {
+            "delay": "300",
+            "description": "Cluster Status",
+            "key": "clusterStatus",
+            "name": "Cluster Status",
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.10.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "cluster status"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "triggers": [
+              {
+                "description": "Cluster error on host on the last 10 minutes",
+                "expression": "min(/SNMP Libraesva/clusterStatus,#5)>0",
+                "name": "Cluster Error on {HOST.NAME}",
+                "priority": "HIGH",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "cluster status"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "2e026687de424500bb2083ffa77bcb8c"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "26278073a5b940db86e3757bc10338b4",
+            "value_type": "FLOAT",
+            "valuemap": {
+              "name": "Libraesva_Clustser_Status"
+            }
+          },
+          {
+            "delay": "60",
+            "description": "Number of messages in incoming queue.",
+            "key": "incomingMailQueue",
+            "name": "Mails queue in",
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.8.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "incomingMailQueue"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "triggers": [
+              {
+                "dependencies": [
+                  {
+                    "expression": "nodata(/SNMP Libraesva/incomingMailQueue,15m)=1",
+                    "name": "SNMP to {HOST.NAME}"
+                  }
+                ],
+                "description": "Queue IN is consistently over 100 messages and over 4 times the average of last week",
+                "expression": "min(/SNMP Libraesva/incomingMailQueue,30m)>100 and min(/SNMP Libraesva/incomingMailQueue,30m)>4*avg(/SNMP Libraesva/incomingMailQueue,7d)  and forecast(/SNMP Libraesva/incomingMailQueue,1200s,3600s)>100",
+                "name": "Queue IN on {HOST.NAME}",
+                "priority": "HIGH",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "Queue IN"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "322beaf3df57494fa4fc88e0c59d4370"
+              },
+              {
+                "description": "SNMP is not responding",
+                "expression": "nodata(/SNMP Libraesva/incomingMailQueue,15m)=1",
+                "name": "SNMP to {HOST.NAME}",
+                "priority": "HIGH",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "smtp"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "a773db714b5640eb85af964083f3de59"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "94abaa21ef50426ebb7a3e320d67782c"
+          },
+          {
+            "delay": "600",
+            "description": "Number of messages per minute bounced",
+            "key": "mailBounced",
+            "name": "Mail Bounced",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "0.1"
+                ],
+                "type": "MULTIPLIER"
+              }
+            ],
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.4.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "mailBounced"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "388f5ed875494dc6bd86e194b626465e",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "600",
+            "description": "Number of messages sent per minute",
+            "key": "mailReceived",
+            "name": "Mail Received",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "0.1"
+                ],
+                "type": "MULTIPLIER"
+              }
+            ],
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.2.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "mailReceived"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "b666cf2e3a7b4e91811e282dffae15c7",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "600",
+            "description": "Number of messages per minute rejected",
+            "key": "mailRejected",
+            "name": "Mail Rejected",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "0.1"
+                ],
+                "type": "MULTIPLIER"
+              }
+            ],
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.3.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "mailRejected"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "ca648e9a104842dda68684b3360fbf06",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "600",
+            "description": "Number of messages sent per minute",
+            "key": "mailSent",
+            "name": "Mail Sent",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "0.1"
+                ],
+                "type": "MULTIPLIER"
+              }
+            ],
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "mail sent"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "libraesva"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "4180c7a2228a4369a47c27c9bc1cfcca",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "60",
+            "key": "net.tcp.service.perf[smtp]",
+            "name": "SMTP service",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "smtp"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "triggers": [
+              {
+                "description": "SMTP service status",
+                "expression": "max(/SNMP Libraesva/net.tcp.service.perf[smtp],3m)=0",
+                "name": "SMTP on {HOST.NAME}",
+                "priority": "WARNING",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "smtp"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "febc77a8f36d4a05845172398f16ab9a"
+              },
+              {
+                "description": "SMTP service status",
+                "expression": "max(/SNMP Libraesva/net.tcp.service.perf[smtp],10m)=0",
+                "name": "SMTP on {HOST.NAME}",
+                "priority": "DISASTER",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "smtp"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "7ce3d486f58c4424880a3fb826f115bf"
+              }
+            ],
+            "type": "SIMPLE",
+            "units": "s",
+            "uuid": "ed5d086bc8f245dc8b18e7637af256a3",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "60",
+            "key": "net.tcp.service[https]",
+            "name": "HTTPS service",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "https"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "triggers": [
+              {
+                "description": "HTTP service NOT running on this host!!",
+                "expression": "max(/SNMP Libraesva/net.tcp.service[https],3m)=0",
+                "name": "HTTP on {HOST.NAME}",
+                "priority": "WARNING",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "https"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "e845778779d34c958dfab79bbefc699e"
+              },
+              {
+                "description": "HTTP service NOT running on this host!!",
+                "expression": "max(/SNMP Libraesva/net.tcp.service[https],10m)=0",
+                "name": "HTTP on {HOST.NAME}",
+                "priority": "HIGH",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "https"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "f8eb2f223caf4ecab2104381502a937b"
+              }
+            ],
+            "type": "SIMPLE",
+            "uuid": "8a490a76180f4c489c1ae19e1826ea0b"
+          },
+          {
+            "delay": "240",
+            "key": "net.tcp.service[ssh]",
+            "name": "SSH service",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "SSH service"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "triggers": [
+              {
+                "description": "SSH service running on this host!!",
+                "expression": "max(/SNMP Libraesva/net.tcp.service[ssh],1m)=1",
+                "name": "SSH service ACTIVE on {HOST.NAME}",
+                "priority": "WARNING",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "ssh"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "6595677524364756ace2052c9b03291f"
+              }
+            ],
+            "type": "SIMPLE",
+            "uuid": "f141cecff14044a8990d53309e6501d7"
+          },
+          {
+            "delay": "60",
+            "description": "Number of messages in outgoing queue.",
+            "key": "outgoingMailQueue",
+            "name": "Mails queue out",
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.9.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "mails-queue-out"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "triggers": [
+              {
+                "dependencies": [
+                  {
+                    "expression": "nodata(/SNMP Libraesva/incomingMailQueue,15m)=1",
+                    "name": "SNMP to {HOST.NAME}"
+                  }
+                ],
+                "description": "Queue OUT is consistently over 200 messages and over 4 times the average of last week",
+                "expression": "min(/SNMP Libraesva/outgoingMailQueue,30m)>200 and min(/SNMP Libraesva/outgoingMailQueue,30m)>6*avg(/SNMP Libraesva/outgoingMailQueue,7d)",
+                "name": "Queue OUT on {HOST.NAME}",
+                "priority": "HIGH",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "queue out"
+                  },
+                  {
+                    "tag": "layer",
+                    "value": "network"
+                  },
+                  {
+                    "tag": "provider",
+                    "value": "izi-it"
+                  },
+                  {
+                    "tag": "vendor",
+                    "value": "Libraesva"
+                  }
+                ],
+                "uuid": "88a1a682ac2a44d7a7dc2559ab6d123f"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "606aa8327e044dd2a92bd5e145715d64"
+          },
+          {
+            "delay": "120",
+            "description": "Libraesva ESG Product Version",
+            "key": "prodVersion",
+            "name": "ESVA Version",
+            "snmp_oid": "1.3.6.1.4.1.41091.1.2.1.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "version"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "56903120802f484ea885a6e2de787a6c",
+            "value_type": "TEXT"
+          },
+          {
+            "delay": "60",
+            "description": "Delta of number of messages in incoming queue.",
+            "key": "queueInDelta",
+            "name": "Mails queue in Delta",
+            "params": "change(//incomingMailQueue)",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Mails queue in Delta"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "type": "CALCULATED",
+            "uuid": "f005d419263340d6897b6b9bfa58a5b2",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "60",
+            "description": "Delta of number of messages in outgoing queue.",
+            "key": "queueOutDelta",
+            "name": "Mails queue out Delta",
+            "params": "change(//outgoingMailQueue)",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "Mails queue out Delta"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "type": "CALCULATED",
+            "uuid": "4834b22dca3b423582ce711070033a89",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "600",
+            "description": "Number of messages per minute flagged as spam",
+            "key": "spamMessages",
+            "name": "Mail Spam",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "0.1"
+                ],
+                "type": "MULTIPLIER"
+              }
+            ],
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.5.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "spamMessages"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "dc9ec6a6c2a347cead33a9525cee49a2",
+            "value_type": "FLOAT"
+          },
+          {
+            "delay": "600",
+            "description": "Number of messages per minute flagged as virus",
+            "key": "virusMessages",
+            "name": "Mail virus",
+            "preprocessing": [
+              {
+                "parameters": [
+                  "0.1"
+                ],
+                "type": "MULTIPLIER"
+              }
+            ],
+            "snmp_oid": "1.3.6.1.4.1.41091.1.1.6.0",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "virusMessages"
+              },
+              {
+                "tag": "layer",
+                "value": "network"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Libraesva"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "eef7f9b8d8034423ab923ffd41084701",
+            "value_type": "FLOAT"
+          }
+        ],
+        "name": "SNMP Libraesva",
+        "tags": [
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Libraesva"
+          }
+        ],
+        "template": "SNMP Libraesva",
+        "templates": [
+          {
+            "name": "HOST-RESOURCES-MIB SNMP"
+          },
+          {
+            "name": "Network Generic Device SNMP"
+          }
+        ],
+        "uuid": "5ae6f40eef2c44c89c7e90445d78cae4",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "nocluster",
+                "value": "-1"
+              },
+              {
+                "newvalue": "healthy",
+                "value": "0"
+              },
+              {
+                "newvalue": "error",
+                "value": "1"
+              }
+            ],
+            "name": "Libraesva_Clustser_Status",
+            "uuid": "b6bdc8f033ea42a88ad5ff0671b9c902"
+          }
+        ]
+      }
+    ],
+    "triggers": [
+      {
+        "dependencies": [
+          {
+            "expression": "nodata(/SNMP Libraesva/incomingMailQueue,15m)=1",
+            "name": "SNMP to {HOST.NAME}"
+          }
+        ],
+        "description": "The Queue IN has been continuously growing for 3 hours",
+        "expression": "min(/SNMP Libraesva/incomingMailQueue,3h)>0 and\nmin(/SNMP Libraesva/queueInDelta,3h)>-1",
+        "name": "Queue IN Growing on {HOST.NAME}",
+        "priority": "AVERAGE",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "queue in"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Libraesva"
+          }
+        ],
+        "uuid": "de046432612845f3994bd5237e213ee7"
+      },
+      {
+        "dependencies": [
+          {
+            "expression": "nodata(/SNMP Libraesva/incomingMailQueue,15m)=1",
+            "name": "SNMP to {HOST.NAME}"
+          }
+        ],
+        "description": "The Queue OUT has been continuously growing for 3 hours",
+        "expression": "min(/SNMP Libraesva/outgoingMailQueue,3h)>100 and\nmin(/SNMP Libraesva/queueOutDelta,3h)>-1",
+        "name": "Queue OUT Growing on {HOST.NAME}",
+        "priority": "AVERAGE",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "queue out"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Libraesva"
+          }
+        ],
+        "uuid": "c799c6dd64754bf4b7ca3cad9cea2d2c"
+      }
+    ],
+    "version": "6.0"
+  }
+}

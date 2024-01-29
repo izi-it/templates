@@ -1,0 +1,204 @@
+{
+  "zabbix_export": {
+    "date": "2022-10-04T07:40:51Z",
+    "groups": [
+      {
+        "name": "Templates/Network devices",
+        "uuid": "36bff6c29af64692839d077febfc7079"
+      }
+    ],
+    "templates": [
+      {
+        "description": "Template SNMP Silverpeak alarms made by automate@izi-it\nHash: xxxxxxxxxxxxxxx\n\n\nCheck alarms.",
+        "groups": [
+          {
+            "name": "Templates/Network devices"
+          }
+        ],
+        "items": [
+          {
+            "description": "A description for the active alarm  ==> [OID:.1.3.6.1.4.1.23867.3.1.1.2.1.1.5]",
+            "key": "spsActiveAlarmDescr",
+            "name": "Description for the active alarm",
+            "snmp_oid": ".1.3.6.1.4.1.23867.3.1.1.2.1.1.5",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "alarm description"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Silverpeak"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "b5fe7be786e04b72aa77b7db85351072",
+            "value_type": "CHAR"
+          },
+          {
+            "description": "The value of sysUpTime when the alarm was generated  ==> [OID:.1.3.6.1.4.1.23867.3.1.1.2.1.1.11]",
+            "key": "spsActiveAlarmLogTime",
+            "name": "Alarm SysUptime",
+            "snmp_oid": ".1.3.6.1.4.1.23867.3.1.1.2.1.1.11",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "alarm sysuptime"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Silverpeak"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "units": "unixtime",
+            "uuid": "7dce4078cedc48079dfdddb5db7deec5",
+            "valuemap": {
+              "name": "Silverpeak_Status_Severity"
+            }
+          },
+          {
+            "description": "The alarm severity for the active alarm ==> [OID:.1.3.6.1.4.1.23867.3.1.1.2.1.1.3]",
+            "key": "spsActiveAlarmSeverity",
+            "name": "Alarm severity for the active alarm",
+            "snmp_oid": ".1.3.6.1.4.1.23867.3.1.1.2.1.1.3",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "alarm severity"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Silverpeak"
+              }
+            ],
+            "type": "SNMP_AGENT",
+            "uuid": "53c8afed1b7a4891bc81b2090b949574",
+            "valuemap": {
+              "name": "Silverpeak_Status_Severity"
+            }
+          },
+          {
+            "description": "The source for the active alarm  ==> [OID:.1.3.6.1.4.1.23867.3.1.1.2.1.1.6]",
+            "key": "spsActiveAlarmSource",
+            "name": "Source for the active alarm",
+            "snmp_oid": ".1.3.6.1.4.1.23867.3.1.1.2.1.1.6",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "source alarm"
+              },
+              {
+                "tag": "layer",
+                "value": "storage"
+              },
+              {
+                "tag": "provider",
+                "value": "izi-it"
+              },
+              {
+                "tag": "vendor",
+                "value": "Silverpeak"
+              }
+            ],
+            "trends": "0",
+            "type": "SNMP_AGENT",
+            "uuid": "d2b34e7dda9d467e93ec289e693044be",
+            "value_type": "CHAR"
+          }
+        ],
+        "name": "SNMP Silverpeak alarms",
+        "tags": [
+          {
+            "tag": "component",
+            "value": "alarms"
+          },
+          {
+            "tag": "layer",
+            "value": "network"
+          },
+          {
+            "tag": "provider",
+            "value": "izi-it"
+          },
+          {
+            "tag": "vendor",
+            "value": "Silverpeak"
+          }
+        ],
+        "template": "SNMP Silverpeak alarms",
+        "uuid": "db0dd6da91034472a5aae9e7bc133f37",
+        "valuemaps": [
+          {
+            "mappings": [
+              {
+                "newvalue": "info",
+                "value": "0"
+              },
+              {
+                "newvalue": "warning",
+                "value": "1"
+              },
+              {
+                "newvalue": "minor",
+                "value": "2"
+              },
+              {
+                "newvalue": "major",
+                "value": "3"
+              },
+              {
+                "newvalue": "critical",
+                "value": "4"
+              },
+              {
+                "newvalue": "cleared",
+                "value": "5"
+              },
+              {
+                "newvalue": "acknowledged",
+                "value": "6"
+              },
+              {
+                "newvalue": "unacknowledged",
+                "value": "7"
+              },
+              {
+                "newvalue": "indeterminate",
+                "value": "8"
+              }
+            ],
+            "name": "Silverpeak_Status_Severity",
+            "uuid": "9cee90aee9284daebdd8080bb2e0f6f1"
+          }
+        ]
+      }
+    ],
+    "version": "6.0"
+  }
+}
